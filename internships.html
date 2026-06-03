@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#05080F" />
+<title>Internship Program · TenTwo Technologies</title>
+<meta name="description" content="Online internship program at TenTwo Technologies. Tracks include Full Stack, AI/ML, Data Science, Cybersecurity, DevOps, UI/UX and more. 8 weeks, mentor-led, certificate. Apply now." />
+<link rel="canonical" href="https://www.tentwotechnologies.com/internships.html" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --bg:#05080F; --bg-2:#0A0F1C;
+  --glass:rgba(255,255,255,0.05); --glass-2:rgba(255,255,255,0.08);
+  --border:rgba(255,255,255,0.09); --border-strong:rgba(255,255,255,0.16);
+  --text:#E7ECF3; --text-dim:#8A93A6; --text-faint:#5B6478;
+  --brand:#2E86FF; --brand-2:#1565D8; --brand-3:#6BA8FF;
+  --brand-soft:rgba(46,134,255,0.14); --brand-glow:rgba(46,134,255,0.5);
+  --radius:18px; --radius-lg:28px; --maxw:1240px;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:'Geist',-apple-system,sans-serif;
+  line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body::before{
+  content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(900px 600px at 80% -5%, rgba(46,134,255,0.12), transparent 60%),
+    radial-gradient(700px 500px at 0% 100%, rgba(46,134,255,0.07), transparent 55%);
+}
+.container{max-width:var(--maxw); margin:0 auto; padding:0 24px; position:relative; z-index:1}
+a{color:inherit; text-decoration:none}
+
+/* NAV */
+.nav{position:sticky; top:0; z-index:50; backdrop-filter:blur(18px); background:rgba(5,8,15,0.72); border-bottom:1px solid var(--border)}
+.nav-inner{max-width:var(--maxw); margin:0 auto; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px}
+.nav-logo{display:flex; align-items:center; gap:10px; font-weight:700; font-size:18px; letter-spacing:-0.02em}
+.nav-logo em{font-style:normal; color:var(--brand-3)}
+.nav-logo .mark{width:30px; height:30px; border-radius:9px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); display:grid; place-items:center; font-weight:800; font-size:14px; color:#fff; box-shadow:0 6px 18px var(--brand-glow)}
+.nav-links{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+.nav-links a{font-size:14px; color:var(--text-dim); padding:8px 12px; border-radius:10px; transition:.25s var(--ease)}
+.nav-links a:hover{color:var(--text); background:var(--glass)}
+.nav-cta{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff !important; padding:9px 16px !important; border-radius:11px; font-weight:600; box-shadow:0 8px 22px var(--brand-glow)}
+
+/* HERO */
+.hero{padding:84px 0 40px; text-align:center}
+.label{display:inline-block; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--brand-3); background:var(--brand-soft); border:1px solid var(--border-strong); padding:7px 14px; border-radius:999px; margin-bottom:22px}
+.hero h1{font-size:clamp(34px,6vw,62px); line-height:1.04; letter-spacing:-0.03em; font-weight:700}
+.hero h1 .ser{font-family:'Instrument Serif',serif; font-style:italic; font-weight:400; color:var(--brand-3)}
+.hero p{max-width:640px; margin:22px auto 0; color:var(--text-dim); font-size:clamp(16px,2.2vw,19px)}
+.hero-badges{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:26px}
+.pill{font-size:13px; color:var(--text-dim); border:1px solid var(--border); background:var(--glass); padding:7px 14px; border-radius:999px; display:inline-flex; gap:7px; align-items:center}
+.pill svg{color:var(--brand-3)}
+
+/* VIDEO PREVIEW (vertical short) */
+.video-wrap{max-width:330px; margin:40px auto 0; aspect-ratio:9/16; border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border-strong); box-shadow:0 30px 80px rgba(0,0,0,0.5); background:#000}
+.video-wrap iframe{width:100%; height:100%; border:0; display:block}
+
+/* TRACKS */
+.section{padding:70px 0}
+.section-head{text-align:center; max-width:680px; margin:0 auto 48px}
+.section-head h2{font-size:clamp(26px,4vw,40px); letter-spacing:-0.025em; line-height:1.1}
+.section-head p{color:var(--text-dim); margin-top:14px; font-size:16px}
+
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:18px}
+.track{
+  background:linear-gradient(180deg,var(--glass-2),var(--glass));
+  border:1px solid var(--border); border-radius:var(--radius);
+  padding:24px 22px; transition:.35s var(--ease); position:relative; overflow:hidden;
+}
+.track::before{content:''; position:absolute; pointer-events:none; inset:0; border-radius:inherit; padding:1px; background:linear-gradient(135deg,var(--brand-glow),transparent 45%); -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0); -webkit-mask-composite:xor; mask-composite:exclude; opacity:0; transition:.35s var(--ease)}
+.track:hover{transform:translateY(-5px); border-color:var(--border-strong); box-shadow:0 22px 50px rgba(0,0,0,0.4)}
+.track:hover::before{opacity:1}
+.track-icon{width:44px; height:44px; border-radius:12px; background:var(--brand-soft); border:1px solid var(--border-strong); display:grid; place-items:center; color:var(--brand-3); margin-bottom:16px}
+.track h3{font-size:17px; letter-spacing:-0.015em}
+.track p{color:var(--text-dim); font-size:13.5px; margin-top:8px}
+.track-meta{display:flex; gap:8px; flex-wrap:wrap; margin-top:16px}
+.chip{font-size:11.5px; color:var(--text-dim); border:1px solid var(--border); border-radius:999px; padding:4px 10px}
+.chip.price{color:var(--brand-3); border-color:var(--border-strong); background:var(--brand-soft)} /* this blue chip shows the fee/label */
+
+/* HOW */
+.how{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin-top:14px}
+.step{background:var(--glass); border:1px solid var(--border); border-radius:var(--radius); padding:24px}
+.step .n{font-family:'Instrument Serif',serif; font-size:34px; color:var(--brand-3); line-height:1}
+.step h4{margin-top:12px; font-size:16px}
+.step p{color:var(--text-dim); font-size:13.5px; margin-top:6px}
+
+/* CTA */
+.cta{margin:30px 0 80px}
+.cta-box{background:linear-gradient(135deg,rgba(46,134,255,0.16),var(--glass)); border:1px solid var(--border-strong); border-radius:var(--radius-lg); padding:clamp(34px,5vw,60px); text-align:center}
+.cta-box h2{font-size:clamp(26px,4vw,40px); letter-spacing:-0.025em; line-height:1.1}
+.cta-box p{color:var(--text-dim); margin:14px auto 0; max-width:520px}
+.cta-actions{margin-top:30px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
+.btn{padding:13px 24px; border-radius:13px; font-weight:600; font-size:15px; transition:.3s var(--ease); display:inline-flex; align-items:center; gap:9px}
+.btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff; box-shadow:0 12px 30px var(--brand-glow)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--border-strong); color:var(--text)}
+.btn-ghost:hover{background:var(--glass-2)}
+
+/* FOOTER */
+.footer{border-top:1px solid var(--border); padding:34px 0; text-align:center; color:var(--text-faint); font-size:13.5px}
+.footer a{color:var(--text-dim)}
+.footer a:hover{color:var(--brand-3)}
+
+@media(max-width:640px){
+  .nav-links{display:none}
+  .hero{padding:54px 0 30px}
+}
+/* FAQ */
+.faq{max-width:840px; margin:0 auto; display:flex; flex-direction:column; gap:12px}
+.faq details{border:1px solid var(--border); background:var(--glass); border-radius:var(--radius); overflow:hidden; transition:border-color .2s}
+.faq details[open]{border-color:var(--border-strong)}
+.faq summary{cursor:pointer; list-style:none; padding:18px 20px; font-weight:600; color:var(--text); display:flex; justify-content:space-between; align-items:center; gap:16px; font-size:15px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+"; color:var(--brand-3); font-size:24px; line-height:1; flex:0 0 auto; transition:transform .25s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .ans{padding:0 20px 18px; color:var(--text-dim); font-size:14.5px; line-height:1.65}
+.faq .ans a{color:var(--brand-3)}
+/* QUOTE MODAL */
+.modal-overlay{position:fixed; inset:0; background:rgba(2,4,10,0.72); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); display:none; align-items:center; justify-content:center; padding:20px; z-index:1000}
+.modal-overlay.open{display:flex}
+.modal{background:linear-gradient(180deg,var(--bg-2),var(--bg)); border:1px solid var(--border-strong); border-radius:var(--radius-lg); width:100%; max-width:480px; padding:30px; position:relative; box-shadow:0 40px 100px rgba(0,0,0,0.6)}
+.modal h3{font-size:22px; letter-spacing:-0.02em}
+.modal .sub{color:var(--text-dim); font-size:14px; margin-top:6px; line-height:1.5}
+.modal .qfor{display:none; margin-top:12px; font-size:12px; color:var(--brand-3); background:var(--brand-soft); border:1px solid var(--border-strong); padding:5px 12px; border-radius:999px}
+.modal form{margin-top:18px; display:flex; flex-direction:column; gap:11px}
+.modal label{font-size:12px; color:var(--text-dim); margin-bottom:-5px}
+.modal input,.modal textarea{width:100%; box-sizing:border-box; background:var(--glass); border:1px solid var(--border); border-radius:12px; padding:12px 14px; color:var(--text); font:inherit; font-size:14px; outline:none; transition:border-color .2s}
+.modal input:focus,.modal textarea:focus{border-color:var(--brand)}
+.modal textarea{resize:vertical; min-height:92px}
+.modal .submit{margin-top:6px; padding:14px; border-radius:12px; border:none; cursor:pointer; font:inherit; font-weight:600; font-size:15px; color:#fff; background:linear-gradient(135deg,var(--brand),var(--brand-2)); box-shadow:0 10px 26px var(--brand-glow); transition:.2s}
+.modal .submit:hover{filter:brightness(1.08)}
+.modal .submit:disabled{opacity:.6; cursor:wait}
+.modal .close{position:absolute; top:14px; right:14px; width:34px; height:34px; border-radius:50%; border:1px solid var(--border); background:var(--glass); color:var(--text-dim); cursor:pointer; font-size:20px; line-height:1; display:flex; align-items:center; justify-content:center}
+.modal .close:hover{color:var(--text); background:var(--glass-2)}
+.modal .msg{font-size:13.5px; margin-top:2px; min-height:18px}
+.modal .msg.ok{color:#34d399}
+.modal .msg.err{color:#f87171}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="mark">TT</span><span>Ten<em>Two</em></span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="internships.html">Internship Program</a>
+    </div>
+    <a href="https://www.tentwotechnologies.com/apply" class="nav-cta">Apply now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <span class="label">Internship Program · Online</span>
+    <h1>Join our <span class="ser">internship program.</span></h1>
+    <p>A hands-on, mentor-led online internship program across 10 tech domains. Build real projects, earn a verified certificate, and learn the way work actually happens.</p>
+    <div class="hero-badges">
+      <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>8-week program</span>
+      <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>100% Online</span>
+      <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Certificate on completion</span>
+      <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Mentor-led</span>
+      <span class="pill" style="color:var(--brand-3); border-color:var(--border-strong); background:var(--brand-soft)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Program fee ₹3,500</span>
+    </div>
+  </div>
+</header>
+
+<!-- VIDEO PREVIEW -->
+<section class="section" style="padding-top:10px" id="preview">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:0">
+      <h2>Watch how it works</h2>
+      <p>A quick look at the TenTwo internship program experience.</p>
+    </div>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/XRO6lp2OFWs"
+              title="TenTwo Technologies Internship preview"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- TRACKS -->
+<section class="section" id="tracks">
+  <div class="container">
+    <div class="section-head">
+      <h2>Program tracks</h2>
+      <p>Each track is part of the same 8-week program (₹3,500). Pick the domain that matches your goals, and every track runs online with guided tasks, reviews, and a final project.</p>
+    </div>
+
+    <div class="grid">
+
+      <!-- Each track: edit the .chip.price text to set fee or "Free" / "Stipend" -->
+
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h3>Full Stack Development</h3>
+        <p>Build complete web apps (front end, back end, and database) with a real deployment.</p>
+        <div class="track-meta"><span class="chip">8 weeks</span><span class="chip price">₹3,500</span></div> <!-- EDIT PRICE/LABEL -->
+      </div>
+
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M5 12H2M22 12h-3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div>
+        <h3>AI &amp; Machine Learning</h3>
+        <p>Train models, work with real datasets, and ship a practical ML project end to end.</p>
+        <div class="track-meta"><span class="chip">8 weeks</span><span class="chip price">₹3,500</span></div> <!-- EDIT PRICE/LABEL -->
+      </div>
+
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <h3>Data Science &amp; Analytics</h3>
+        <p>Clean, analyse, and visualise data to find insights and build dashboards that matter.</p>
+        <div class="track-meta"><span class="chip">8 weeks</span><span class="chip price">₹3,500</span></div> <!-- EDIT PRICE/LABEL -->
+      </div>
+
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Cybersecurity</h3>
+        <p>Learn security fundamentals, run hands-on labs, and practise defending real systems.</p>
+        <div class="track-meta"><span class="chip">8 weeks</span><span class="chip price">₹3,500</span></div> <!-- EDIT PRICE/LABEL -->
+      </div>
+
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg></div>
+        <h3>Mobile App Development</h3>
+        <p>Design and build cross-platform mobile apps and publish a working prototype.</p>
+        <div class="track-meta"><span class="chip">8 weeks</span><span class="chip price">₹3,500</span></div> <!-- EDIT PRICE/LABEL -->
+      </div>
+
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <h3>Software Engineering</h3>
+        <p>Practise clean code, version control, and team workflows on a structured project.</p>
+        <div class="track-meta"><span class="chip">8 weeks</span><span class="chip price">₹3,500</span></div> <!-- EDIT PRICE/LABEL -->
+      </div>
+
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div>
+        <h3>Python &amp; Automation</h3>
+        <p>Write Python scripts that automate real tasks and save hours of manual work.</p>
+        <div class="track-meta"><span class="chip">8 weeks</span><span class="chip price">₹3,500</span></div> <!-- EDIT PRICE/LABEL -->
+      </div>
+
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+        <h3>DevOps &amp; Cloud</h3>
+        <p>Work with CI/CD, containers, and cloud deployment on hands-on infrastructure tasks.</p>
+        <div class="track-meta"><span class="chip">8 weeks</span><span class="chip price">₹3,500</span></div> <!-- EDIT PRICE/LABEL -->
+      </div>
+
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18z"/><line x1="2" y1="2" x2="9.586" y2="9.586"/></svg></div>
+        <h3>UI / UX Design</h3>
+        <p>Design clean, usable interfaces, from wireframes to a polished, interactive prototype.</p>
+        <div class="track-meta"><span class="chip">8 weeks</span><span class="chip price">₹3,500</span></div> <!-- EDIT PRICE/LABEL -->
+      </div>
+
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3>QA / Software Testing</h3>
+        <p>Learn manual and automated testing and ship a real test plan for a live project.</p>
+        <div class="track-meta"><span class="chip">8 weeks</span><span class="chip price">₹3,500</span></div> <!-- EDIT PRICE/LABEL -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="section" style="padding-top:0" id="included">
+  <div class="container">
+    <div class="section-head">
+      <h2>What's included</h2>
+      <p>Everything in the ₹3,500 program fee, designed to give you real, show-it-on-your-resume experience.</p>
+    </div>
+    <div class="grid">
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+        <h3>1-on-1 mentorship</h3>
+        <p>Guidance and reviews from working engineers throughout the 8 weeks.</p>
+      </div>
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <h3>Real projects</h3>
+        <p>Hands-on tasks and a final project you can add to your portfolio.</p>
+      </div>
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3>Verified certificate</h3>
+        <p>An official completion certificate from TenTwo Technologies Pvt Ltd.</p>
+      </div>
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></div>
+        <h3>Learning resources</h3>
+        <p>Structured tasks, references, and a domain roadmap to follow.</p>
+      </div>
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Community access</h3>
+        <p>A mentor &amp; peer channel to ask questions and share progress.</p>
+      </div>
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3>Feedback &amp; review</h3>
+        <p>Your final submission is reviewed so you know where you stand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <h2>How it works</h2>
+    </div>
+    <div class="how">
+      <div class="step"><div class="n">1</div><h4>Apply online</h4><p>Fill the short application and pick your preferred domain.</p></div>
+      <div class="step"><div class="n">2</div><h4>Get onboarded</h4><p>Receive your tasks, resources, and access to the mentor channel.</p></div>
+      <div class="step"><div class="n">3</div><h4>Build &amp; submit</h4><p>Work through guided tasks and submit a final project for review.</p></div>
+      <div class="step"><div class="n">4</div><h4>Get certified</h4><p>Earn a verified completion certificate from TenTwo Technologies.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="padding-top:0" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <h2>Frequently asked questions</h2>
+      <p>Everything you need to know before you apply.</p>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Is this a paid internship with a stipend?</summary>
+        <div class="ans">No. This is a paid training program, not a stipend internship. You pay a one-time program fee of ₹3,500, and in return you get structured mentorship, real project work, reviews, and a verified certificate. We do not pay a stipend.</div>
+      </details>
+      <details>
+        <summary>Who is this program for?</summary>
+        <div class="ans">Students, final-year students, freshers, and early-career professionals who want practical, hands-on experience in a tech domain. If you want to build real projects and have something solid to show on your resume, this is for you.</div>
+      </details>
+      <details>
+        <summary>Do I need prior experience?</summary>
+        <div class="ans">No. Each track starts from the fundamentals and builds up through guided tasks. Basic familiarity with your chosen domain helps, but it is not required.</div>
+      </details>
+      <details>
+        <summary>How long is the program and how much time does it take?</summary>
+        <div class="ans">The program runs for 8 weeks. It is online and flexible, so you can work through the tasks at your own pace around college or a job. Plan for a few focused hours each week.</div>
+      </details>
+      <details>
+        <summary>What does the ₹3,500 fee cover?</summary>
+        <div class="ans">One-time fee per track. It covers 1-on-1 mentorship, learning resources, real project tasks, reviews and feedback, community access, and your completion certificate.</div>
+      </details>
+      <details>
+        <summary>Will I get a certificate?</summary>
+        <div class="ans">Yes. After you submit and complete your final project, you receive a verified completion certificate from TenTwo Technologies Private Limited.</div>
+      </details>
+      <details>
+        <summary>Is the fee refundable?</summary>
+        <div class="ans">The program fee is non-refundable. Once your spot is confirmed, your seat and resources are reserved for you. If you have any questions about the program, please email <a href="mailto:info@tentwotechnologies.com">info@tentwotechnologies.com</a> before applying.</div>
+      </details>
+      <details>
+        <summary>When does the next batch start?</summary>
+        <div class="ans">We onboard new participants regularly. Once you apply, we will email you to confirm your start date and next steps.</div>
+      </details>
+      <details>
+        <summary>How do I apply?</summary>
+        <div class="ans">Click <a href="https://www.tentwotechnologies.com/apply">Apply now</a>, fill out the short form, and choose your preferred track. We will get back to you with the next steps.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="apply">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Ready to apply?</h2>
+      <p>Spots are limited each cohort. Submit your application and we'll get back to you with next steps.</p>
+      <div class="cta-actions">
+        <a href="https://www.tentwotechnologies.com/apply" class="btn btn-primary">Apply now</a>
+        <a href="#quote" class="btn btn-ghost js-quote" data-title="Ask about the program">Have a question?</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    TenTwo Technologies Private Limited · Andhra Pradesh, Krishna, India 521333 · +91 88974 43993<br>
+    <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="services.html">Services</a> &nbsp;·&nbsp; <a href="https://www.tentwotechnologies.com">tentwotechnologies.com</a>
+  </div>
+</footer>
+
+<!-- QUOTE / CONTACT MODAL -->
+<div class="modal-overlay" id="quoteModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="qmTitle">
+    <button class="close" id="quoteClose" aria-label="Close">&times;</button>
+    <h3 id="qmTitle">Get a quote</h3>
+    <p class="sub">Share a few details and we'll get back to you, usually within a day.</p>
+    <span class="qfor" id="quoteFor"></span>
+    <form id="quoteForm" action="https://formspree.io/f/mzdwnkkn" method="POST">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="New message from tentwotechnologies.com">
+      <input type="hidden" name="service" id="quoteService" value="">
+      <label for="qname">Your name</label>
+      <input id="qname" type="text" name="name" required placeholder="e.g. Ravi Kumar">
+      <label for="qemail">Email</label>
+      <input id="qemail" type="email" name="email" required placeholder="you@example.com">
+      <label for="qphone">Phone / WhatsApp</label>
+      <input id="qphone" type="tel" name="phone" required placeholder="+91 ...">
+      <label for="qmsg">Your message</label>
+      <textarea id="qmsg" name="message" required placeholder="Tell us a bit about what you need..."></textarea>
+      <button type="submit" class="submit" id="quoteSubmit">Send</button>
+      <p class="msg" id="quoteMsg"></p>
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+  var overlay=document.getElementById('quoteModal'),
+      form=document.getElementById('quoteForm'),
+      closeBtn=document.getElementById('quoteClose'),
+      svc=document.getElementById('quoteService'),
+      qFor=document.getElementById('quoteFor'),
+      msg=document.getElementById('quoteMsg'),
+      submit=document.getElementById('quoteSubmit'),
+      title=document.getElementById('qmTitle'),
+      FALLBACK='tsriram261@gmail.com';
+
+  function open(service, ttl){
+    title.textContent = ttl || 'Get a quote';
+    if(service){ svc.value=service; qFor.textContent='Topic: '+service; qFor.style.display='inline-block'; }
+    else { svc.value=''; qFor.style.display='none'; }
+    msg.textContent=''; msg.className='msg';
+    overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  }
+  function close(){ overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+
+  document.querySelectorAll('.js-quote').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      var ttl=btn.getAttribute('data-title');
+      var explicit=btn.getAttribute('data-service');
+      var card=btn.closest('.card');
+      var h3=card ? card.querySelector('h3') : null;
+      open(explicit || (h3 ? h3.textContent.trim() : ''), ttl);
+    });
+  });
+  closeBtn.addEventListener('click', close);
+  overlay.addEventListener('click', function(e){ if(e.target===overlay) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && overlay.classList.contains('open')) close(); });
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var hp=form.querySelector('[name="_gotcha"]'); if(hp && hp.value) return;
+    if(form.action.indexOf('YOUR_FORM_ID')!==-1){
+      msg.className='msg err';
+      msg.textContent='Form not connected yet. Add your Formspree form ID to start receiving messages.';
+      return;
+    }
+    submit.disabled=true; var orig=submit.textContent; submit.textContent='Sending...';
+    msg.textContent=''; msg.className='msg';
+    try{
+      var res=await fetch(form.action,{method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}});
+      if(res.ok){
+        msg.className='msg ok'; msg.textContent='Thanks! Your message has been sent. We will get back to you soon.';
+        form.reset();
+        setTimeout(close, 2200);
+      } else {
+        msg.className='msg err'; msg.textContent='Something went wrong. Please email '+FALLBACK+' directly.';
+      }
+    }catch(err){
+      msg.className='msg err'; msg.textContent='Network error. Please email '+FALLBACK+' directly.';
+    }finally{
+      submit.disabled=false; submit.textContent=orig;
+    }
+  });
+})();
+</script>
+</body>
+</html>

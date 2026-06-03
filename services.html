@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#05080F" />
+<title>Services & Pricing · TenTwo Technologies</title>
+<meta name="description" content="Websites, software, dashboards and custom web apps for businesses. Transparent, affordable pricing from TenTwo Technologies." />
+<link rel="canonical" href="https://www.tentwotechnologies.com/services.html" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --bg:#05080F; --bg-2:#0A0F1C;
+  --glass:rgba(255,255,255,0.05); --glass-2:rgba(255,255,255,0.08);
+  --border:rgba(255,255,255,0.09); --border-strong:rgba(255,255,255,0.16);
+  --text:#E7ECF3; --text-dim:#8A93A6; --text-faint:#5B6478;
+  --brand:#2E86FF; --brand-2:#1565D8; --brand-3:#6BA8FF;
+  --brand-soft:rgba(46,134,255,0.14); --brand-glow:rgba(46,134,255,0.5);
+  --radius:18px; --radius-lg:28px; --maxw:1240px;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:'Geist',-apple-system,sans-serif;
+  line-height:1.6; -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+body::before{
+  content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(900px 600px at 80% -5%, rgba(46,134,255,0.12), transparent 60%),
+    radial-gradient(700px 500px at 0% 100%, rgba(46,134,255,0.07), transparent 55%);
+}
+.container{max-width:var(--maxw); margin:0 auto; padding:0 24px; position:relative; z-index:1}
+a{color:inherit; text-decoration:none}
+
+/* NAV */
+.nav{position:sticky; top:0; z-index:50; backdrop-filter:blur(18px); background:rgba(5,8,15,0.72); border-bottom:1px solid var(--border)}
+.nav-inner{max-width:var(--maxw); margin:0 auto; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px}
+.nav-logo{display:flex; align-items:center; gap:10px; font-weight:700; font-size:18px; letter-spacing:-0.02em}
+.nav-logo em{font-style:normal; color:var(--brand-3)}
+.nav-logo .mark{width:30px; height:30px; border-radius:9px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); display:grid; place-items:center; font-weight:800; font-size:14px; color:#fff; box-shadow:0 6px 18px var(--brand-glow)}
+.nav-links{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+.nav-links a{font-size:14px; color:var(--text-dim); padding:8px 12px; border-radius:10px; transition:.25s var(--ease)}
+.nav-links a:hover{color:var(--text); background:var(--glass)}
+.nav-cta{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff !important; padding:9px 16px !important; border-radius:11px; font-weight:600; box-shadow:0 8px 22px var(--brand-glow)}
+
+/* HERO */
+.hero{padding:84px 0 40px; text-align:center}
+.label{display:inline-block; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--brand-3); background:var(--brand-soft); border:1px solid var(--border-strong); padding:7px 14px; border-radius:999px; margin-bottom:22px}
+.hero h1{font-size:clamp(34px,6vw,62px); line-height:1.04; letter-spacing:-0.03em; font-weight:700}
+.hero h1 .ser{font-family:'Instrument Serif',serif; font-style:italic; font-weight:400; color:var(--brand-3)}
+.hero p{max-width:620px; margin:22px auto 0; color:var(--text-dim); font-size:clamp(16px,2.2vw,19px)}
+
+/* POSTER */
+.poster-wrap{margin:46px auto 0; max-width:560px; padding:0 24px}
+.poster{width:100%; border-radius:var(--radius-lg); border:1px solid var(--border-strong); box-shadow:0 30px 80px rgba(0,0,0,0.5); display:block}
+
+/* PRICING */
+.section{padding:70px 0}
+.section-head{text-align:center; max-width:680px; margin:0 auto 48px}
+.section-head h2{font-size:clamp(26px,4vw,40px); letter-spacing:-0.025em; line-height:1.1}
+.section-head p{color:var(--text-dim); margin-top:14px; font-size:16px}
+
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:22px}
+.card{
+  background:linear-gradient(180deg,var(--glass-2),var(--glass));
+  border:1px solid var(--border); border-radius:var(--radius-lg);
+  padding:30px 28px; display:flex; flex-direction:column;
+  transition:.4s var(--ease); position:relative; overflow:hidden;
+}
+.card::before{content:''; position:absolute; pointer-events:none; inset:0; border-radius:inherit; padding:1px; background:linear-gradient(135deg,var(--brand-glow),transparent 40%); -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0); -webkit-mask-composite:xor; mask-composite:exclude; opacity:0; transition:.4s var(--ease)}
+.card:hover{transform:translateY(-6px); border-color:var(--border-strong); box-shadow:0 24px 60px rgba(0,0,0,0.45)}
+.card:hover::before{opacity:1}
+.card.featured{border-color:var(--border-strong); background:linear-gradient(180deg,rgba(46,134,255,0.13),var(--glass))}
+.card-icon{width:50px; height:50px; border-radius:14px; background:var(--brand-soft); border:1px solid var(--border-strong); display:grid; place-items:center; color:var(--brand-3); margin-bottom:18px}
+.card h3{font-size:20px; letter-spacing:-0.02em}
+.card .desc{color:var(--text-dim); font-size:14.5px; margin-top:10px; flex:1}
+.price{display:flex; align-items:baseline; gap:6px; margin:22px 0 4px}
+.price .from{font-size:12px; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.08em}
+.price .amt{font-size:30px; font-weight:700; letter-spacing:-0.02em; color:var(--text)}
+.price .unit{font-size:13px; color:var(--text-dim)}
+.feat{list-style:none; margin:16px 0 0; display:flex; flex-direction:column; gap:9px}
+.feat li{font-size:13.5px; color:var(--text-dim); display:flex; gap:9px; align-items:flex-start}
+.feat li svg{flex-shrink:0; margin-top:3px; color:var(--brand-3)}
+.card-btn{margin-top:24px; text-align:center; padding:12px; border-radius:12px; border:1px solid var(--border-strong); font-weight:600; font-size:14px; color:var(--text); transition:.3s var(--ease)}
+.card-btn:hover{background:var(--glass-2)}
+.card.featured .card-btn{background:linear-gradient(135deg,var(--brand),var(--brand-2)); border:none; color:#fff; box-shadow:0 10px 26px var(--brand-glow)}
+
+.tag{position:absolute; top:18px; right:18px; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff; padding:5px 11px; border-radius:999px; font-weight:600}
+
+.note{text-align:center; color:var(--text-faint); font-size:13px; margin-top:34px; max-width:640px; margin-left:auto; margin-right:auto}
+
+/* CTA */
+.cta{margin:30px 0 80px}
+.cta-box{background:linear-gradient(135deg,rgba(46,134,255,0.16),var(--glass)); border:1px solid var(--border-strong); border-radius:var(--radius-lg); padding:clamp(34px,5vw,60px); text-align:center}
+.cta-box h2{font-size:clamp(26px,4vw,40px); letter-spacing:-0.025em; line-height:1.1}
+.cta-box p{color:var(--text-dim); margin:14px auto 0; max-width:520px}
+.cta-actions{margin-top:30px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
+.btn{padding:13px 24px; border-radius:13px; font-weight:600; font-size:15px; transition:.3s var(--ease); display:inline-flex; align-items:center; gap:9px}
+.btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff; box-shadow:0 12px 30px var(--brand-glow)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--border-strong); color:var(--text)}
+.btn-ghost:hover{background:var(--glass-2)}
+
+/* FOOTER */
+.footer{border-top:1px solid var(--border); padding:34px 0; text-align:center; color:var(--text-faint); font-size:13.5px}
+.footer a{color:var(--text-dim)}
+.footer a:hover{color:var(--brand-3)}
+
+@media(max-width:640px){
+  .nav-links{display:none}
+  .hero{padding:54px 0 30px}
+}
+/* QUOTE MODAL */
+.modal-overlay{position:fixed; inset:0; background:rgba(2,4,10,0.72); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); display:none; align-items:center; justify-content:center; padding:20px; z-index:1000}
+.modal-overlay.open{display:flex}
+.modal{background:linear-gradient(180deg,var(--bg-2),var(--bg)); border:1px solid var(--border-strong); border-radius:var(--radius-lg); width:100%; max-width:480px; padding:30px; position:relative; box-shadow:0 40px 100px rgba(0,0,0,0.6)}
+.modal h3{font-size:22px; letter-spacing:-0.02em}
+.modal .sub{color:var(--text-dim); font-size:14px; margin-top:6px; line-height:1.5}
+.modal .qfor{display:none; margin-top:12px; font-size:12px; color:var(--brand-3); background:var(--brand-soft); border:1px solid var(--border-strong); padding:5px 12px; border-radius:999px}
+.modal form{margin-top:18px; display:flex; flex-direction:column; gap:11px}
+.modal label{font-size:12px; color:var(--text-dim); margin-bottom:-5px}
+.modal input,.modal textarea{width:100%; box-sizing:border-box; background:var(--glass); border:1px solid var(--border); border-radius:12px; padding:12px 14px; color:var(--text); font:inherit; font-size:14px; outline:none; transition:border-color .2s}
+.modal input:focus,.modal textarea:focus{border-color:var(--brand)}
+.modal textarea{resize:vertical; min-height:92px}
+.modal .submit{margin-top:6px; padding:14px; border-radius:12px; border:none; cursor:pointer; font:inherit; font-weight:600; font-size:15px; color:#fff; background:linear-gradient(135deg,var(--brand),var(--brand-2)); box-shadow:0 10px 26px var(--brand-glow); transition:.2s}
+.modal .submit:hover{filter:brightness(1.08)}
+.modal .submit:disabled{opacity:.6; cursor:wait}
+.modal .close{position:absolute; top:14px; right:14px; width:34px; height:34px; border-radius:50%; border:1px solid var(--border); background:var(--glass); color:var(--text-dim); cursor:pointer; font-size:20px; line-height:1; display:flex; align-items:center; justify-content:center}
+.modal .close:hover{color:var(--text); background:var(--glass-2)}
+.modal .msg{font-size:13.5px; margin-top:2px; min-height:18px}
+.modal .msg.ok{color:#34d399}
+.modal .msg.err{color:#f87171}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="mark">TT</span><span>Ten<em>Two</em></span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="internships.html">Internship Program</a>
+    </div>
+    <a href="#quote" class="nav-cta js-quote">Get a quote</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <span class="label">Services &amp; Pricing</span>
+    <h1>We build websites, software<br>&amp; <span class="ser">dashboards.</span></h1>
+    <p>Affordable, production-grade digital solutions for businesses. Clear scope, clear pricing, no surprises.</p>
+  </div>
+</header>
+
+<!-- STARTER / SMALL PROJECTS -->
+<section class="section" id="starter">
+  <div class="container">
+    <div class="section-head">
+      <h2>Starter &amp; small projects</h2>
+      <p>Quick, affordable options for individuals and small businesses who need to get online fast.</p>
+    </div>
+
+    <div class="grid">
+
+      <!-- ============ BASIC BUSINESS WEBSITE ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3>Basic Business Website</h3>
+        <p class="desc">A clean one-page website showing your business details: what you do, contact info, hours, and location. Perfect to get your business online.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹3,000</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Single-page, mobile-friendly</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Contact, hours &amp; map</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+      <!-- ============ PORTFOLIO WEBSITE ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        </div>
+        <h3>Portfolio Website</h3>
+        <p class="desc">A personal portfolio to showcase your work, projects, or skills. Great for freelancers, students, and creators.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹5,000</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Showcase projects &amp; skills</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Links to resume &amp; socials</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+      <!-- ============ LANDING PAGE ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Landing Page</h3>
+        <p class="desc">A single, focused page for a product, event, or campaign, built to grab attention and drive sign-ups or calls.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹4,000</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>One high-impact page</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Call-to-action &amp; form</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+      <!-- ============ DIGITAL VISITING CARD ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M15 8h4M15 12h4M5 16h14"/></svg>
+        </div>
+        <h3>Digital Visiting Card</h3>
+        <p class="desc">A shareable one-link card with your photo, contact details, and social links. Send it on WhatsApp or add a QR code.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹2,000</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>One shareable link + QR</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Click-to-call &amp; WhatsApp</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+      <!-- ============ RESUME / CV WEBSITE ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>
+        </div>
+        <h3>Resume / CV Website</h3>
+        <p class="desc">Your resume as a clean online page you can share with one link. Easier to send and looks far more professional than a PDF.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹2,500</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Shareable online resume</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>PDF download option</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+      <!-- ============ WEBSITE EDITS & FIXES ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Website Edits &amp; Fixes</h3>
+        <p class="desc">Quick changes to an existing website: update text, images, or details, or fix small issues. Great for one-off jobs.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹1,000</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Content &amp; image updates</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Small bug fixes</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <h2>What we offer</h2>
+      <p>Each project starts with a free scoping call. Final price depends on features, integrations, and timeline.</p>
+    </div>
+
+    <div class="grid">
+
+      <!-- ============ WEBSITES ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+        </div>
+        <h3>Websites</h3>
+        <p class="desc">Fast, responsive, SEO-ready websites: portfolios, landing pages, and business sites that look sharp on every device.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹15,000</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Up to 5 pages, mobile-first</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Contact form &amp; basic SEO</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Hosting &amp; domain guidance</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+      <!-- ============ SOFTWARE DEVELOPMENT ============ -->
+      <div class="card featured">
+        <span class="tag">Popular</span>
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h3>Software Development</h3>
+        <p class="desc">Custom software built end to end: internal tools, automation, and customer-facing products on modern, maintainable stacks.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹50,000</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Tailored to your workflow</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>API &amp; third-party integrations</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Documentation &amp; support</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Start a project</a>
+      </div>
+
+      <!-- ============ DASHBOARDS ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <h3>Dashboards</h3>
+        <p class="desc">Real-time dashboards and reporting portals that turn your data into decisions, with clean charts, filters, and exports.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹40,000</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Live data &amp; charts</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Role-based access</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>CSV / report exports</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+      <!-- ============ CUSTOM WEB APPS ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="2" y1="8" x2="22" y2="8"/><line x1="6" y1="6" x2="6.01" y2="6"/></svg>
+        </div>
+        <h3>Custom Web Apps</h3>
+        <p class="desc">Full-featured web applications with logins, databases, and dashboards, built to scale with your business.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹75,000</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>User accounts &amp; auth</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Database &amp; cloud hosting</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Scalable architecture</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+      <!-- ============ BUSINESS SOLUTIONS ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3>Business Solutions</h3>
+        <p class="desc">End-to-end digital solutions that combine websites, software, and dashboards into one system tailored to your business.</p>
+        <div class="price"><span class="from">Custom</span><span class="amt">Let's talk</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Multiple products combined</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Dedicated project support</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Priced to your scope</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Talk to us</a>
+      </div>
+
+      <!-- ============ MOBILE APP DEVELOPMENT ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+        </div>
+        <h3>Mobile App Development</h3>
+        <p class="desc">Android &amp; iOS apps built from a single codebase, with clean design, smooth performance, and store-ready delivery.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹60,000</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Android &amp; iOS</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Play Store / App Store help</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Push notifications</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+      <!-- ============ AI & AUTOMATION ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M5 12H2M22 12h-3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>
+        </div>
+        <h3>AI &amp; Automation</h3>
+        <p class="desc">Chatbots, AI assistants, and workflow automation that save your team hours, built around what your business actually does.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹45,000</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>AI chatbots &amp; assistants</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Document &amp; data automation</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Integrates with your tools</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+      <!-- ============ E-COMMERCE / ONLINE STORE ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        </div>
+        <h3>E-commerce / Online Store</h3>
+        <p class="desc">Online stores with product catalogues, carts, and secure payments, ready to start selling from day one.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹35,000</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Product catalogue &amp; cart</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Payment gateway setup</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Order &amp; inventory tracking</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+      <!-- ============ API & INTEGRATIONS ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        </div>
+        <h3>API &amp; Integrations</h3>
+        <p class="desc">Connect your tools and systems (payment, CRM, WhatsApp, maps, and more) into one smooth workflow.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹20,000</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Third-party API setup</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>WhatsApp, payments, CRM</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Custom REST APIs</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+      <!-- ============ CLOUD & DEVOPS ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+        </div>
+        <h3>Cloud Setup &amp; DevOps</h3>
+        <p class="desc">Deploy, host, and scale your apps on the cloud with automated pipelines, backups, and monitoring.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹25,000</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>AWS / cloud deployment</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>CI/CD &amp; auto-deploys</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Backups &amp; monitoring</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+      <!-- ============ UI/UX DESIGN ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18z"/><line x1="2" y1="2" x2="9.586" y2="9.586"/></svg>
+        </div>
+        <h3>UI / UX Design</h3>
+        <p class="desc">Clean, modern interface design, from wireframes to polished, interactive prototypes your users will love.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹18,000</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Wireframes &amp; prototypes</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Brand-consistent design</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Figma handoff</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+      <!-- ============ MAINTENANCE & SUPPORT ============ -->
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Maintenance &amp; Support</h3>
+        <p class="desc">Keep your website or app fast, secure, and up to date with ongoing updates, fixes, and priority support.</p>
+        <div class="price"><span class="from">From</span><span class="amt">₹3,000</span><span class="unit">/ month</span></div> <!-- EDIT PRICE -->
+        <ul class="feat">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Updates &amp; bug fixes</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Security &amp; backups</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Priority response</li>
+        </ul>
+        <a href="#quote" class="card-btn js-quote">Get a quote</a>
+      </div>
+
+    </div>
+
+    <p class="note">Prices shown are starting points and may vary based on features, scope, and timeline. Every quote is confirmed in writing before any work begins.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Have a project in mind?</h2>
+      <p>Tell us what you need and we'll send a clear quote and timeline, usually within a day.</p>
+      <div class="cta-actions">
+        <a href="#quote" class="btn btn-primary js-quote">Get a quote</a>
+        <a href="tel:+919059291261" class="btn btn-ghost">+91 90592 91261</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    TenTwo Technologies Private Limited · Andhra Pradesh, Krishna, India 521333<br>
+    <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="internships.html">Internship Program</a> &nbsp;·&nbsp; <a href="https://www.tentwotechnologies.com">tentwotechnologies.com</a>
+  </div>
+</footer>
+
+<!-- QUOTE MODAL -->
+<div class="modal-overlay" id="quoteModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="qmTitle">
+    <button class="close" id="quoteClose" aria-label="Close">&times;</button>
+    <h3 id="qmTitle">Get a quote</h3>
+    <p class="sub">Share a few details and we'll get back to you with a clear quote and timeline, usually within a day.</p>
+    <span class="qfor" id="quoteFor"></span>
+    <form id="quoteForm" action="https://formspree.io/f/mzdwnkkn" method="POST">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="New quote request from tentwotechnologies.com">
+      <input type="hidden" name="service" id="quoteService" value="">
+      <label for="qname">Your name</label>
+      <input id="qname" type="text" name="name" required placeholder="e.g. Ravi Kumar">
+      <label for="qemail">Email</label>
+      <input id="qemail" type="email" name="email" required placeholder="you@example.com">
+      <label for="qphone">Phone / WhatsApp</label>
+      <input id="qphone" type="tel" name="phone" required placeholder="+91 ...">
+      <label for="qmsg">About your project</label>
+      <textarea id="qmsg" name="message" required placeholder="A short description of what you need..."></textarea>
+      <button type="submit" class="submit" id="quoteSubmit">Send request</button>
+      <p class="msg" id="quoteMsg"></p>
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+  var overlay=document.getElementById('quoteModal'),
+      form=document.getElementById('quoteForm'),
+      closeBtn=document.getElementById('quoteClose'),
+      svc=document.getElementById('quoteService'),
+      qFor=document.getElementById('quoteFor'),
+      msg=document.getElementById('quoteMsg'),
+      submit=document.getElementById('quoteSubmit'),
+      title=document.getElementById('qmTitle'),
+      FALLBACK='tsriram261@gmail.com';
+
+  function open(service, ttl){
+    title.textContent = ttl || 'Get a quote';
+    if(service){ svc.value=service; qFor.textContent='Service: '+service; qFor.style.display='inline-block'; }
+    else { svc.value=''; qFor.style.display='none'; }
+    msg.textContent=''; msg.className='msg';
+    overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  }
+  function close(){ overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+
+  document.querySelectorAll('.js-quote').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      var ttl=btn.getAttribute('data-title');
+      var explicit=btn.getAttribute('data-service');
+      var card=btn.closest('.card');
+      var h3=card ? card.querySelector('h3') : null;
+      open(explicit || (h3 ? h3.textContent.trim() : ''), ttl);
+    });
+  });
+  closeBtn.addEventListener('click', close);
+  overlay.addEventListener('click', function(e){ if(e.target===overlay) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && overlay.classList.contains('open')) close(); });
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var hp=form.querySelector('[name="_gotcha"]'); if(hp && hp.value) return;
+    if(form.action.indexOf('YOUR_FORM_ID')!==-1){
+      msg.className='msg err';
+      msg.textContent='Form not connected yet. Add your Formspree form ID to start receiving requests.';
+      return;
+    }
+    submit.disabled=true; var orig=submit.textContent; submit.textContent='Sending...';
+    msg.textContent=''; msg.className='msg';
+    try{
+      var res=await fetch(form.action,{method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}});
+      if(res.ok){
+        msg.className='msg ok'; msg.textContent='Thanks! Your request has been sent. We will get back to you soon.';
+        form.reset();
+        setTimeout(close, 2200);
+      } else {
+        msg.className='msg err'; msg.textContent='Something went wrong. Please email '+FALLBACK+' directly.';
+      }
+    }catch(err){
+      msg.className='msg err'; msg.textContent='Network error. Please email '+FALLBACK+' directly.';
+    }finally{
+      submit.disabled=false; submit.textContent=orig;
+    }
+  });
+})();
+</script>
+</body>
+</html>
