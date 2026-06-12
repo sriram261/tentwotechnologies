@@ -118,6 +118,9 @@ a{color:inherit; text-decoration:none}
   .nav-links{display:none}
   .hero{padding:54px 0 30px}
 }
+/* VIDEO PREVIEW */
+.video-wrap{max-width:330px; margin:40px auto 0; aspect-ratio:9/16; border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border-strong); box-shadow:0 30px 80px rgba(0,0,0,0.5); background:#000}
+.video-wrap iframe{width:100%; height:100%; border:0; display:block}
 /* QUOTE MODAL */
 .modal-overlay{position:fixed; inset:0; background:rgba(2,4,10,0.72); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); display:none; align-items:center; justify-content:center; padding:20px; z-index:1000}
 .modal-overlay.open{display:flex}
@@ -162,6 +165,23 @@ a{color:inherit; text-decoration:none}
     <p>Affordable, production-grade digital solutions for businesses. Clear scope, clear pricing, no surprises.</p>
   </div>
 </header>
+
+<!-- VIDEO PREVIEW -->
+<section class="section" style="padding-top:10px" id="preview">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:0">
+      <h2>Watch what we build</h2>
+      <p>A quick look at what TenTwo Technologies delivers for clients.</p>
+    </div>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/MZUxOfK_6gk"
+              title="TenTwo Technologies Services preview"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
 
 <!-- STARTER / SMALL PROJECTS -->
 <section class="section" id="starter">
