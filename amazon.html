@@ -162,6 +162,54 @@ h1,h2,h3,h4{font-weight:500;letter-spacing:-0.025em;line-height:1.05;color:var(-
 .launch-panel strong{font-size:17px;color:var(--text)}
 .launch-panel span{display:block;color:var(--text-dim);font-size:14px;margin-top:4px}
 
+
+/* page intro */
+.page-intro-section{padding:80px 0 70px}
+.page-intro-card{position:relative;overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;padding:42px 46px;border-radius:var(--radius-xl);background:linear-gradient(135deg,rgba(28,74,44,0.22),rgba(255,255,255,0.04));border:1px solid rgba(200,168,75,0.18);box-shadow:var(--glass-shadow),inset 0 1px 0 rgba(255,255,255,0.07)}
+.page-intro-card::before{content:'';position:absolute;right:-120px;top:-140px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(200,168,75,0.16),transparent 68%);pointer-events:none}
+.page-intro-card h2{font-size:clamp(30px,3.5vw,48px);margin:14px 0 16px}
+.page-intro-card p{color:var(--text-dim);font-size:16px;line-height:1.65;margin-bottom:14px;max-width:720px}
+.page-intro-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative;z-index:1}
+.page-intro-point{padding:16px;border-radius:var(--radius);background:rgba(255,255,255,0.055);border:1px solid var(--border);transition:all .3s var(--ease)}
+.page-intro-point:hover{transform:translateY(-3px);background:rgba(255,255,255,0.075);border-color:rgba(200,168,75,0.22)}
+.page-intro-point strong{display:block;font-size:14px;color:var(--text);margin-bottom:4px}
+.page-intro-point span{display:block;font-size:12px;color:var(--text-dim);line-height:1.45}
+/* product preview */
+.product-preview-section{padding:80px 0 70px}
+.product-preview-header{text-align:center;max-width:720px;margin:0 auto 48px}
+.product-preview-header h2{font-size:clamp(34px,4vw,54px);margin:16px 0 14px}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.product-card{position:relative;overflow:hidden;min-height:320px;padding:22px;border-radius:var(--radius-lg);background:linear-gradient(180deg,rgba(255,255,255,0.075),rgba(255,255,255,0.035));border:1px solid rgba(255,255,255,0.11);box-shadow:0 18px 44px rgba(0,0,0,0.22),inset 0 1px 0 rgba(255,255,255,0.06);transition:all .35s var(--ease);display:flex;flex-direction:column}
+.product-card:hover{transform:translateY(-5px);border-color:rgba(200,168,75,0.28);background:linear-gradient(180deg,rgba(255,255,255,0.10),rgba(255,255,255,0.045))}
+.product-placeholder{height:132px;border-radius:20px;background:radial-gradient(circle at 30% 20%,rgba(242,217,138,0.24),transparent 45%),linear-gradient(135deg,rgba(28,74,44,0.55),rgba(200,168,75,0.11));border:1px solid rgba(200,168,75,0.20);display:flex;align-items:center;justify-content:center;font-size:46px;margin-bottom:18px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.08)}
+.product-badge{position:absolute;top:14px;right:14px;padding:5px 10px;border-radius:100px;background:rgba(200,168,75,0.14);border:1px solid rgba(200,168,75,0.24);font-family:'Geist Mono',monospace;font-size:10px;color:var(--tb-gold-light);letter-spacing:.05em;text-transform:uppercase}
+.product-card h3{font-size:18px;margin-bottom:8px}
+.product-card p{font-size:13px;color:var(--text-dim);line-height:1.55;margin-bottom:16px;flex:1}
+.product-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.product-chip{font-family:'Geist Mono',monospace;font-size:10px;color:var(--text-dim);padding:5px 9px;border-radius:100px;background:rgba(255,255,255,0.05);border:1px solid var(--border)}
+.product-actions{display:flex;gap:8px;flex-wrap:wrap}
+.product-actions .btn{padding:10px 14px;font-size:12px}
+/* calculator presets */
+.calc-presets{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;padding-bottom:22px;border-bottom:1px solid var(--border)}
+.preset-btn{padding:9px 14px;border-radius:100px;background:rgba(255,255,255,0.055);border:1px solid var(--border);font-size:12px;font-weight:600;color:var(--text-dim);transition:all .25s var(--ease)}
+.preset-btn:hover,.preset-btn.active{color:#0A0F1C;background:linear-gradient(135deg,var(--tb-gold),var(--tb-gold-mid));border-color:rgba(200,168,75,0.4);transform:translateY(-1px)}
+.calc-note{margin-top:18px;font-size:12px;color:var(--text-faint);line-height:1.55;padding:13px 15px;border-radius:var(--radius);background:rgba(255,255,255,0.035);border:1px solid var(--border)}
+/* faq */
+.faq-section{padding:90px 0 70px}
+.faq-header{text-align:center;max-width:700px;margin:0 auto 46px}
+.faq-header h2{font-size:clamp(32px,4vw,50px);margin:16px 0 14px}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.faq-item{padding:24px;border-radius:var(--radius-lg);background:rgba(255,255,255,0.055);border:1px solid var(--border);transition:all .3s var(--ease)}
+.faq-item:hover{transform:translateY(-3px);background:rgba(255,255,255,0.075);border-color:rgba(200,168,75,0.22)}
+.faq-item h3{font-size:16px;margin-bottom:9px}
+.faq-item p{font-size:13px;color:var(--text-dim);line-height:1.6}
+.final-cta-section{padding:70px 0 110px}
+.final-cta-card{position:relative;overflow:hidden;text-align:center;padding:58px 36px;border-radius:var(--radius-xl);background:linear-gradient(135deg,rgba(200,168,75,0.14),rgba(28,74,44,0.20));border:1px solid rgba(200,168,75,0.24);box-shadow:var(--glass-shadow)}
+.final-cta-card::before{content:'';position:absolute;left:50%;top:-180px;transform:translateX(-50%);width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(200,168,75,0.14),transparent 66%);pointer-events:none}
+.final-cta-card h2{font-size:clamp(32px,4vw,54px);margin:0 auto 14px;max-width:760px}
+.final-cta-card p{color:var(--text-dim);font-size:16px;line-height:1.6;max-width:620px;margin:0 auto 28px}
+.final-cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
 /* calculator */
 .calc-section{padding:100px 0}
 .calc-section-header{text-align:center;max-width:680px;margin:0 auto 60px}
@@ -244,7 +292,9 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .footer-links a:hover{color:var(--text)}
 /* responsive */
 @media(max-width:900px){
-  .brand-story-grid,.support-grid,.process-steps,.why-grid,.seller-card{grid-template-columns:1fr}
+  .brand-story-grid,.page-intro-card,.support-grid,.process-steps,.why-grid,.seller-card,.faq-grid{grid-template-columns:1fr}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .page-intro-points{grid-template-columns:1fr}
   .amazon-cta-card{grid-template-columns:1fr}
   .calc-grid{grid-template-columns:1fr}
   .hero-shard{display:none}
@@ -255,9 +305,9 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 }
 @media(max-width:640px){
   .hero{padding:104px 0 62px;min-height:auto}
-  .brand-story,.support-section,.calc-section,.process-section,.why-section,.seller-section{padding:60px 0}
+  .brand-story,.page-intro-section,.product-preview-section,.support-section,.calc-section,.process-section,.why-section,.faq-section,.seller-section,.final-cta-section{padding:60px 0}
   .process-steps{grid-template-columns:1fr}
-  .why-grid,.support-grid{grid-template-columns:1fr}
+  .why-grid,.support-grid,.product-grid{grid-template-columns:1fr}
   .hero-stats{flex-direction:column}
   .hero-stat{border-right:none;border-bottom:1px solid var(--border)}
   .hero-stat:last-child{border-bottom:none}
@@ -268,7 +318,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   .hero-brand-logo{width:56px;height:56px;font-size:24px}
   .amazon-cta-card,.seller-card{padding:34px 22px}
   .amazon-logo-badge{width:88px;height:88px;font-size:40px}
-  .hero-actions .btn,.amazon-cta-card .btn,.seller-card .btn,.launch-panel .btn{width:100%;justify-content:center}
+  .hero-actions .btn,.amazon-cta-card .btn,.seller-card .btn,.launch-panel .btn,.product-actions .btn,.final-cta-actions .btn{width:100%;justify-content:center}
   .hero-actions{align-items:stretch}
 }
 </style>
@@ -397,6 +447,84 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   </div>
 </div>
 
+
+<!-- WHAT THIS PAGE IS ABOUT -->
+<section class="page-intro-section" id="overview">
+  <div class="container">
+    <div class="page-intro-card reveal">
+      <div>
+        <div class="section-label">What this page is</div>
+        <h2>Our Amazon brand, plus product launch support</h2>
+        <p>Tuberose &amp; Co. is a TenTwo Technologies brand focused on practical daily-life products for Amazon India.</p>
+        <p>This page also shows how we help sellers and founders validate product ideas, understand GST and Amazon fees, and make better launch decisions before investing in inventory.</p>
+      </div>
+      <div class="page-intro-points">
+        <div class="page-intro-point">
+          <strong>For customers</strong>
+          <span>Discover Tuberose &amp; Co. products and future product categories.</span>
+        </div>
+        <div class="page-intro-point">
+          <strong>For sellers</strong>
+          <span>Use research, pricing, and profit planning before launching on Amazon.</span>
+        </div>
+        <div class="page-intro-point">
+          <strong>For founders</strong>
+          <span>Validate product ideas before spending money on stock and packaging.</span>
+        </div>
+        <div class="page-intro-point">
+          <strong>For our brand</strong>
+          <span>Track product direction, launch strategy, and customer feedback.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT PREVIEW CARDS -->
+<section class="product-preview-section" id="products">
+  <div class="container">
+    <div class="product-preview-header reveal">
+      <div class="section-label">Product previews</div>
+      <h2>No photos yet? Still show the product direction clearly.</h2>
+      <p class="section-sub" style="margin:0 auto">These cards use clean placeholders now. Later, real product images can be added without changing the full page layout.</p>
+    </div>
+    <div class="product-grid">
+      <div class="product-card reveal">
+        <div class="product-badge">Focus</div>
+        <div class="product-placeholder">💍</div>
+        <h3>Imitation Jewellery</h3>
+        <p>Affordable daily-wear accessories with careful pricing, low-weight shipping, and strong style positioning.</p>
+        <div class="product-meta"><span class="product-chip">GST 3%</span><span class="product-chip">Low weight</span><span class="product-chip">Amazon India</span></div>
+        <div class="product-actions"><a class="btn btn-primary" href="#calculator">Calculate profit</a></div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-badge">Planned</div>
+        <div class="product-placeholder">🏠</div>
+        <h3>Home Essentials</h3>
+        <p>Simple daily-use home products that can be judged by demand, repeat usage, and competitor gaps.</p>
+        <div class="product-meta"><span class="product-chip">Daily use</span><span class="product-chip">Research needed</span></div>
+        <div class="product-actions"><a class="btn btn-ghost" href="mailto:info@tentwotechnologies.com?subject=Home%20Essentials%20Product%20Research">Review idea</a></div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-badge">Planned</div>
+        <div class="product-placeholder">🍽️</div>
+        <h3>Kitchen Utility</h3>
+        <p>Useful kitchen products where price, packaging, material, and reviews matter before ordering inventory.</p>
+        <div class="product-meta"><span class="product-chip">Utility</span><span class="product-chip">Packaging</span></div>
+        <div class="product-actions"><a class="btn btn-ghost" href="#support">See support</a></div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-badge">Research</div>
+        <div class="product-placeholder">✨</div>
+        <h3>Beauty &amp; Personal Care</h3>
+        <p>Product ideas can be screened for demand, compliance, returns, pricing, and differentiation before launch.</p>
+        <div class="product-meta"><span class="product-chip">Demand check</span><span class="product-chip">Validation</span></div>
+        <div class="product-actions"><a class="btn btn-ghost" href="#contact">Start research</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- AMAZON SUPPORT SERVICES -->
 <section class="support-section" id="support">
   <div class="container">
@@ -493,71 +621,117 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
     <div class="calc-section-header reveal">
       <div class="section-label">Product economics</div>
       <h2>Amazon seller profit calculator</h2>
-      <p class="section-sub" style="margin:0 auto">Model your unit economics before sourcing. Adjust pricing and costs to see your real margin after all Amazon fees.</p>
+      <p class="section-sub" style="margin:0 auto">Model Amazon India unit economics for imitation / fashion jewellery with GST, referral fee, closing fee, shipping/FBA, ads, packaging, and return buffer included. Defaults are set for low-priced imitation jewellery, but final Amazon fees should be verified in Seller Central.</p>
     </div>
     <div class="calc-card reveal">
+      <div class="calc-presets" aria-label="Calculator presets">
+        <button type="button" class="preset-btn active" onclick="setPreset('jewellery',this)">Imitation jewellery</button>
+        <button type="button" class="preset-btn" onclick="setPreset('home',this)">Home &amp; kitchen</button>
+        <button type="button" class="preset-btn" onclick="setPreset('beauty',this)">Beauty / personal care</button>
+        <button type="button" class="preset-btn" onclick="setPreset('generic',this)">Generic product</button>
+      </div>
       <div class="calc-grid">
         <div class="calc-inputs">
           <div class="calc-field">
-            <div class="calc-field-label">MRP &mdash; selling price <span class="cur-val" id="lbl-mrp">&#x20B9;499</span></div>
-            <input type="range" min="150" max="1500" step="10" value="499" id="sl-mrp" oninput="calc()">
+            <div class="calc-field-label">Customer selling price incl. GST <span class="cur-val" id="lbl-mrp">&#x20B9;300</span></div>
+            <input type="range" min="50" max="2000" step="1" value="300" id="sl-mrp" oninput="calc()">
           </div>
           <div class="calc-field">
-            <div class="calc-field-label">Unit cost (COGS) <span class="cur-val" id="lbl-cogs">&#x20B9;120</span></div>
-            <input type="range" min="30" max="600" step="5" value="120" id="sl-cogs" oninput="calc()">
+            <div class="calc-field-label">Product GST rate <span class="cur-val" id="lbl-gst-rate">3%</span></div>
+            <input type="range" min="0" max="28" step="1" value="3" id="sl-gst-rate" oninput="calc()">
           </div>
           <div class="calc-field">
-            <div class="calc-field-label">Amazon referral fee % <span class="cur-val" id="lbl-ref">10%</span></div>
-            <input type="range" min="5" max="18" step="1" value="10" id="sl-ref" oninput="calc()">
+            <div class="calc-field-label">Purchase cost incl. GST <span class="cur-val" id="lbl-cogs">&#x20B9;65</span></div>
+            <input type="range" min="1" max="1000" step="1" value="65" id="sl-cogs" oninput="calc()">
           </div>
           <div class="calc-field">
-            <div class="calc-field-label">FBA fulfil fee (&#x20B9;) <span class="cur-val" id="lbl-fba">&#x20B9;60</span></div>
-            <input type="range" min="30" max="200" step="5" value="60" id="sl-fba" oninput="calc()">
+            <div class="calc-field-label">Amazon referral fee % <small style="color:var(--text-faint);font-size:11px;">fashion jewellery</small> <span class="cur-val" id="lbl-ref">0%</span></div>
+            <input type="range" min="0" max="25" step="0.5" value="0" id="sl-ref" oninput="calc()">
           </div>
           <div class="calc-field">
-            <div class="calc-field-label">Ad spend per unit (&#x20B9;) <span class="cur-val" id="lbl-ads">&#x20B9;30</span></div>
-            <input type="range" min="0" max="150" step="5" value="30" id="sl-ads" oninput="calc()">
+            <div class="calc-field-label">Amazon closing fee <span class="cur-val" id="lbl-closing">&#x20B9;13</span></div>
+            <input type="range" min="0" max="120" step="1" value="13" id="sl-closing" oninput="calc()">
           </div>
           <div class="calc-field">
-            <div class="calc-field-label">Packaging cost (&#x20B9;) <span class="cur-val" id="lbl-pack">&#x20B9;20</span></div>
-            <input type="range" min="5" max="80" step="5" value="20" id="sl-pack" oninput="calc()">
+            <div class="calc-field-label">FBA / shipping fee before GST <span class="cur-val" id="lbl-fba">&#x20B9;55</span></div>
+            <input type="range" min="0" max="300" step="1" value="55" id="sl-fba" oninput="calc()">
+          </div>
+          <div class="calc-field">
+            <div class="calc-field-label">Ad spend per unit incl. GST <span class="cur-val" id="lbl-ads">&#x20B9;30</span></div>
+            <input type="range" min="0" max="300" step="1" value="30" id="sl-ads" oninput="calc()">
+          </div>
+          <div class="calc-field">
+            <div class="calc-field-label">Packaging cost incl. GST <span class="cur-val" id="lbl-pack">&#x20B9;10</span></div>
+            <input type="range" min="0" max="150" step="1" value="10" id="sl-pack" oninput="calc()">
+          </div>
+          <div class="calc-field">
+            <div class="calc-field-label">Returns / damage buffer <span class="cur-val" id="lbl-return">5%</span></div>
+            <input type="range" min="0" max="20" step="1" value="5" id="sl-return" oninput="calc()">
+          </div>
+          <div style="font-size:12px;color:var(--text-faint);line-height:1.5;padding:12px 14px;border:1px solid var(--border);border-radius:var(--radius);background:rgba(255,255,255,0.035);">
+            Defaults used: imitation jewellery GST 3%, fashion jewellery referral 0% up to &#x20B9;1,000, and &#x20B9;13 closing fee for the &#x20B9;0-300 FC slab. Adjust shipping/FBA and closing fee from your Seller Central fee preview.
           </div>
         </div>
         <div class="calc-results">
           <div class="calc-result-row">
-            <span class="calc-result-label">Selling price (MRP)</span>
-            <span class="calc-result-val" id="res-mrp">&#x20B9;499</span>
+            <span class="calc-result-label">Sale value before GST</span>
+            <span class="calc-result-val" id="res-sale-exgst">&#x20B9;291</span>
           </div>
           <div class="calc-result-row">
-            <span class="calc-result-label">Amazon referral fee</span>
-            <span class="calc-result-val" id="res-ref-amt">&#x20B9;50</span>
+            <span class="calc-result-label">Output GST collected</span>
+            <span class="calc-result-val" id="res-output-gst">&#x20B9;9</span>
           </div>
           <div class="calc-result-row">
-            <span class="calc-result-label">FBA + packaging + ads</span>
-            <span class="calc-result-val" id="res-ops">&#x20B9;110</span>
+            <span class="calc-result-label">Purchase GST credit / ITC <small style="color:var(--text-faint);font-size:11px;">auto</small></span>
+            <span class="calc-result-val" id="res-purchase-itc">&#x20B9;2</span>
           </div>
           <div class="calc-result-row">
-            <span class="calc-result-label">Unit cost (COGS)</span>
-            <span class="calc-result-val" id="res-cogs-disp">&#x20B9;120</span>
+            <span class="calc-result-label">GST on Amazon fees @18%</span>
+            <span class="calc-result-val" id="res-fee-gst">&#x20B9;12</span>
+          </div>
+          <div class="calc-result-row" id="gst-payable-row">
+            <span class="calc-result-label">Estimated GST payable</span>
+            <span class="calc-result-val" id="res-gst-payable">&#x20B9;0</span>
+          </div>
+          <div class="calc-result-row">
+            <span class="calc-result-label">Amazon fees before GST</span>
+            <span class="calc-result-val" id="res-amz-fees">&#x20B9;68</span>
+          </div>
+          <div class="calc-result-row">
+            <span class="calc-result-label">COGS before GST</span>
+            <span class="calc-result-val" id="res-cogs-net">&#x20B9;63</span>
+          </div>
+          <div class="calc-result-row">
+            <span class="calc-result-label">Ads + packaging + return buffer</span>
+            <span class="calc-result-val" id="res-other-costs">&#x20B9;55</span>
+          </div>
+          <div class="calc-result-row">
+            <span class="calc-result-label">Break-even selling price</span>
+            <span class="calc-result-val" id="res-breakeven">&#x20B9;200</span>
+          </div>
+          <div class="calc-result-row">
+            <span class="calc-result-label">Target price for 20% margin</span>
+            <span class="calc-result-val" id="res-target20">&#x20B9;250</span>
           </div>
           <div class="calc-result-row highlight" id="profit-row">
-            <span class="calc-result-label" style="font-weight:600;color:var(--text)">Net profit / unit</span>
-            <span class="calc-result-val" id="res-profit">&#x20B9;219</span>
+            <span class="calc-result-label" style="font-weight:600;color:var(--text)">Net profit / unit after GST impact</span>
+            <span class="calc-result-val" id="res-profit">&#x20B9;100</span>
           </div>
           <div>
             <div style="display:flex;align-items:center;justify-content:space-between;padding:6px 0 0;">
               <span style="font-size:13px;color:var(--text-dim)">Net margin</span>
-              <span class="calc-result-val" id="res-margin-pct">43.9%</span>
+              <span class="calc-result-val" id="res-margin-pct">33.3%</span>
             </div>
             <div class="calc-margin-bar-bg">
-              <div class="calc-margin-bar-fill" id="margin-bar" style="width:43.9%;background:#4CAF78;"></div>
+              <div class="calc-margin-bar-fill" id="margin-bar" style="width:33.3%;background:#FFB340;"></div>
             </div>
-            <div class="calc-margin-label" id="margin-label">Healthy — ready to scale</div>
+            <div class="calc-margin-label" id="margin-label">Thin — review your costs</div>
           </div>
-          <div class="calc-advice good" id="calc-advice">Healthy margin. Leaves room for ad spend, returns, and growth.</div>
+          <div class="calc-advice warn" id="calc-advice">This margin is workable but tight. Check GST, returns, ads, and Amazon settlement before buying inventory.</div>
         </div>
       </div>
     </div>
+    <div class="calc-note reveal">Note: This calculator is an estimate for planning. Final settlement can change based on product category, shipping zone, weight, FBA/FBM method, promotional fees, returns, and Seller Central fee preview.</div>
   </div>
 </section>
 
@@ -625,6 +799,58 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <div class="why-card-icon">&#x1F9EE;</div>
         <h3>Margin clarity</h3>
         <p>We review unit economics so pricing, fees, ads, packaging, and cost are clear before launch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="faq-header reveal">
+      <div class="section-label">FAQ</div>
+      <h2>Common Amazon launch questions</h2>
+      <p class="section-sub" style="margin:0 auto">Quick answers for sellers who want to understand product research, GST, Amazon fees, and launch risk.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item reveal">
+        <h3>Does the calculator include GST?</h3>
+        <p>Yes. It separates customer selling price before GST, output GST collected, purchase GST credit, GST on Amazon fees, and estimated GST payable.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Does it include Amazon fees?</h3>
+        <p>Yes. It includes referral fee, closing fee, shipping/FBA fee, and 18% GST on Amazon fees. You should still verify the final fee inside Seller Central.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Can you help find a product?</h3>
+        <p>Yes. We can research categories, compare competitors, review pricing, estimate margin, and help shortlist lower-risk product ideas.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Can you help with launch planning?</h3>
+        <p>Yes. We can help with product positioning, listing direction, pricing strategy, margin review, packaging direction, and launch checklist planning.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Is profit guaranteed?</h3>
+        <p>No. Product research reduces blind risk, but sales depend on demand, competition, reviews, pricing, ads, quality, and Amazon performance.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Can I use this without product images?</h3>
+        <p>Yes. The preview cards use placeholders now. You can replace them later with real product photos once the product samples are ready.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta-section">
+  <div class="container">
+    <div class="final-cta-card reveal">
+      <h2>Before buying inventory, check the product properly.</h2>
+      <p>Send us your product idea, supplier price, expected selling price, and category. We can help review the numbers and decide whether it is worth moving forward.</p>
+      <div class="final-cta-actions">
+        <a class="btn btn-primary" href="mailto:info@tentwotechnologies.com?subject=Amazon%20Product%20Research%20Request">Start product research</a>
+        <a class="btn btn-ghost" href="#calculator">Use profit calculator</a>
       </div>
     </div>
   </div>
@@ -821,36 +1047,123 @@ reveals.forEach(function(r){io.observe(r);});
 
 // calculator
 function r(n){return Math.round(n);}
+function money(n){return (n>=0?'\u20B9':'-\u20B9')+Math.abs(r(n));}
+
+var presets={
+  jewellery:{mrp:300,gst:3,cogs:65,ref:0,closing:13,fba:55,ads:30,pack:10,ret:5},
+  home:{mrp:499,gst:18,cogs:180,ref:8,closing:25,fba:80,ads:50,pack:18,ret:6},
+  beauty:{mrp:399,gst:18,cogs:120,ref:8,closing:25,fba:65,ads:45,pack:15,ret:5},
+  generic:{mrp:499,gst:18,cogs:160,ref:10,closing:25,fba:75,ads:50,pack:20,ret:5}
+};
+
+function setPreset(name,btn){
+  var p=presets[name];
+  if(!p) return;
+  document.getElementById('sl-mrp').value=p.mrp;
+  document.getElementById('sl-gst-rate').value=p.gst;
+  document.getElementById('sl-cogs').value=p.cogs;
+  document.getElementById('sl-ref').value=p.ref;
+  document.getElementById('sl-closing').value=p.closing;
+  document.getElementById('sl-fba').value=p.fba;
+  document.getElementById('sl-ads').value=p.ads;
+  document.getElementById('sl-pack').value=p.pack;
+  document.getElementById('sl-return').value=p.ret;
+  document.querySelectorAll('.preset-btn').forEach(function(b){b.classList.remove('active');});
+  if(btn) btn.classList.add('active');
+  calc();
+}
+
+function profitForPrice(mrp, vals){
+  var gstRate=vals.gstRate;
+  var cogsIncl=vals.cogsIncl;
+  var ref=vals.ref;
+  var closing=vals.closing;
+  var fba=vals.fba;
+  var ads=vals.ads;
+  var pack=vals.pack;
+  var returnPct=vals.returnPct;
+
+  var saleExGst = gstRate > 0 ? mrp / (1 + gstRate/100) : mrp;
+  var outputGst = mrp - saleExGst;
+  var cogsNet = gstRate > 0 ? cogsIncl / (1 + gstRate/100) : cogsIncl;
+  var purchaseItc = cogsIncl - cogsNet;
+
+  // Amazon referral fee is estimated on customer item price. Closing + FBA are fee amounts before GST.
+  var refAmt = mrp * ref/100;
+  var amazonFees = refAmt + closing + fba;
+  var amazonFeeGst = amazonFees * 0.18;
+  var returnsBuffer = mrp * returnPct/100;
+  var otherCosts = ads + pack + returnsBuffer;
+  var totalItc = purchaseItc + amazonFeeGst;
+  var gstPayable = Math.max(0, outputGst - totalItc);
+  var itcCarryForward = Math.max(0, totalItc - outputGst);
+  var cashOut = cogsIncl + amazonFees + amazonFeeGst + otherCosts + gstPayable;
+  var profit = mrp - cashOut;
+  return {saleExGst,outputGst,cogsNet,purchaseItc,refAmt,amazonFees,amazonFeeGst,returnsBuffer,otherCosts,totalItc,gstPayable,itcCarryForward,cashOut,profit,margin:mrp>0?(profit/mrp)*100:0};
+}
+
+function findPriceForMargin(vals,targetMargin){
+  var low=1, high=5000;
+  for(var i=0;i<60;i++){
+    var mid=(low+high)/2;
+    var p=profitForPrice(mid,vals);
+    var margin=p.profit/mid;
+    if(margin>=targetMargin) high=mid; else low=mid;
+  }
+  return high;
+}
+
 function calc(){
   var mrp=+document.getElementById('sl-mrp').value;
-  var cogs=+document.getElementById('sl-cogs').value;
+  var gstRate=+document.getElementById('sl-gst-rate').value;
+  var cogsIncl=+document.getElementById('sl-cogs').value;
   var ref=+document.getElementById('sl-ref').value;
+  var closing=+document.getElementById('sl-closing').value;
   var fba=+document.getElementById('sl-fba').value;
   var ads=+document.getElementById('sl-ads').value;
   var pack=+document.getElementById('sl-pack').value;
+  var returnPct=+document.getElementById('sl-return').value;
+  var vals={gstRate:gstRate,cogsIncl:cogsIncl,ref:ref,closing:closing,fba:fba,ads:ads,pack:pack,returnPct:returnPct};
+  var result=profitForPrice(mrp,vals);
 
   document.getElementById('lbl-mrp').textContent='\u20B9'+mrp;
-  document.getElementById('lbl-cogs').textContent='\u20B9'+cogs;
+  document.getElementById('lbl-gst-rate').textContent=gstRate+'%';
+  document.getElementById('lbl-cogs').textContent='\u20B9'+cogsIncl;
   document.getElementById('lbl-ref').textContent=ref+'%';
+  document.getElementById('lbl-closing').textContent='\u20B9'+closing;
   document.getElementById('lbl-fba').textContent='\u20B9'+fba;
   document.getElementById('lbl-ads').textContent='\u20B9'+ads;
   document.getElementById('lbl-pack').textContent='\u20B9'+pack;
+  document.getElementById('lbl-return').textContent=returnPct+'%';
 
-  var refAmt=r(mrp*ref/100);
-  var ops=fba+pack+ads;
-  var total=cogs+refAmt+ops;
-  var profit=mrp-total;
-  var margin=Math.round((profit/mrp)*1000)/10;
+  document.getElementById('res-sale-exgst').textContent=money(result.saleExGst);
+  document.getElementById('res-output-gst').textContent=money(result.outputGst);
+  document.getElementById('res-purchase-itc').textContent=money(result.purchaseItc);
+  document.getElementById('res-fee-gst').textContent=money(result.amazonFeeGst);
 
-  document.getElementById('res-mrp').textContent='\u20B9'+mrp;
-  document.getElementById('res-ref-amt').textContent='\u20B9'+refAmt;
-  document.getElementById('res-ops').textContent='\u20B9'+ops;
-  document.getElementById('res-cogs-disp').textContent='\u20B9'+cogs;
+  var gstRow=document.getElementById('gst-payable-row');
+  var gstPay=document.getElementById('res-gst-payable');
+  if(result.itcCarryForward>0){
+    gstPay.textContent='\u20B90 / ITC +'+money(result.itcCarryForward).replace('\u20B9','');
+    gstPay.className='calc-result-val good';
+    gstRow.className='calc-result-row';
+  }else{
+    gstPay.textContent=money(result.gstPayable);
+    gstPay.className='calc-result-val '+(result.gstPayable>0?'warn':'good');
+    gstRow.className='calc-result-row '+(result.gstPayable>0?'warn':'');
+  }
+
+  document.getElementById('res-amz-fees').textContent=money(result.amazonFees);
+  document.getElementById('res-cogs-net').textContent=money(result.cogsNet);
+  document.getElementById('res-other-costs').textContent=money(result.otherCosts);
+  document.getElementById('res-breakeven').textContent=money(findPriceForMargin(vals,0));
+  document.getElementById('res-target20').textContent=money(findPriceForMargin(vals,0.20));
 
   var profEl=document.getElementById('res-profit');
-  profEl.textContent=(profit>=0?'\u20B9':'-\u20B9')+Math.abs(profit);
-  profEl.className='calc-result-val '+(profit>0?'good':'bad');
+  profEl.textContent=money(result.profit);
+  profEl.className='calc-result-val '+(result.profit>0?'good':'bad');
 
+  var margin=Math.round(result.margin*10)/10;
   var mEl=document.getElementById('res-margin-pct');
   mEl.textContent=margin+'%';
   mEl.className='calc-result-val '+(margin>=30?'good':margin>=15?'warn':'bad');
@@ -864,23 +1177,24 @@ function calc(){
   var pr=document.getElementById('profit-row');
 
   if(margin>=30){
-    ml.textContent='Healthy \u2014 ready to scale';
-    adv.textContent='Healthy margin. Leaves room for ad spend, returns (5\u201310%), and growth.';
+    ml.textContent='Healthy — covers GST, fees, ads, and returns';
+    adv.textContent='Healthy margin. GST payable, Amazon fee GST, purchase ITC, ads, packaging, and returns buffer are included in this estimate.';
     adv.className='calc-advice good';
     pr.className='calc-result-row highlight';
   } else if(margin>=15){
-    ml.textContent='Thin \u2014 review your costs';
-    adv.textContent='Thin but workable. Factor in returns. Try raising MRP by \u20B950\u2013100 or reducing COGS.';
+    ml.textContent='Thin — review GST, ads, and return costs';
+    adv.textContent='Thin but possible. Before buying inventory, verify product GST rate, Amazon category fee, closing fee, FBA fee, and expected return rate.';
     adv.className='calc-advice warn';
     pr.className='calc-result-row warn';
   } else {
-    ml.textContent='Not viable at this margin';
-    adv.textContent='Not viable. You need \u226525% margin to cover ad spend and returns. Lower COGS or raise price.';
+    ml.textContent='Not viable after full cost check';
+    adv.textContent='Not viable. The price does not safely cover GST impact, Amazon fees, product cost, ads, packaging, and returns buffer.';
     adv.className='calc-advice bad';
     pr.className='calc-result-row bad';
   }
 }
 calc();
+
 </script>
 </body>
 </html>
