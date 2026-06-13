@@ -4,8 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <meta name="theme-color" content="#05080F" />
-<title>Tuberose &amp; Co. · Amazon India Launch Support · TenTwo Technologies</title>
-<meta name="description" content="Tuberose &amp; Co. by TenTwo Technologies — Amazon India product research, validation, launch strategy, and daily-life products sold on Amazon India." />
+<title>Tuberose &amp; Co. Amazon India Store | Product Research &amp; Profit Calculator</title>
+<meta name="description" content="Explore Tuberose &amp; Co. on Amazon India and use our Amazon seller profit calculator to estimate GST, fees, costs, returns, and product margins before launch." />
 <link rel="canonical" href="https://www.tentwotechnologies.com/amazon" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -281,7 +281,9 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .seller-contact-item-text strong{display:block;font-size:12px;color:var(--text-dim)}
 .seller-contact-item-text span{font-size:13px;color:var(--text)}
 .under-tentwo{margin-top:20px;padding:12px 14px;border-radius:var(--radius);background:rgba(46,134,255,0.08);border:1px solid rgba(46,134,255,0.15);font-size:12px;color:var(--brand-4);text-align:center;line-height:1.5}
+.under-tentwo .brand-line{display:block;white-space:nowrap;font-size:11.5px}
 .under-tentwo a{color:var(--brand-3);text-decoration:underline}
+@media(max-width:640px){.under-tentwo .brand-line{white-space:normal;font-size:12px}}
 /* footer */
 .footer{padding:40px 0;border-top:1px solid var(--border)}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
@@ -290,6 +292,41 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .footer-links{display:flex;gap:24px}
 .footer-links a{font-size:13px;color:var(--text-faint);transition:color .2s}
 .footer-links a:hover{color:var(--text)}
+
+/* final audit additions */
+.trust-strip{padding:26px 0 48px}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.trust-item{padding:18px 16px;border-radius:var(--radius);background:rgba(255,255,255,0.045);border:1px solid var(--border);box-shadow:inset 0 1px 0 rgba(255,255,255,0.05)}
+.trust-item strong{display:block;font-size:14px;color:var(--text);margin-bottom:4px}
+.trust-item span{font-size:12px;color:var(--text-dim);line-height:1.45}
+.assumption-note{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.assumption-pill{padding:13px 15px;border-radius:var(--radius);background:rgba(200,168,75,0.08);border:1px solid rgba(200,168,75,0.18);font-size:12px;color:var(--text-dim);line-height:1.55}
+.assumption-pill strong{color:var(--tb-gold-light)}
+.lead-section{padding:80px 0 40px}
+.lead-card{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:start;padding:48px;border-radius:var(--radius-xl);background:linear-gradient(135deg,rgba(28,74,44,0.22),rgba(255,255,255,0.05));border:1px solid rgba(200,168,75,0.18);box-shadow:var(--glass-shadow),inset 0 1px 0 rgba(255,255,255,0.07);position:relative;overflow:hidden}
+.lead-card::before{content:'';position:absolute;right:-120px;top:-140px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(200,168,75,0.13),transparent 68%);pointer-events:none}
+.lead-copy{position:relative;z-index:1}
+.lead-copy h2{font-size:clamp(32px,3.8vw,52px);margin:16px 0 16px}
+.lead-copy p{color:var(--text-dim);font-size:16px;line-height:1.65;margin-bottom:22px}
+.lead-checks{display:grid;gap:10px;margin-top:24px}
+.lead-check{display:flex;gap:10px;align-items:flex-start;color:var(--text-dim);font-size:14px;line-height:1.5}
+.lead-check span:first-child{color:var(--tb-gold-light)}
+.lead-form{position:relative;z-index:1;background:rgba(255,255,255,0.045);border:1px solid var(--border-strong);border-radius:var(--radius-lg);padding:28px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-field{margin-bottom:16px}
+.form-field.full{grid-column:1/-1}
+.form-field label{display:block;font-size:11px;color:var(--text-dim);font-family:'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.form-field input,.form-field select,.form-field textarea{width:100%;background:rgba(255,255,255,0.06);border:1px solid var(--border-strong);border-radius:12px;padding:13px 15px;color:var(--text);font-family:inherit;font-size:14px;outline:none;transition:border-color .2s,background .2s}
+.form-field select option{background:#0A1628;color:var(--text)}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:rgba(200,168,75,0.50);background:rgba(255,255,255,0.08)}
+.form-field textarea{resize:vertical;min-height:110px}
+.form-help{font-size:12px;color:var(--text-faint);line-height:1.5;margin-top:10px}
+.form-message{margin-top:12px;font-size:13px;min-height:18px;text-align:center}
+.floating-whatsapp{position:fixed;right:22px;bottom:22px;z-index:90;display:flex;align-items:center;gap:9px;padding:12px 16px;border-radius:100px;background:linear-gradient(135deg,#1C4A2C,#2E7D52);border:1px solid rgba(76,175,120,0.35);color:#fff;font-size:13px;font-weight:700;box-shadow:0 16px 38px rgba(0,0,0,0.32),0 0 22px rgba(46,125,82,0.25);transition:transform .25s var(--ease)}
+.floating-whatsapp:hover{transform:translateY(-2px)}
+@media(max-width:900px){.trust-grid,.lead-card{grid-template-columns:1fr}.assumption-note{grid-template-columns:1fr}.lead-card{padding:34px 24px}}
+@media(max-width:640px){.trust-grid{grid-template-columns:1fr 1fr}.form-grid{grid-template-columns:1fr}.floating-whatsapp{right:14px;bottom:14px;padding:11px 13px;font-size:12px}.floating-whatsapp .wa-text{display:none}}
+
 /* responsive */
 @media(max-width:900px){
   .brand-story-grid,.page-intro-card,.support-grid,.process-steps,.why-grid,.seller-card,.faq-grid{grid-template-columns:1fr}
@@ -322,6 +359,58 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   .hero-actions{align-items:stretch}
 }
 </style>
+
+<meta property="og:title" content="Tuberose &amp; Co. Amazon India Store | Product Research &amp; Profit Calculator" />
+<meta property="og:description" content="Explore Tuberose &amp; Co. on Amazon India and estimate GST, Amazon fees, costs, returns, and product margins before launch." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.tentwotechnologies.com/amazon" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I know if an Amazon product is profitable?",
+      "acceptedAnswer": {"@type": "Answer", "text": "A product should be checked after GST, purchase cost, Amazon referral fee, closing fee, shipping or FBA fee, advertising, packaging, and expected returns. The calculator on this page gives an estimate for planning."}
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator include GST?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. It separates sale value before GST, output GST collected, purchase GST credit, GST on Amazon fees, and estimated GST payable."}
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator include Amazon fees?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. It includes referral fee, closing fee, shipping or FBA fee, and GST on Amazon fees. Sellers should still verify the final fee inside Amazon Seller Central."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can TenTwo help with Amazon India product research?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. TenTwo Technologies can help with product research, competitor review, pricing strategy, margin checks, and launch planning for Amazon India."}
+    },
+    {
+      "@type": "Question",
+      "name": "Is profit guaranteed?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No. Product research reduces blind risk, but sales depend on demand, competition, reviews, pricing, ads, product quality, and Amazon marketplace performance."}
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TenTwo Technologies Private Limited",
+  "url": "https://www.tentwotechnologies.com",
+  "brand": {"@type": "Brand", "name": "Tuberose & Co."},
+  "email": "info@tentwotechnologies.com",
+  "telephone": "+91 8997443993",
+  "address": {"@type": "PostalAddress", "addressLocality": "Kaikaluru", "addressRegion": "Andhra Pradesh", "postalCode": "521333", "addressCountry": "IN"}
+}
+</script>
+
 </head>
 <body>
 
@@ -344,7 +433,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       <a href="https://tentwotechnologies.com/internships">Internships</a>
       <a href="https://tentwotechnologies.com/amazon#" class="active">Amazon</a>
     </div>
-    <a class="nav-cta btn" href="https://www.amazon.in/s?rh=n%3A1951048031%2Cp_4%3ATuberose%2B%2526%2BCo.&ref=bl_sl_s_je_web_1951048031" target="_blank" rel="noopener">
+    <a class="nav-cta btn" href="https://www.amazon.in/s?rh=n%3A1951048031%2Cp_4%3ATuberose%2B%2526%2BCo.&ref=bl_sl_s_je_web_1951048031" data-track="shop-amazon" target="_blank" rel="noopener">
       <span>Shop on Amazon</span>
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11L11 3M5 3h6v6"/></svg>
     </a>
@@ -476,6 +565,19 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <span>Track product direction, launch strategy, and customer feedback.</span>
         </div>
       </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip">
+  <div class="container">
+    <div class="trust-grid reveal">
+      <div class="trust-item"><strong>GST-aware estimate</strong><span>Shows sale GST, purchase ITC, Amazon fee GST, and estimated GST payable.</span></div>
+      <div class="trust-item"><strong>Amazon India focused</strong><span>Designed for Indian marketplace costs, closing fees, FBA/shipping, ads, and returns.</span></div>
+      <div class="trust-item"><strong>Before-stock validation</strong><span>Check margin before buying inventory, packaging, and samples.</span></div>
+      <div class="trust-item"><strong>Seller Central reminder</strong><span>Final fees should be verified inside Amazon Seller Central before launch.</span></div>
     </div>
   </div>
 </section>
@@ -731,7 +833,11 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         </div>
       </div>
     </div>
-    <div class="calc-note reveal">Note: This calculator is an estimate for planning. Final settlement can change based on product category, shipping zone, weight, FBA/FBM method, promotional fees, returns, and Seller Central fee preview.</div>
+    <div class="calc-note reveal"><strong style="color:var(--tb-gold-light);">Important:</strong> This calculator is an estimate only. Final profit may vary based on Amazon Seller Central fee preview, product category, weight, fulfillment method, GST eligibility, input tax credit, ads, returns, supplier invoice details, and policy changes.</div>
+    <div class="assumption-note reveal">
+      <div class="assumption-pill"><strong>Fee assumptions last reviewed:</strong> June 2026. Imitation/fashion jewellery defaults use 3% product GST and 0% referral fee for item price up to &#x20B9;1,000. Verify before publishing live numbers.</div>
+      <div class="assumption-pill"><strong>Not tax advice:</strong> GST, HSN, ITC, and Amazon fee treatment should be confirmed with your CA/accountant and Amazon Seller Central for the exact product listing.</div>
+    </div>
   </div>
 </section>
 
@@ -842,6 +948,75 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   </div>
 </section>
 
+
+<!-- LEAD FORM -->
+<section class="lead-section" id="research-request">
+  <div class="container">
+    <div class="lead-card reveal">
+      <div class="lead-copy">
+        <div class="section-label">Product research request</div>
+        <h2>Want us to review your Amazon product idea?</h2>
+        <p>Send the product category, supplier cost, expected selling price, and budget. We can help check whether the numbers look practical before you invest in stock.</p>
+        <div class="lead-checks">
+          <div class="lead-check"><span>&#10003;</span><span>Margin check after GST, Amazon fees, ads, packaging, and return buffer.</span></div>
+          <div class="lead-check"><span>&#10003;</span><span>Competitor and pricing review for Amazon India.</span></div>
+          <div class="lead-check"><span>&#10003;</span><span>Launch planning support for product selection, listing direction, and validation.</span></div>
+        </div>
+      </div>
+      <form class="lead-form" id="leadForm" action="https://formspree.io/f/mzdwnkkn" method="POST">
+        <input type="hidden" name="_subject" value="Amazon Product Research Request — TenTwo Technologies">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-grid">
+          <div class="form-field">
+            <label>Your name</label>
+            <input type="text" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-field">
+            <label>Email or WhatsApp</label>
+            <input type="text" name="contact" placeholder="Email / WhatsApp number" required>
+          </div>
+          <div class="form-field">
+            <label>Product category</label>
+            <select name="category" required>
+              <option value="">Select category</option>
+              <option>Imitation jewellery</option>
+              <option>Home & kitchen</option>
+              <option>Beauty / personal care</option>
+              <option>Daily essentials</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Budget range</label>
+            <select name="budget">
+              <option value="">Select budget</option>
+              <option>Below ₹25,000</option>
+              <option>₹25,000 - ₹50,000</option>
+              <option>₹50,000 - ₹1,00,000</option>
+              <option>Above ₹1,00,000</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Expected selling price</label>
+            <input type="text" name="expected_selling_price" placeholder="e.g. ₹299">
+          </div>
+          <div class="form-field">
+            <label>Supplier cost</label>
+            <input type="text" name="supplier_cost" placeholder="e.g. ₹65 incl. GST">
+          </div>
+          <div class="form-field full">
+            <label>Product idea / message</label>
+            <textarea name="message" placeholder="Tell us your product idea, supplier price, target selling price, and any competitor links." required></textarea>
+          </div>
+        </div>
+        <button type="submit" id="leadSubmit" class="btn btn-primary" style="width:100%;justify-content:center;border-radius:14px;">Request product review</button>
+        <p class="form-help">We will use this only to respond to your product research request.</p>
+        <p class="form-message" id="leadMsg"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="final-cta-section">
   <div class="container">
@@ -849,8 +1024,8 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       <h2>Before buying inventory, check the product properly.</h2>
       <p>Send us your product idea, supplier price, expected selling price, and category. We can help review the numbers and decide whether it is worth moving forward.</p>
       <div class="final-cta-actions">
-        <a class="btn btn-primary" href="mailto:info@tentwotechnologies.com?subject=Amazon%20Product%20Research%20Request">Start product research</a>
-        <a class="btn btn-ghost" href="#calculator">Use profit calculator</a>
+        <a class="btn btn-primary" href="mailto:info@tentwotechnologies.com?subject=Amazon%20Product%20Research%20Request" data-track="start-product-research">Start product research</a>
+        <a class="btn btn-ghost" href="#calculator" data-track="use-profit-calculator">Use profit calculator</a>
       </div>
     </div>
   </div>
@@ -922,7 +1097,8 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
             </div>
           </div>
           <div class="under-tentwo">
-            Tuberose &amp; Co. is a consumer brand under <a href="https://tentwotechnologies.com" target="_blank">TenTwo Technologies Pvt. Ltd.</a><br>CIN: U62099AP2026PTC123529
+            <span class="brand-line">Tuberose &amp; Co. is a consumer brand under <a href="https://tentwotechnologies.com" target="_blank">TenTwo Technologies Pvt. Ltd.</a></span>
+            <span>CIN: U62099AP2026PTC123529</span>
           </div>
         </div>
       </div>
@@ -978,6 +1154,8 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   </div>
 </section>
 
+<a class="floating-whatsapp" href="https://wa.me/918997443993?text=Hi%20TenTwo%2C%20I%20need%20help%20with%20Amazon%20product%20research" target="_blank" rel="noopener" aria-label="Contact TenTwo on WhatsApp"><span>&#x1F4AC;</span><span class="wa-text">WhatsApp</span></a>
+
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
@@ -1007,6 +1185,37 @@ window.addEventListener('scroll',function(){
   if(window.scrollY>60)nav.style.padding='10px 32px';
   else nav.style.padding='20px 32px';
 },{passive:true});
+
+
+// lead form
+(function(){
+  var form=document.getElementById('leadForm');
+  var btn=document.getElementById('leadSubmit');
+  var msg=document.getElementById('leadMsg');
+  if(!form) return;
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var hp=form.querySelector('[name="_gotcha"]'); if(hp&&hp.value) return;
+    btn.disabled=true; btn.textContent='Sending...';
+    msg.textContent=''; msg.style.color='';
+    try{
+      var res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+      if(res.ok){
+        msg.style.color='#4CAF78';
+        msg.textContent='Thank you. Your product research request has been received.';
+        form.reset();
+      } else {
+        msg.style.color='#F87171';
+        msg.textContent='Something went wrong. Please email info@tentwotechnologies.com';
+      }
+    }catch(err){
+      msg.style.color='#F87171';
+      msg.textContent='Network error. Please try again or email info@tentwotechnologies.com';
+    }finally{
+      btn.disabled=false; btn.textContent='Request product review';
+    }
+  });
+})();
 
 // feedback form
 (function(){
