@@ -147,6 +147,11 @@ a{color:inherit; text-decoration:none}
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq .ans{padding:0 20px 18px; color:var(--text-dim); font-size:14.5px; line-height:1.65}
 .faq .ans a{color:var(--brand-3)}
+.faq-extra{display:none; flex-direction:column; gap:12px}
+.faq-extra.show{display:flex}
+.faq-more-wrap{text-align:center; margin-top:8px}
+.faq-toggle{border:1px solid var(--border-strong); background:var(--glass); color:var(--text); border-radius:999px; padding:11px 18px; font:inherit; font-size:14px; font-weight:600; cursor:pointer; transition:.25s var(--ease)}
+.faq-toggle:hover{background:var(--glass-2); transform:translateY(-1px)}
 /* QUOTE MODAL */
 .modal-overlay{position:fixed; inset:0; background:rgba(2,4,10,0.72); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); display:none; align-items:center; justify-content:center; padding:20px; z-index:1000}
 .modal-overlay.open{display:flex}
@@ -378,7 +383,7 @@ a{color:inherit; text-decoration:none}
       <p>Everything you need to know before you apply.</p>
     </div>
     <div class="faq">
-      <details open>
+      <details>
         <summary>Is this a paid internship with a stipend?</summary>
         <div class="ans">No. This is a paid training program, not a stipend internship. You pay a one-time program fee of ₹3,500, and in return you get structured mentorship, real project work, reviews, and a verified certificate. We do not pay a stipend.</div>
       </details>
@@ -402,6 +407,7 @@ a{color:inherit; text-decoration:none}
         <summary>Will I get a certificate?</summary>
         <div class="ans">Yes. After you submit and complete your final project, you receive a verified completion certificate from TenTwo Technologies Private Limited.</div>
       </details>
+      <div class="faq-extra" id="faqExtra" aria-hidden="true">
       <details>
         <summary>Is the fee refundable?</summary>
         <div class="ans">The program fee is non-refundable. Once your spot is confirmed, your seat and resources are reserved for you. If you have any questions about the program, please email <a href="mailto:info@tentwotechnologies.com">info@tentwotechnologies.com</a> before applying.</div>
@@ -446,6 +452,10 @@ a{color:inherit; text-decoration:none}
         <summary>Can I ask questions before applying?</summary>
         <div class="ans">Yes. Click the “Have a question?” button, fill out the enquiry form, and we will respond with the details you need.</div>
       </details>
+      </div>
+      <div class="faq-more-wrap">
+        <button type="button" class="faq-toggle" id="faqToggle" aria-expanded="false" aria-controls="faqExtra">Show more questions</button>
+      </div>
     </div>
   </div>
 </section>
@@ -609,6 +619,17 @@ a{color:inherit; text-decoration:none}
   }
   overlay.addEventListener('click', function(e){ if(e.target===overlay) close(); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape' && overlay.classList.contains('open')) close(); });
+
+  var faqToggle=document.getElementById('faqToggle'),
+      faqExtra=document.getElementById('faqExtra');
+  if(faqToggle && faqExtra){
+    faqToggle.addEventListener('click', function(){
+      var isOpen=faqExtra.classList.toggle('show');
+      faqExtra.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      faqToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      faqToggle.textContent=isOpen ? 'Hide extra questions' : 'Show more questions';
+    });
+  }
 
   form.addEventListener('submit', async function(e){
     e.preventDefault();
