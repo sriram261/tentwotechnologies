@@ -1423,6 +1423,46 @@ h3 { font-size: clamp(20px, 2.2vw, 26px); letter-spacing: -0.02em; }
 .reveal-stagger.in > *:nth-child(5) { transition-delay: 0.4s; }
 .reveal-stagger.in > *:nth-child(6) { transition-delay: 0.5s; }
 
+
+/* ============================================
+   FLOATING WHATSAPP BUTTON
+   ============================================ */
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: calc(24px + env(safe-area-inset-bottom));
+  z-index: 140;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 18px 44px rgba(18, 140, 126, 0.36), inset 0 1px 0 rgba(255,255,255,0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+.whatsapp-float:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 22px 54px rgba(18, 140, 126, 0.46), inset 0 1px 0 rgba(255,255,255,0.25);
+}
+.whatsapp-float:focus-visible {
+  outline: 3px solid rgba(37, 211, 102, 0.38);
+  outline-offset: 4px;
+}
+.whatsapp-float svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  flex: 0 0 auto;
+}
+
 /* ============================================
    RESPONSIVE
    ============================================ */
@@ -1473,6 +1513,7 @@ h3 { font-size: clamp(20px, 2.2vw, 26px); letter-spacing: -0.02em; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .founder-badge { width: 64px; height: 64px; font-size: 11px; top: -12px; right: -12px; }
   .marquee-track { gap: 40px; }
+  .whatsapp-float { right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); padding: 13px 16px; font-size: 13px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001s !important; transition-duration: 0.001s !important; }
@@ -2666,7 +2707,6 @@ h3 { font-size: clamp(20px, 2.2vw, 26px); letter-spacing: -0.02em; }
           <input type="hidden" name="_subject" value="New enquiry from TenTwo Technologies website" />
           <input type="hidden" name="form_source" value="TenTwo homepage contact form" />
           <input type="hidden" name="full_mobile_number" id="cf-full-mobile" value="" />
-          <input type="hidden" name="whatsapp_notification" value="Enabled. A pre-filled WhatsApp message opens after successful Formspree submission." />
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
           <button type="submit" class="form-submit" id="cf-submit">
             <span>Send message</span>
@@ -2771,6 +2811,13 @@ h3 { font-size: clamp(20px, 2.2vw, 26px); letter-spacing: -0.02em; }
     <div class="footer-mark">TT</div>
   </div>
 </footer>
+
+<a class="whatsapp-float" href="https://wa.me/919059291261?text=Hi%20TenTwo%20Technologies%2C%20I%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat with TenTwo Technologies on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M16.02 3.2C9.05 3.2 3.38 8.78 3.38 15.64c0 2.21.59 4.37 1.72 6.25L3.2 28.8l7.1-1.85a12.9 12.9 0 0 0 5.72 1.35c6.97 0 12.64-5.58 12.64-12.44S22.99 3.2 16.02 3.2Zm0 22.95c-1.83 0-3.62-.49-5.18-1.41l-.37-.22-4.22 1.1 1.13-4.05-.25-.4a10.2 10.2 0 0 1-1.6-5.53c0-5.68 4.7-10.3 10.49-10.3s10.49 4.62 10.49 10.3-4.7 10.51-10.49 10.51Zm5.75-7.73c-.31-.16-1.86-.9-2.15-1-.29-.11-.5-.16-.71.16-.21.31-.81 1-.99 1.2-.18.21-.37.23-.68.08-.31-.16-1.32-.48-2.51-1.52-.93-.82-1.56-1.82-1.74-2.13-.18-.31-.02-.48.14-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.68-.97-2.3-.26-.61-.52-.52-.71-.53h-.6c-.21 0-.55.08-.84.39-.29.31-1.1 1.06-1.1 2.58s1.13 2.99 1.29 3.2c.16.21 2.23 3.35 5.4 4.69.75.32 1.34.51 1.8.65.76.24 1.45.2 1.99.12.61-.09 1.86-.75 2.12-1.47.26-.72.26-1.34.18-1.47-.08-.13-.29-.21-.6-.37Z"/>
+  </svg>
+  <span>WhatsApp</span>
+</a>
 
 <script>
 // =============================================
@@ -3030,8 +3077,6 @@ if (contactForm) {
   const status = document.getElementById('cf-status');
   const submitBtn = document.getElementById('cf-submit');
   const submitText = submitBtn.querySelector('span');
-  const whatsappOwnerNumber = '919059291261';
-
   const getFieldValue = (formData, key) => (formData.get(key) || '').toString().trim();
 
   const buildFullPhoneNumber = (formData) => {
@@ -3041,30 +3086,6 @@ if (contactForm) {
     if (!code || code === 'other') return mobile;
     return `${code} ${mobile}`.replace(/\s+/g, ' ').trim();
   };
-
-  const buildWhatsAppMessage = (formData) => {
-    const fullPhone = buildFullPhoneNumber(formData);
-    const lines = [
-      'New enquiry from TenTwo Technologies website',
-      '',
-      `Name: ${getFieldValue(formData, 'name')}`,
-      `Email: ${getFieldValue(formData, 'email')}`,
-      `Company: ${getFieldValue(formData, 'company') || 'Not provided'}`,
-      `Country: ${getFieldValue(formData, 'country') || 'Not provided'}`,
-      `Mobile: ${fullPhone || 'Not provided'}`,
-      `Preferred contact: ${getFieldValue(formData, 'preferred_contact') || 'Not provided'}`,
-      `Project type: ${getFieldValue(formData, 'project_type') || 'Not provided'}`,
-      `Budget: ${getFieldValue(formData, 'budget') || 'Not provided'}`,
-      `Timeline: ${getFieldValue(formData, 'timeline') || 'Not provided'}`,
-      '',
-      'Message:',
-      getFieldValue(formData, 'message') || 'Not provided'
-    ];
-
-    return lines.join('\n');
-  };
-
-  const createWhatsAppLink = (message) => `https://wa.me/${whatsappOwnerNumber}?text=${encodeURIComponent(message)}`;
 
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -3092,8 +3113,6 @@ if (contactForm) {
       if (fullPhoneField) fullPhoneField.value = fullPhone;
       if (fullPhone) formData.set('full_mobile_number', fullPhone);
 
-      const whatsappMessage = buildWhatsAppMessage(formData);
-      const whatsappLink = createWhatsAppLink(whatsappMessage);
 
       const response = await fetch(contactForm.action, {
         method: 'POST',
@@ -3103,8 +3122,7 @@ if (contactForm) {
 
       if (response.ok) {
         status.className = 'form-status success';
-        status.innerHTML = 'Thank you. Your message is in. We will reply within 24 hours.<br><a href="' + whatsappLink + '" target="_blank" rel="noopener">Open WhatsApp copy</a>';
-        window.open(whatsappLink, '_blank', 'noopener');
+        status.textContent = 'Thank you. Your message is in. We will reply within 24 hours.';
         contactForm.reset();
         submitText.textContent = 'Sent';
         setTimeout(() => { submitText.textContent = 'Send message'; submitBtn.disabled = false; }, 3000);
