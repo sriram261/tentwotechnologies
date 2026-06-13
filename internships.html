@@ -48,6 +48,10 @@ a{color:inherit; text-decoration:none}
 .nav-links{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
 .nav-links a{font-size:14px; color:var(--text-dim); padding:8px 12px; border-radius:10px; transition:.25s var(--ease)}
 .nav-links a:hover{color:var(--text); background:var(--glass)}
+.nav-links a.active{color:var(--text); background:var(--brand-soft); border:1px solid var(--border-strong)}
+.nav-actions{display:flex; align-items:center; gap:10px}
+.nav-store{font-size:14px; color:#fff; padding:9px 15px; border-radius:11px; border:1px solid var(--border-strong); background:var(--glass); font-weight:600; transition:.25s var(--ease)}
+.nav-store:hover{background:var(--glass-2); border-color:rgba(255,255,255,0.26); transform:translateY(-1px)}
 .nav-cta{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff !important; padding:9px 16px !important; border-radius:11px; font-weight:600; box-shadow:0 8px 22px var(--brand-glow)}
 
 /* HERO */
@@ -105,6 +109,19 @@ a{color:inherit; text-decoration:none}
 .btn-ghost{border:1px solid var(--border-strong); color:var(--text)}
 .btn-ghost:hover{background:var(--glass-2)}
 
+
+/* WHATSAPP FLOATING BUTTON */
+.whatsapp-float{
+  position:fixed; right:22px; bottom:22px; z-index:900;
+  display:inline-flex; align-items:center; gap:10px;
+  background:#25D366; color:#07110B; border:1px solid rgba(255,255,255,0.22);
+  padding:12px 16px; border-radius:999px; font-weight:700; font-size:14px;
+  box-shadow:0 18px 45px rgba(37,211,102,0.28);
+  transition:transform .25s var(--ease), box-shadow .25s var(--ease), filter .25s var(--ease);
+}
+.whatsapp-float:hover{transform:translateY(-3px); filter:brightness(1.04); box-shadow:0 22px 55px rgba(37,211,102,0.38)}
+.whatsapp-float svg{width:22px; height:22px; flex:0 0 auto}
+
 /* FOOTER */
 .footer{border-top:1px solid var(--border); padding:34px 0; text-align:center; color:var(--text-faint); font-size:13.5px}
 .footer a{color:var(--text-dim)}
@@ -112,7 +129,13 @@ a{color:inherit; text-decoration:none}
 
 @media(max-width:640px){
   .nav-links{display:none}
+  .nav-inner{padding:14px 16px}
+  .nav-actions{gap:8px}
+  .nav-store,.nav-cta{font-size:12.5px; padding:8px 11px !important}
   .hero{padding:54px 0 30px}
+
+  .whatsapp-float{right:16px; bottom:16px; width:54px; height:54px; padding:0; justify-content:center}
+  .whatsapp-float span{display:none}
 }
 /* FAQ */
 .faq{max-width:840px; margin:0 auto; display:flex; flex-direction:column; gap:12px}
@@ -127,14 +150,22 @@ a{color:inherit; text-decoration:none}
 /* QUOTE MODAL */
 .modal-overlay{position:fixed; inset:0; background:rgba(2,4,10,0.72); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); display:none; align-items:center; justify-content:center; padding:20px; z-index:1000}
 .modal-overlay.open{display:flex}
-.modal{background:linear-gradient(180deg,var(--bg-2),var(--bg)); border:1px solid var(--border-strong); border-radius:var(--radius-lg); width:100%; max-width:480px; padding:30px; position:relative; box-shadow:0 40px 100px rgba(0,0,0,0.6)}
+.modal{background:linear-gradient(180deg,var(--bg-2),var(--bg)); border:1px solid var(--border-strong); border-radius:var(--radius-lg); width:100%; max-width:520px; padding:30px; position:relative; box-shadow:0 40px 100px rgba(0,0,0,0.6); max-height:calc(100vh - 40px); overflow-y:auto}
 .modal h3{font-size:22px; letter-spacing:-0.02em}
 .modal .sub{color:var(--text-dim); font-size:14px; margin-top:6px; line-height:1.5}
 .modal .qfor{display:none; margin-top:12px; font-size:12px; color:var(--brand-3); background:var(--brand-soft); border:1px solid var(--border-strong); padding:5px 12px; border-radius:999px}
 .modal form{margin-top:18px; display:flex; flex-direction:column; gap:11px}
+.modal .form-note{font-size:12px; color:var(--text-faint); line-height:1.5; margin-top:2px}
+.modal .success-panel{display:none; margin-top:18px; border:1px solid var(--border-strong); background:var(--brand-soft); border-radius:16px; padding:18px}
+.modal .success-panel h4{font-size:18px; margin-bottom:6px}
+.modal .success-panel p{font-size:13.5px; color:var(--text-dim); line-height:1.55}
+.modal .success-panel button{margin-top:14px; padding:10px 14px; border-radius:10px; border:1px solid var(--border-strong); background:var(--glass); color:var(--text); cursor:pointer; font:inherit; font-size:13.5px; font-weight:600}
+.modal .success-panel button:hover{background:var(--glass-2)}
 .modal label{font-size:12px; color:var(--text-dim); margin-bottom:-5px}
-.modal input,.modal textarea{width:100%; box-sizing:border-box; background:var(--glass); border:1px solid var(--border); border-radius:12px; padding:12px 14px; color:var(--text); font:inherit; font-size:14px; outline:none; transition:border-color .2s}
-.modal input:focus,.modal textarea:focus{border-color:var(--brand)}
+.modal input,.modal select,.modal textarea{width:100%; box-sizing:border-box; background:var(--glass); border:1px solid var(--border); border-radius:12px; padding:12px 14px; color:var(--text); font:inherit; font-size:14px; outline:none; transition:border-color .2s}
+.modal select{appearance:none; -webkit-appearance:none; color:var(--text); background-color:rgba(255,255,255,0.05)}
+.modal select option{background:#0A0F1C; color:var(--text)}
+.modal input:focus,.modal select:focus,.modal textarea:focus{border-color:var(--brand)}
 .modal textarea{resize:vertical; min-height:92px}
 .modal .submit{margin-top:6px; padding:14px; border-radius:12px; border:none; cursor:pointer; font:inherit; font-weight:600; font-size:15px; color:#fff; background:linear-gradient(135deg,var(--brand),var(--brand-2)); box-shadow:0 10px 26px var(--brand-glow); transition:.2s}
 .modal .submit:hover{filter:brightness(1.08)}
@@ -154,9 +185,12 @@ a{color:inherit; text-decoration:none}
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
-      <a href="internships.html">Internship Program</a>
+      <a href="internships.html" class="active">Internship Program</a>
     </div>
-    <a href="https://www.tentwotechnologies.com/apply" class="nav-cta">Apply now</a>
+    <div class="nav-actions">
+      <a href="https://tentwotechnologies.com/amazon" class="nav-store">Amazon</a>
+      <a href="https://www.tentwotechnologies.com/apply" class="nav-cta">Apply now</a>
+    </div>
   </div>
 </nav>
 
@@ -380,6 +414,38 @@ a{color:inherit; text-decoration:none}
         <summary>How do I apply?</summary>
         <div class="ans">Click <a href="https://www.tentwotechnologies.com/apply">Apply now</a>, fill out the short form, and choose your preferred track. We will get back to you with the next steps.</div>
       </details>
+      <details>
+        <summary>Can I join from outside India?</summary>
+        <div class="ans">Yes. The program is online, so students from India, the United States, and other countries can enquire or apply. We will confirm timing, payment, and onboarding details after reviewing your application.</div>
+      </details>
+      <details>
+        <summary>Can I choose more than one track?</summary>
+        <div class="ans">Yes, you can ask for more than one track, but we recommend starting with one track first so you can complete the tasks and final project properly.</div>
+      </details>
+      <details>
+        <summary>What happens after I apply?</summary>
+        <div class="ans">After you apply, our team reviews your details and contacts you with the next steps, including track confirmation, batch details, and onboarding instructions.</div>
+      </details>
+      <details>
+        <summary>Will there be live sessions?</summary>
+        <div class="ans">The program is mentor-led and online. Depending on the track and batch, guidance may include live discussions, task reviews, and mentor support.</div>
+      </details>
+      <details>
+        <summary>What project will I build?</summary>
+        <div class="ans">Your project depends on the track you select. The goal is to complete a practical project that shows your skills and can be added to your portfolio or resume.</div>
+      </details>
+      <details>
+        <summary>Do I need a laptop?</summary>
+        <div class="ans">Yes. A laptop or desktop with a stable internet connection is recommended because most tracks involve coding, design, cloud tools, testing, or project submissions.</div>
+      </details>
+      <details>
+        <summary>Do you guarantee a job or placement?</summary>
+        <div class="ans">No. This program does not guarantee a job or placement. It is designed to help you build practical skills, complete a project, and gain certificate-backed experience.</div>
+      </details>
+      <details>
+        <summary>Can I ask questions before applying?</summary>
+        <div class="ans">Yes. Click the “Have a question?” button, fill out the enquiry form, and we will respond with the details you need.</div>
+      </details>
     </div>
   </div>
 </section>
@@ -406,26 +472,91 @@ a{color:inherit; text-decoration:none}
   </div>
 </footer>
 
+<!-- WHATSAPP FLOATING BUTTON -->
+<a class="whatsapp-float"
+   href="https://wa.me/919059291261?text=Hi%20TenTwo%20Technologies%2C%20I%20have%20a%20question%20about%20the%20internship%20program."
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat on WhatsApp about the internship program">
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+    <path d="M16.04 3C9.43 3 4.05 8.31 4.05 14.84c0 2.09.56 4.13 1.63 5.92L4 29l8.42-1.65a12.15 12.15 0 0 0 3.62.55c6.61 0 11.99-5.31 11.99-11.84S22.65 3 16.04 3Zm0 22.86c-1.16 0-2.3-.18-3.39-.55l-.49-.16-4.99.98.99-4.86-.29-.5a9.77 9.77 0 0 1-1.52-5.22c0-5.43 4.47-9.85 9.97-9.85s9.97 4.42 9.97 9.85-4.47 10.31-10.25 10.31Zm5.47-7.36c-.3-.15-1.78-.87-2.06-.97-.28-.1-.48-.15-.68.15-.2.29-.78.96-.96 1.16-.18.19-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.78-1.49-1.75-1.66-2.04-.17-.29-.02-.45.13-.6.13-.13.3-.34.45-.51.15-.17.2-.29.3-.49.1-.19.05-.36-.02-.51-.07-.15-.68-1.62-.93-2.22-.25-.58-.5-.5-.68-.51h-.58c-.2 0-.51.07-.78.36-.27.29-1.03 1-1.03 2.43s1.05 2.82 1.2 3.01c.15.19 2.07 3.12 5.01 4.38.7.3 1.25.48 1.68.61.71.22 1.35.19 1.86.12.57-.08 1.78-.72 2.03-1.41.25-.7.25-1.29.17-1.41-.08-.13-.28-.2-.58-.35Z"/>
+  </svg>
+  <span>WhatsApp</span>
+</a>
+
 <!-- QUOTE / CONTACT MODAL -->
 <div class="modal-overlay" id="quoteModal" aria-hidden="true">
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="qmTitle">
     <button class="close" id="quoteClose" aria-label="Close">&times;</button>
-    <h3 id="qmTitle">Get a quote</h3>
-    <p class="sub">Share a few details and we'll get back to you, usually within a day.</p>
+    <h3 id="qmTitle">Ask about the program</h3>
+    <p class="sub">Share your internship details and we\'ll get back to you, usually within 24 hours.</p>
     <span class="qfor" id="quoteFor"></span>
+    <div class="success-panel" id="quoteThanks">
+      <h4>Thank you!</h4>
+      <p>Your internship enquiry has been sent successfully. We usually reply within 24 hours.</p>
+      <button type="button" id="quoteAnother">Send another question</button>
+    </div>
     <form id="quoteForm" action="https://formspree.io/f/mzdwnkkn" method="POST">
       <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-      <input type="hidden" name="_subject" value="New message from tentwotechnologies.com">
-      <input type="hidden" name="service" id="quoteService" value="">
-      <label for="qname">Your name</label>
-      <input id="qname" type="text" name="name" required placeholder="e.g. Ravi Kumar">
-      <label for="qemail">Email</label>
-      <input id="qemail" type="email" name="email" required placeholder="you@example.com">
-      <label for="qphone">Phone / WhatsApp</label>
-      <input id="qphone" type="tel" name="phone" required placeholder="+91 ...">
-      <label for="qmsg">Your message</label>
-      <textarea id="qmsg" name="message" required placeholder="Tell us a bit about what you need..."></textarea>
-      <button type="submit" class="submit" id="quoteSubmit">Send</button>
+      <input type="hidden" name="_subject" value="New internship program enquiry from tentwotechnologies.com">
+      <input type="hidden" name="page" value="Internship Program">
+      <input type="hidden" name="service" id="quoteService" value="Internship Program Enquiry">
+
+      <label for="qname">Full name</label>
+      <input id="qname" type="text" name="name" required placeholder="Example: Sri Ram Tentu" autocomplete="name">
+
+      <label for="qemail">Email address</label>
+      <input id="qemail" type="email" name="email" required placeholder="you@example.com" autocomplete="email">
+
+      <label for="qcountry">Country</label>
+      <select id="qcountry" name="country" required>
+        <option value="">Select your country</option>
+        <option>India</option>
+        <option>United States</option>
+        <option>Canada</option>
+        <option>United Kingdom</option>
+        <option>Australia</option>
+        <option>United Arab Emirates</option>
+        <option>Other</option>
+      </select>
+
+      <label for="qphone">Phone / WhatsApp number</label>
+      <input id="qphone" type="tel" name="phone_or_whatsapp" required placeholder="Example: +91 90592 91261" autocomplete="tel" pattern="[0-9+\-\s()]{7,20}">
+
+      <label for="qtrack">Preferred internship track</label>
+      <select id="qtrack" name="preferred_track" required>
+        <option value="">Select a track</option>
+        <option>Full Stack Development</option>
+        <option>AI &amp; Machine Learning</option>
+        <option>Data Science &amp; Analytics</option>
+        <option>Cybersecurity</option>
+        <option>Mobile App Development</option>
+        <option>Software Engineering</option>
+        <option>Python &amp; Automation</option>
+        <option>DevOps &amp; Cloud</option>
+        <option>UI / UX Design</option>
+        <option>QA / Software Testing</option>
+        <option>Not sure yet</option>
+      </select>
+
+      <label for="qstatus">Current status</label>
+      <select id="qstatus" name="current_status" required>
+        <option value="">Select your status</option>
+        <option>Student</option>
+        <option>Final-year student</option>
+        <option>Fresher</option>
+        <option>Working professional</option>
+        <option>Other</option>
+      </select>
+
+      <label for="qcollege">College / University / Company</label>
+      <input id="qcollege" type="text" name="college_or_company" required placeholder="Example: Andhra University">
+
+      <label for="qmsg">Your question</label>
+      <textarea id="qmsg" name="message" required placeholder="Ask about the program, batch dates, track, certificate, payment, or anything else..."></textarea>
+
+      <p class="form-note">Usually replies within 24 hours. We only use your details to respond to your internship enquiry.</p>
+      <button type="submit" class="submit" id="quoteSubmit">Send enquiry</button>
       <p class="msg" id="quoteMsg"></p>
     </form>
   </div>
@@ -441,13 +572,17 @@ a{color:inherit; text-decoration:none}
       msg=document.getElementById('quoteMsg'),
       submit=document.getElementById('quoteSubmit'),
       title=document.getElementById('qmTitle'),
-      FALLBACK='tsriram261@gmail.com';
+      thanks=document.getElementById('quoteThanks'),
+      another=document.getElementById('quoteAnother'),
+      FALLBACK='info@tentwotechnologies.com';
 
   function open(service, ttl){
-    title.textContent = ttl || 'Get a quote';
+    title.textContent = ttl || 'Ask about the program';
     if(service){ svc.value=service; qFor.textContent='Topic: '+service; qFor.style.display='inline-block'; }
-    else { svc.value=''; qFor.style.display='none'; }
+    else { svc.value='Internship Program Enquiry'; qFor.style.display='none'; }
     msg.textContent=''; msg.className='msg';
+    if(thanks) thanks.style.display='none';
+    form.style.display='flex';
     overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false');
     document.body.style.overflow='hidden';
   }
@@ -464,6 +599,14 @@ a{color:inherit; text-decoration:none}
     });
   });
   closeBtn.addEventListener('click', close);
+  if(another){
+    another.addEventListener('click', function(){
+      if(thanks) thanks.style.display='none';
+      form.style.display='flex';
+      msg.textContent='';
+      msg.className='msg';
+    });
+  }
   overlay.addEventListener('click', function(e){ if(e.target===overlay) close(); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape' && overlay.classList.contains('open')) close(); });
 
@@ -480,9 +623,9 @@ a{color:inherit; text-decoration:none}
     try{
       var res=await fetch(form.action,{method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}});
       if(res.ok){
-        msg.className='msg ok'; msg.textContent='Thanks! Your message has been sent. We will get back to you soon.';
         form.reset();
-        setTimeout(close, 2200);
+        form.style.display='none';
+        if(thanks) thanks.style.display='block';
       } else {
         msg.className='msg err'; msg.textContent='Something went wrong. Please email '+FALLBACK+' directly.';
       }
