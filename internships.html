@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <meta name="theme-color" content="#05080F" />
 <title>Internship Program · TenTwo Technologies</title>
-<meta name="description" content="Online internship program at TenTwo Technologies. Tracks include Full Stack, AI/ML, Data Science, Cybersecurity, DevOps, UI/UX and more. 8 weeks, fully online, certificate after project review. Payment details after application review and seat confirmation. No job guarantee. Apply now." />
+<meta name="description" content="TenTwo Technologies online internship program: 8 weeks, 10 tech tracks, project-based learning, certificate after successful review, and clear payment details after seat confirmation." />
 <link rel="canonical" href="https://www.tentwotechnologies.com/internships.html" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -760,6 +760,17 @@ body::after{
   }
 }
 
+/* 10/10 INTERNSHIP PAGE CLEANUP */
+.hero-badges{max-width:760px; margin-left:auto; margin-right:auto}
+.hero-notice{max-width:920px; margin-left:auto; margin-right:auto}
+.info-grid .info-card{min-height:100%}
+.batch-banner a{color:var(--brand-3); font-weight:700}
+.faq details[open]:first-child{border-color:rgba(46,134,255,0.28); background:rgba(46,134,255,0.08)}
+@media(max-width:640px){
+  .hero-notice .notice-pill{width:100%; justify-content:center; text-align:center}
+  .batch-banner{font-size:14px; line-height:1.55}
+}
+
 </style>
 </head>
 <body>
@@ -794,7 +805,7 @@ body::after{
   <a href="internships.html" class="active" aria-current="page">Internship Program</a>
   <a href="amazon.html" class="amazon-link">Amazon Store</a>
   <a href="index.html#founder">Founder</a>
-  <a href="index.html#process">Process</a>
+  <a href="#process">Process</a>
   <a href="https://www.tentwotechnologies.com/apply">Apply Now</a>
   <a href="#company-contact">Contact Details</a>
 </div>
@@ -802,42 +813,91 @@ body::after{
 <!-- HERO -->
 <header class="hero">
   <div class="container">
-    <span class="label">Internship Program · Online</span>
-    <h1>Join our <span class="ser">internship program.</span></h1>
-    <p>A fully online internship program across 10 tech domains. We share the learning material and project task, you complete and submit the project, and we issue the certificate after review.</p>
+    <span class="label">Internship Program · 100% Online</span>
+    <h1>Build a project. <span class="ser">Earn your certificate.</span></h1>
+    <p>Choose one tech track, receive learning material and a project task, complete it online, and get your TenTwo Technologies certificate after successful review.</p>
     <div class="hero-badges">
       <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>8-week program</span>
-      <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>100% Online</span>
-      <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Certificate on completion</span>
-      <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Material shared</span>
-      <span class="pill" style="color:var(--brand-3); border-color:var(--border-strong); background:var(--brand-soft)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Program fee ₹3,500</span>
+      <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M12 3v18"/></svg>Fully online</span>
+      <span class="pill" style="color:var(--brand-3); border-color:var(--border-strong); background:var(--brand-soft)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Fee ₹3,500</span>
+      <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Certificate after review</span>
     </div>
     <div class="hero-notice">
-      <span class="notice-pill urgent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg><strong>Limited seats</strong> in each batch</span>
-      <span class="notice-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Usually replies within <strong>24 hours</strong></span>
-      <span class="notice-pill urgent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><strong>Paid training program</strong> · No stipend</span>
-      <span class="notice-pill">Payment details shared only after <strong>application review</strong> and <strong>seat confirmation</strong></span>
-      <span class="notice-pill">Training + project + certificate · <strong>No job guarantee</strong></span>
+      <span class="notice-pill urgent"><strong>Paid online program</strong> · ₹3,500 per track</span>
+      <span class="notice-pill">No stipend</span>
+      <span class="notice-pill">No job guarantee</span>
+      <span class="notice-pill">Certificate after project review</span>
+      <span class="notice-pill">Payment details only after application review + seat confirmation</span>
     </div>
   </div>
 </header>
+
+<!-- PROGRAM OVERVIEW -->
+<section class="section" style="padding-top:10px" id="overview">
+  <div class="container">
+    <div class="section-head">
+      <h2>Quick overview</h2>
+      <p>All important details in one place, so students and parents understand the program before applying.</p>
+    </div>
+    <div class="batch-banner"><strong>Applications are open now.</strong> Start date, payment details, and joining instructions are shared only after application review and seat confirmation.</div>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Who can apply?</h3>
+        <p>Students, final-year students, freshers, beginners, and early-career professionals who want project-based tech experience.</p>
+        <span class="mini-note">Beginner friendly</span>
+      </div>
+      <div class="info-card">
+        <h3>What you receive</h3>
+        <p>Learning material, project task, online submission instructions, review, and a completion certificate after successful project review.</p>
+        <span class="mini-note">Project based</span>
+      </div>
+      <div class="info-card">
+        <h3>Paid program</h3>
+        <p>The program fee is <strong>₹3,500 per track</strong>. Payment details are shared only after application review and seat confirmation.</p>
+        <span class="mini-note">No payment before review</span>
+      </div>
+      <div class="info-card">
+        <h3>Clear expectation</h3>
+        <p>This is a paid online training and project program. It has <strong>no stipend</strong>, <strong>no job guarantee</strong>, and certificate is issued only after successful project review.</p>
+        <span class="mini-note">Transparent terms</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" style="padding-top:0" id="process">
+  <div class="container">
+    <div class="section-head">
+      <h2>How it works</h2>
+      <p>A simple, clear flow from application to certificate.</p>
+    </div>
+    <div class="batch-banner"><strong>Apply</strong> <span>→</span> Review + seat confirmation <span>→</span> Payment <span>→</span> Get material <span>→</span> Submit project <span>→</span> Receive certificate</div>
+    <div class="how">
+      <div class="step"><div class="n">1</div><h4>Apply online</h4><p>Fill the application form and choose your preferred internship track.</p></div>
+      <div class="step"><div class="n">2</div><h4>Review &amp; confirm</h4><p>We review your details, check seat availability, and share payment details only after confirmation.</p></div>
+      <div class="step"><div class="n">3</div><h4>Get material</h4><p>After payment confirmation, you receive the learning material and project instructions.</p></div>
+      <div class="step"><div class="n">4</div><h4>Submit project</h4><p>Complete your assigned project and submit the required files, links, screenshots, or report online.</p></div>
+      <div class="step"><div class="n">5</div><h4>Receive certificate</h4><p>After successful review, we issue your TenTwo Technologies completion certificate.</p></div>
+    </div>
+  </div>
+</section>
 
 <!-- TRACKS -->
 <section class="section" id="tracks">
   <div class="container">
     <div class="section-head">
-      <h2>Program tracks</h2>
-      <p>Each track is part of the same 8-week paid online program (₹3,500). Pick your domain, receive the material and project task, complete the project, and submit it for certificate review.</p>
+      <h2>Choose your track</h2>
+      <p>Pick one domain to start. Every track follows the same 8-week online format with material, a project task, review, and certificate after completion.</p>
     </div>
 
     <div class="grid">
 
-      <!-- Each track: edit the .chip.price text to set fee or "Free" / "Stipend" -->
 
       <div class="track">
         <div class="track-image"><img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20800%20450%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230b1220%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2258%25%22%20stop-color%3D%22%23123a72%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%232E86FF%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22800%22%20height%3D%22450%22%20rx%3D%2228%22%20fill%3D%22url%28%23g%29%22/%3E%0A%20%20%3Crect%20x%3D%2232%22%20y%3D%2232%22%20width%3D%22736%22%20height%3D%22386%22%20rx%3D%2224%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.03%29%22%20stroke%3D%22rgba%28255%2C255%2C255%2C0.12%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22670%22%20cy%3D%2288%22%20r%3D%22112%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.08%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22708%22%20cy%3D%2266%22%20r%3D%2254%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.12%29%22/%3E%0A%20%20%3Crect%20x%3D%2262%22%20y%3D%2268%22%20width%3D%22138%22%20height%3D%2232%22%20rx%3D%2216%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.10%29%22%20stroke%3D%22rgba%28255%2C255%2C255%2C0.16%29%22/%3E%0A%20%20%3Ctext%20x%3D%2284%22%20y%3D%2289%22%20font-family%3D%22Arial%2C%20Helvetica%2C%20sans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22700%22%20fill%3D%22%23DCEBFF%22%3ETenTwo%3C/text%3E%0A%20%20%3Ctext%20x%3D%2262%22%20y%3D%22192%22%20font-family%3D%22Arial%2C%20Helvetica%2C%20sans-serif%22%20font-size%3D%2242%22%20font-weight%3D%22800%22%20fill%3D%22%23FFFFFF%22%3EFULL%20STACK%3C/text%3E%0A%20%20%3Ctext%20x%3D%2262%22%20y%3D%22232%22%20font-family%3D%22Arial%2C%20Helvetica%2C%20sans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22500%22%20fill%3D%22%23D6E3F8%22%3EWeb%20%E2%80%A2%20API%20%E2%80%A2%20Database%3C/text%3E%0A%20%20%3Crect%20x%3D%2262%22%20y%3D%22300%22%20width%3D%22186%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.16%29%22/%3E%0A%20%20%3Crect%20x%3D%2262%22%20y%3D%22328%22%20width%3D%22122%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.10%29%22/%3E%0A%20%20%3Crect%20x%3D%2262%22%20y%3D%22356%22%20width%3D%22154%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.10%29%22/%3E%0A%20%20%3Crect%20x%3D%22528%22%20y%3D%22280%22%20width%3D%22172%22%20height%3D%2294%22%20rx%3D%2218%22%20fill%3D%22rgba%286%2C11%2C22%2C0.26%29%22%20stroke%3D%22rgba%28255%2C255%2C255%2C0.16%29%22/%3E%0A%20%20%3Crect%20x%3D%22552%22%20y%3D%22304%22%20width%3D%22126%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.16%29%22/%3E%0A%20%20%3Crect%20x%3D%22552%22%20y%3D%22332%22%20width%3D%2292%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.10%29%22/%3E%0A%20%20%3Cpath%20d%3D%22M0%20362%20C140%20308%2C%20300%20420%2C%20456%20362%20S690%20288%2C%20800%20334%20L800%20450%20L0%20450%20Z%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.06%29%22/%3E%0A%3C/svg%3E" alt="Course preview image" loading="lazy" /></div>
         <h3>Full Stack Development</h3>
-        <p>Build complete web apps (front end, back end, and database) with a real deployment.</p>
+        <p>Build a complete web app with front end, back end, database, and a final project submission.</p>
         <div class="track-meta"><span class="chip">8 weeks</span><span class="chip price">₹3,500</span><span class="chip outcome">Project task</span></div>
         <a class="track-apply" href="https://www.tentwotechnologies.com/apply" aria-label="Apply for Full Stack Development">Apply Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a> <!-- EDIT PRICE/LABEL -->
       </div>
@@ -893,7 +953,7 @@ body::after{
       <div class="track">
         <div class="track-image"><img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20800%20450%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2307111d%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2258%25%22%20stop-color%3D%22%2314405d%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2367a6ff%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22800%22%20height%3D%22450%22%20rx%3D%2228%22%20fill%3D%22url%28%23g%29%22/%3E%0A%20%20%3Crect%20x%3D%2232%22%20y%3D%2232%22%20width%3D%22736%22%20height%3D%22386%22%20rx%3D%2224%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.03%29%22%20stroke%3D%22rgba%28255%2C255%2C255%2C0.12%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22670%22%20cy%3D%2288%22%20r%3D%22112%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.08%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22708%22%20cy%3D%2266%22%20r%3D%2254%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.12%29%22/%3E%0A%20%20%3Crect%20x%3D%2262%22%20y%3D%2268%22%20width%3D%22138%22%20height%3D%2232%22%20rx%3D%2216%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.10%29%22%20stroke%3D%22rgba%28255%2C255%2C255%2C0.16%29%22/%3E%0A%20%20%3Ctext%20x%3D%2284%22%20y%3D%2289%22%20font-family%3D%22Arial%2C%20Helvetica%2C%20sans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22700%22%20fill%3D%22%23DCEBFF%22%3ETenTwo%3C/text%3E%0A%20%20%3Ctext%20x%3D%2262%22%20y%3D%22192%22%20font-family%3D%22Arial%2C%20Helvetica%2C%20sans-serif%22%20font-size%3D%2242%22%20font-weight%3D%22800%22%20fill%3D%22%23FFFFFF%22%3EDEVOPS%3C/text%3E%0A%20%20%3Ctext%20x%3D%2262%22%20y%3D%22232%22%20font-family%3D%22Arial%2C%20Helvetica%2C%20sans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22500%22%20fill%3D%22%23D6E3F8%22%3ECI/CD%20%E2%80%A2%20Containers%20%E2%80%A2%20Cloud%3C/text%3E%0A%20%20%3Crect%20x%3D%2262%22%20y%3D%22300%22%20width%3D%22186%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.16%29%22/%3E%0A%20%20%3Crect%20x%3D%2262%22%20y%3D%22328%22%20width%3D%22122%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.10%29%22/%3E%0A%20%20%3Crect%20x%3D%2262%22%20y%3D%22356%22%20width%3D%22154%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.10%29%22/%3E%0A%20%20%3Crect%20x%3D%22528%22%20y%3D%22280%22%20width%3D%22172%22%20height%3D%2294%22%20rx%3D%2218%22%20fill%3D%22rgba%286%2C11%2C22%2C0.26%29%22%20stroke%3D%22rgba%28255%2C255%2C255%2C0.16%29%22/%3E%0A%20%20%3Crect%20x%3D%22552%22%20y%3D%22304%22%20width%3D%22126%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.16%29%22/%3E%0A%20%20%3Crect%20x%3D%22552%22%20y%3D%22332%22%20width%3D%2292%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.10%29%22/%3E%0A%20%20%3Cpath%20d%3D%22M0%20362%20C140%20308%2C%20300%20420%2C%20456%20362%20S690%20288%2C%20800%20334%20L800%20450%20L0%20450%20Z%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.06%29%22/%3E%0A%3C/svg%3E" alt="Course preview image" loading="lazy" /></div>
         <h3>DevOps &amp; Cloud</h3>
-        <p>Work with CI/CD, containers, and cloud deployment on hands-on infrastructure tasks.</p>
+        <p>Study CI/CD, containers, and cloud concepts through the shared material and complete an online project task.</p>
         <div class="track-meta"><span class="chip">8 weeks</span><span class="chip price">₹3,500</span><span class="chip outcome">Cloud project</span></div>
         <a class="track-apply" href="https://www.tentwotechnologies.com/apply" aria-label="Apply for DevOps and Cloud">Apply Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a> <!-- EDIT PRICE/LABEL -->
       </div>
@@ -918,90 +978,35 @@ body::after{
   </div>
 </section>
 
-<!-- PROGRAM OVERVIEW -->
-<section class="section" style="padding-top:10px" id="overview">
+
+<!-- WHAT'S INCLUDED -->
+<section class="section" style="padding-top:0" id="included">
   <div class="container">
     <div class="section-head">
-      <h2>Simple program overview</h2>
-      <p>Quick details so students, parents, and freshers can understand the internship clearly before applying.</p>
+      <h2>What's included</h2>
+      <p>The ₹3,500 program fee covers the full online project-based internship flow.</p>
     </div>
-    <div class="batch-banner"><strong>Next batch starts soon.</strong> <span><a href="https://www.tentwotechnologies.com/apply">Applications are open now</a></span> and the confirmed start date is shared after your application review and seat confirmation.</div>
-    <div class="info-grid">
-      <div class="info-card">
-        <h3>Who can apply?</h3>
-        <p>Students, final-year students, freshers, beginners, and early-career professionals who want practical project experience can apply.</p>
-        <span class="mini-note">Beginner friendly</span>
+    <div class="grid">
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+        <h3>Learning material</h3>
+        <p>Track-specific material and references to help you understand the selected domain.</p>
       </div>
-      <div class="info-card">
-        <h3>What will you get?</h3>
-        <p>8-week online material access, project task, final review, resume-friendly work, and a verified completion certificate after successful submission.</p>
-        <span class="mini-note">Real project based</span>
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <h3>Project task</h3>
+        <p>A practical task or final project based on your selected internship track.</p>
       </div>
-      <div class="info-card">
-        <h3>Program fee</h3>
-        <p>The fee is <strong>₹3,500 only</strong> per track. This is a paid internship training program, not a stipend internship. No stipend is provided. Payment details will be shared only after application review and seat confirmation.</p>
-        <span class="mini-note">Payment after seat confirmation</span>
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Basic clarification support</h3>
+        <p>Support for program-related questions and project submission instructions.</p>
       </div>
-      <div class="info-card">
-        <h3>Certificate rule</h3>
-        <p>The certificate is issued after successful completion of tasks, project work, and final review. The sample shown below includes a watermark background for website display only.</p>
-        <span class="mini-note">Verified on completion</span>
+      <div class="track">
+        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3>Review &amp; certificate</h3>
+        <p>Project review and completion certificate after successful submission.</p>
       </div>
-      <div class="info-card">
-        <h3>Job guarantee note</h3>
-        <p>This program provides training material, project work, review, and a completion certificate. It does not guarantee a job, internship placement, or hiring opportunity.</p>
-        <span class="mini-note">No job guarantee</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- BEFORE YOU APPLY -->
-<section class="section" style="padding-top:0" id="fit">
-  <div class="container">
-    <div class="section-head">
-      <h2>Before you apply</h2>
-      <p>A simple check so students and parents can quickly understand if this program is the right fit.</p>
-    </div>
-    <div class="info-grid">
-      <div class="info-card">
-        <h3>Good fit for</h3>
-        <p>Students, final-year students, freshers, beginners, and early-career professionals who want a self-paced online internship experience with learning material, project work, and a certificate after review.</p>
-        <span class="mini-note">Student friendly</span>
-      </div>
-      <div class="info-card">
-        <h3>Not the right fit if</h3>
-        <p>You are expecting a paid job, stipend, daily live classes, one-to-one teaching, placement guarantee, or company hiring after completion.</p>
-        <span class="mini-note">Clear expectation</span>
-      </div>
-      <div class="info-card">
-        <h3>Basic requirements</h3>
-        <p>You need a laptop or desktop, stable internet, email or WhatsApp access, and enough time each week to study the material and complete the assigned project.</p>
-        <span class="mini-note">Laptop recommended</span>
-      </div>
-      <div class="info-card">
-        <h3>Support style</h3>
-        <p>This is a self-paced online program. We share material and project instructions. Basic clarification support is available, but this is not a live daily classroom program.</p>
-        <span class="mini-note">Self-paced online</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AFTER APPLYING -->
-<section class="section" style="padding-top:0" id="after-apply">
-  <div class="container">
-    <div class="section-head">
-      <h2>What happens after applying?</h2>
-      <p>No confusion: application review happens first. Payment details are shared only after seat confirmation.</p>
-    </div>
-    <div class="how">
-      <div class="step"><div class="n">1</div><h4>Apply online</h4><p>Fill the application form and choose your preferred track.</p></div>
-      <div class="step"><div class="n">2</div><h4>Review</h4><p>Our team reviews your details and checks seat availability.</p></div>
-      <div class="step"><div class="n">3</div><h4>Seat confirmation</h4><p>If your seat is confirmed, we share payment details and joining instructions.</p></div>
-      <div class="step"><div class="n">4</div><h4>Material shared</h4><p>After payment confirmation, you receive the online material and project task.</p></div>
-      <div class="step"><div class="n">5</div><h4>Submit project</h4><p>Complete the project, submit it online, and receive the certificate after successful review.</p></div>
     </div>
   </div>
 </section>
@@ -1048,87 +1053,13 @@ body::after{
   </div>
 </section>
 
-<!-- WHAT'S INCLUDED -->
-<section class="section" style="padding-top:0" id="included">
-  <div class="container">
-    <div class="section-head">
-      <h2>What's included</h2>
-      <p>Everything in the ₹3,500 paid online program, designed to help you complete a project and receive a certificate after review.</p>
-    </div>
-    <div class="grid">
-      <div class="track">
-        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
-        <h3>Learning material</h3>
-        <p>We share the online material and project instructions needed to complete your selected track.</p>
-      </div>
-      <div class="track">
-        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-        <h3>Real projects</h3>
-        <p>Hands-on tasks and a final project you can add to your portfolio.</p>
-      </div>
-      <div class="track">
-        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
-        <h3>Verified certificate</h3>
-        <p>An official completion certificate from TenTwo Technologies Pvt Ltd.</p>
-      </div>
-      <div class="track">
-        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></div>
-        <h3>Learning resources</h3>
-        <p>Structured tasks, references, and a domain roadmap to follow.</p>
-      </div>
-      <div class="track">
-        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <h3>Online submission</h3>
-        <p>Clear instructions for completing and submitting your assigned project online.</p>
-      </div>
-      <div class="track">
-        <div class="track-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <h3>Feedback &amp; review</h3>
-        <p>Your submitted project is reviewed before the completion certificate is issued.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- REQUIREMENTS AND COMPLETION CHECKLIST -->
-<section class="section" style="padding-top:0" id="requirements">
-  <div class="container">
-    <div class="section-head">
-      <h2>Requirements and completion checklist</h2>
-      <p>Keep these simple points ready before joining and before submitting your final project.</p>
-    </div>
-    <div class="info-grid">
-      <div class="info-card">
-        <h3>Before joining</h3>
-        <p>Keep a laptop or desktop, internet connection, email access, WhatsApp access, and basic interest in your selected track. Beginners can apply.</p>
-        <span class="mini-note">Beginner friendly</span>
-      </div>
-      <div class="info-card">
-        <h3>To complete the internship</h3>
-        <p>You must study the shared material, complete the assigned project, and submit the required files, links, screenshots, demo proof, or report based on your track.</p>
-        <span class="mini-note">Submission required</span>
-      </div>
-      <div class="info-card">
-        <h3>If project is not submitted</h3>
-        <p>The certificate cannot be issued until the assigned project is submitted and successfully reviewed by the TenTwo team.</p>
-        <span class="mini-note">Review required</span>
-      </div>
-      <div class="info-card">
-        <h3>Refund or cancellation</h3>
-        <p>Refund or cancellation details will be shared before payment confirmation. Please read the details clearly before making payment.</p>
-        <span class="mini-note">Before payment</span>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- CERTIFICATE SAMPLE -->
 <section class="section" style="padding-top:0" id="certificate">
   <div class="container">
     <div class="section-head">
       <h2>Certificate sample</h2>
-      <p>We added a visible sample watermark on the preview below so visitors can see the certificate style, while the final issued certificate remains clean.</p>
+      <p>Preview the certificate style before applying. The website sample includes a watermark only for display safety.</p>
     </div>
     <div class="cert-showcase">
       <div class="cert-card">
@@ -1143,41 +1074,116 @@ body::after{
       </div>
       <div class="cert-side">
         <span class="cert-topline">Sample preview only</span>
-        <h3>See the certificate format before you apply</h3>
-        <p>This preview helps applicants understand the certificate design and the information included on it. The watermark is there only on the website sample preview.</p>
-        <div class="trust-strip">
-          <span class="notice-pill urgent">Limited seats in each batch</span>
-          <span class="notice-pill">Usually replies within 24 hours</span>
-        </div>
+        <h3>Certificate preview</h3>
+        <p>The final certificate is issued after successful project submission and review. The website preview is watermarked only to prevent misuse.</p>
         <div class="cert-points">
-          <div class="item"><span class="dot"></span><span>Final certificate is issued after successful completion of tasks, project work, and review.</span></div>
-          <div class="item"><span class="dot"></span><span>The actual issued certificate will contain the participant name, internship domain, completion date, and company signature.</span></div>
-          <div class="item"><span class="dot"></span><span>The live sample uses a watermark to discourage easy reuse or editing of the preview image.</span></div>
+          <div class="item"><span class="dot"></span><span>Issued after successful completion, project submission, and review.</span></div>
+          <div class="item"><span class="dot"></span><span>Includes participant name, internship domain, completion date, and company signature.</span></div>
+          <div class="item"><span class="dot"></span><span>Certificate verification can be requested by contacting TenTwo Technologies.</span></div>
         </div>
         <div class="cert-actions">
           <a href="https://www.tentwotechnologies.com/apply" class="inline-apply">Apply now</a>
           <a href="#tracks" class="inline-ghost">See all tracks</a>
         </div>
-        <p class="cert-note">Note: A watermark helps discourage misuse, but no website image can be made 100% impossible to copy. Final official certificates should still be verified by TenTwo Technologies when needed. Certificate verification can be requested by contacting TenTwo Technologies with the certificate details.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="section" style="padding-top:0" id="process">
+
+<!-- BEFORE YOU APPLY -->
+<section class="section" style="padding-top:0" id="fit">
   <div class="container">
     <div class="section-head">
-      <h2>How it works</h2>
-      <p>Simple process: Apply → Get material → Complete project → Submit project → Receive certificate.</p>
+      <h2>Before you join</h2>
+      <p>Read these points once so there is no confusion later.</p>
     </div>
-    <div class="batch-banner"><strong>Clear process:</strong> Apply <span>→</span> Get material <span>→</span> Complete project <span>→</span> Submit project <span>→</span> Receive certificate</div>
-    <div class="how">
-      <div class="step"><div class="n">1</div><h4>Apply</h4><p>Fill the short application form and choose your preferred internship track.</p></div>
-      <div class="step"><div class="n">2</div><h4>Get material</h4><p>After review, seat confirmation, and payment confirmation, we share the online material and project instructions.</p></div>
-      <div class="step"><div class="n">3</div><h4>Complete project</h4><p>Study the material and complete the assigned project work at your own pace.</p></div>
-      <div class="step"><div class="n">4</div><h4>Submit project</h4><p>Submit your completed project online for review by the TenTwo team.</p></div>
-      <div class="step"><div class="n">5</div><h4>Receive certificate</h4><p>After successful project review, we issue your completion certificate.</p></div>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Good fit for</h3>
+        <p>Students, freshers, beginners, and early-career learners who want a self-paced online internship with project work and certificate review.</p>
+        <span class="mini-note">Student friendly</span>
+      </div>
+      <div class="info-card">
+        <h3>Not the right fit if</h3>
+        <p>You expect a stipend, paid job, placement guarantee, daily live classes, one-to-one teaching, or automatic hiring after completion.</p>
+        <span class="mini-note">Clear expectation</span>
+      </div>
+      <div class="info-card">
+        <h3>What you need</h3>
+        <p>A laptop or desktop, stable internet, email or WhatsApp access, and enough weekly time to study the material and finish the project.</p>
+        <span class="mini-note">Laptop recommended</span>
+      </div>
+      <div class="info-card">
+        <h3>Certificate rule</h3>
+        <p>The certificate is issued only after you submit the assigned project and the TenTwo team successfully reviews it.</p>
+        <span class="mini-note">Submission required</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="padding-top:0" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <h2>Frequently asked questions</h2>
+      <p>Short answers to the questions most students and parents ask before applying.</p>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Is this a paid program?</summary>
+        <div class="ans">Yes. The one-time program fee is ₹3,500 per track. Payment details are shared only after application review and seat confirmation.</div>
+      </details>
+      <details>
+        <summary>Is there any stipend?</summary>
+        <div class="ans">No. This is a paid online training and project-based internship program. We do not provide a stipend.</div>
+      </details>
+      <details>
+        <summary>Will I get a certificate?</summary>
+        <div class="ans">Yes, after you complete the assigned project, submit it online, and the TenTwo team successfully reviews it.</div>
+      </details>
+      <details>
+        <summary>Do you guarantee a job or placement?</summary>
+        <div class="ans">No. The program provides learning material, project work, review, and a certificate. It does not guarantee a job, placement, or hiring opportunity.</div>
+      </details>
+      <details>
+        <summary>Is it fully online?</summary>
+        <div class="ans">Yes. The material, project task, submission, and review process are handled online.</div>
+      </details>
+      <details>
+        <summary>Do I need prior experience?</summary>
+        <div class="ans">Beginners can apply. Some tracks may feel easier with basic computer knowledge, so choose a track based on your interest and comfort level.</div>
+      </details>
+      <details>
+        <summary>What happens after I apply?</summary>
+        <div class="ans">We review your application and seat availability. If confirmed, we share payment details and joining instructions. After payment confirmation, you receive the material and project task.</div>
+      </details>
+      <div class="faq-extra" id="faqExtra" aria-hidden="true">
+      <details>
+        <summary>How long is the program?</summary>
+        <div class="ans">The program duration is 8 weeks and is designed to be flexible around college, studies, or work.</div>
+      </details>
+      <details>
+        <summary>Can I join from outside India?</summary>
+        <div class="ans">Yes. Since the program is online, students from India, the United States, and other countries can enquire or apply. Timing and payment details are confirmed after review.</div>
+      </details>
+      <details>
+        <summary>Can I choose more than one track?</summary>
+        <div class="ans">You can enquire about more than one track, but we recommend starting with one track first so you can complete the project properly.</div>
+      </details>
+      <details>
+        <summary>What if I do not submit the project?</summary>
+        <div class="ans">The certificate cannot be issued until your assigned project is submitted and successfully reviewed.</div>
+      </details>
+      <details>
+        <summary>Can I ask questions before applying?</summary>
+        <div class="ans">Yes. Click the “Have a question?” button, fill out the enquiry form, or contact TenTwo Technologies through email or WhatsApp.</div>
+      </details>
+      </div>
+      <div class="faq-more-wrap">
+        <button type="button" class="faq-toggle" id="faqToggle" aria-expanded="false" aria-controls="faqExtra">Show more questions</button>
+      </div>
     </div>
   </div>
 </section>
@@ -1189,7 +1195,7 @@ body::after{
       <div class="video-copy">
         <span class="label">Program preview</span>
         <h2>Watch before you apply</h2>
-        <p>After checking the tracks and process, watch this quick preview to understand how the TenTwo internship program works.</p>
+        <p>Watch this short preview after checking the overview, tracks, and process.</p>
         <div class="video-actions">
           <a class="inline-apply" href="https://www.tentwotechnologies.com/apply">Apply Now</a>
           <a class="inline-ghost js-quote" href="#question" data-service="Internship Program Enquiry" data-title="Ask about the internship program">Have a question?</a>
@@ -1206,144 +1212,32 @@ body::after{
   </div>
 </section>
 
+
 <!-- PROGRAM HIGHLIGHTS / REVIEWS -->
 <section class="section" style="padding-top:0" id="testimonials">
   <div class="container">
     <div class="section-head">
-      <h2>Program highlights now. Real reviews later.</h2>
-      <p>We will add student reviews only after real participants complete the program and share feedback. Until then, these cards explain the program expectations clearly without fake testimonials.</p>
+      <h2>Program highlights</h2>
+      <p>Real student reviews will be added after participants complete the program and share feedback.</p>
     </div>
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <div class="quote-mark">01</div>
-        <p class="testimonial-text">Remote, hands-on internship experience focused on developing, testing, and supporting technology solutions.</p>
-        <div class="testimonial-author">Remote learning format</div>
-        <div class="testimonial-role">Based on the public internship role description</div>
+        <p class="testimonial-text">Self-paced online format for students who want to learn, complete a project, and submit work for review.</p>
+        <div class="testimonial-author">Flexible learning</div>
+        <div class="testimonial-role">Study around college or work</div>
       </div>
       <div class="testimonial-card">
         <div class="quote-mark">02</div>
-        <p class="testimonial-text">Practical tasks may include coding, debugging, research, data analysis, and improving digital solutions.</p>
-        <div class="testimonial-author">Real task exposure</div>
-        <div class="testimonial-role">Useful for project and resume building</div>
+        <p class="testimonial-text">Project-based structure so learners can build something practical instead of only reading theory.</p>
+        <div class="testimonial-author">Project focused</div>
+        <div class="testimonial-role">Useful for portfolio and resume discussion</div>
       </div>
       <div class="testimonial-card">
         <div class="quote-mark">03</div>
-        <p class="testimonial-text">Best suited for learners with interest in Python, Java, JavaScript, web development, AI, data, backend systems, and problem solving.</p>
-        <div class="testimonial-author">Good fit for tech learners</div>
-        <div class="testimonial-role">Real student reviews will be added after completion feedback</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="section" style="padding-top:0" id="faq">
-  <div class="container">
-    <div class="section-head">
-      <h2>Frequently asked questions</h2>
-      <p>Everything you need to know before you apply.</p>
-    </div>
-    <div class="faq">
-      <details>
-        <summary>Is this a paid internship with a stipend?</summary>
-        <div class="ans">No. This is a paid internship training program, not a stipend internship. You pay a one-time program fee of ₹3,500. We share the learning material and project task, you complete and submit the project, and we issue the certificate after review. We do not pay a stipend.</div>
-      </details>
-      <details>
-        <summary>Who is this program for?</summary>
-        <div class="ans">Students, final-year students, freshers, and early-career professionals who want practical, hands-on experience in a tech domain. If you want to build real projects and have something solid to show on your resume, this is for you.</div>
-      </details>
-      <details>
-        <summary>Do I need prior experience?</summary>
-        <div class="ans">No. Each track starts from the fundamentals and builds up through guided tasks. Basic familiarity with your chosen domain helps, but it is not required.</div>
-      </details>
-      <details>
-        <summary>How long is the program and how much time does it take?</summary>
-        <div class="ans">The program runs for 8 weeks. It is online and flexible, so you can work through the tasks at your own pace around college or a job. Plan for a few focused hours each week.</div>
-      </details>
-      <details>
-        <summary>What does the ₹3,500 fee cover?</summary>
-        <div class="ans">One-time fee per track. It covers the online learning material, assigned project task, project review, and your completion certificate after successful submission. Payment details will be shared only after application review and seat confirmation.</div>
-      </details>
-      <details>
-        <summary>When will payment details be shared?</summary>
-        <div class="ans">Payment details will be shared only after your application is reviewed and your seat is confirmed. This helps avoid confusion before confirmation.</div>
-      </details>
-      <details>
-        <summary>Will I get a certificate?</summary>
-        <div class="ans">Yes. After you complete and submit your final project, the project is reviewed. After successful review, you receive a completion certificate from TenTwo Technologies Private Limited.</div>
-      </details>
-      <div class="faq-extra" id="faqExtra" aria-hidden="true">
-      <details>
-        <summary>Is the fee refundable?</summary>
-        <div class="ans">Refund or cancellation details will be shared before payment confirmation. Please read the details clearly before making payment. If you have any questions about the program, please email <a href="mailto:info@tentwotechnologies.com">info@tentwotechnologies.com</a> before payment.</div>
-      </details>
-      <details>
-        <summary>When does the next batch start?</summary>
-        <div class="ans">We onboard new participants regularly. Once you apply, we will email you to confirm your start date and next steps.</div>
-      </details>
-      <details>
-        <summary>How do I apply?</summary>
-        <div class="ans">Click <a href="https://www.tentwotechnologies.com/apply">Apply now</a>, fill out the short form, and choose your preferred track. We will get back to you with the next steps.</div>
-      </details>
-      <details>
-        <summary>Can I join from outside India?</summary>
-        <div class="ans">Yes. The program is online, so students from India, the United States, and other countries can enquire or apply. We will confirm timing, payment, and onboarding details after reviewing your application.</div>
-      </details>
-      <details>
-        <summary>Can I choose more than one track?</summary>
-        <div class="ans">Yes, you can ask for more than one track, but we recommend starting with one track first so you can complete the tasks and final project properly.</div>
-      </details>
-      <details>
-        <summary>What happens after I apply?</summary>
-        <div class="ans">After you apply, our team reviews your details and checks seat availability. If your seat is confirmed, we share payment details and joining instructions. After payment confirmation, you receive the material and project task. The full process is: Apply → Get material → Complete project → Submit project → Receive certificate.</div>
-      </details>
-      <details>
-        <summary>Will there be live sessions?</summary>
-        <div class="ans">This is a self-paced online program, not a daily live classroom program. After confirmation, we share the material and project instructions. You complete the project and submit it for review. Basic clarification support is available.</div>
-      </details>
-      <details>
-        <summary>What project will I build?</summary>
-        <div class="ans">Your project depends on the track you select. The goal is to complete a practical project that shows your skills and can be added to your portfolio or resume.</div>
-      </details>
-      <details>
-        <summary>Do I need a laptop?</summary>
-        <div class="ans">Yes. A laptop or desktop with a stable internet connection is recommended because most tracks involve coding, design, cloud tools, testing, or project submissions.</div>
-      </details>
-      <details>
-        <summary>Do you guarantee a job or placement?</summary>
-        <div class="ans">No. This program provides training material, project work, review, and a completion certificate. It does not guarantee a job, internship placement, or hiring opportunity.</div>
-      </details>
-      <details>
-        <summary>Can I ask questions before applying?</summary>
-        <div class="ans">Yes. Click the “Have a question?” button, fill out the enquiry form, and we will respond with the details you need.</div>
-      </details>
-      <details>
-        <summary>Is this a job?</summary>
-        <div class="ans">No. This is an online paid internship training program with material, project work, review, and certificate after successful completion. It is not a job offer.</div>
-      </details>
-      <details>
-        <summary>Will payment be collected before application review?</summary>
-        <div class="ans">No. Payment details are shared only after your application is reviewed and your seat is confirmed.</div>
-      </details>
-      <details>
-        <summary>Do I need coding knowledge?</summary>
-        <div class="ans">Beginners can apply. Some tracks are easier for beginners, and some technical tracks may need basic computer knowledge. Choose the track based on your interest and comfort level.</div>
-      </details>
-      <details>
-        <summary>What happens if I do not complete the project?</summary>
-        <div class="ans">The certificate cannot be issued until you complete the assigned project, submit it online, and the project is successfully reviewed.</div>
-      </details>
-      <details>
-        <summary>When will I receive the certificate?</summary>
-        <div class="ans">The certificate is issued after your final project is submitted and successfully reviewed. The review timeline depends on the project submission and review queue.</div>
-      </details>
-      <details>
-        <summary>Can my certificate be verified later?</summary>
-        <div class="ans">Yes. Certificate verification can be requested by contacting TenTwo Technologies with the certificate details.</div>
-      </details>
-      </div>
-      <div class="faq-more-wrap">
-        <button type="button" class="faq-toggle" id="faqToggle" aria-expanded="false" aria-controls="faqExtra">Show more questions</button>
+        <p class="testimonial-text">Clear expectations before payment: paid program, no stipend, no job guarantee, certificate after project review.</p>
+        <div class="testimonial-author">Transparent terms</div>
+        <div class="testimonial-role">No fake reviews or misleading claims</div>
       </div>
     </div>
   </div>
@@ -1354,20 +1248,20 @@ body::after{
   <div class="container">
     <div class="cta-box">
       <h2>Ready to apply?</h2>
-      <p>Spots are limited each cohort. Submit your application and we'll get back to you with next steps.</p>
+      <p>Submit your application. We review it first, confirm seat availability, and then share the next steps.</p>
       <div class="cta-actions">
         <a href="https://www.tentwotechnologies.com/apply" class="btn btn-primary">Apply now</a>
         <a href="#quote" class="btn btn-ghost js-quote" data-title="Ask about the program">Have a question?</a>
       </div>
       <div class="cta-meta">
-        <span class="notice-pill urgent">Limited seats per cohort</span>
         <span class="notice-pill">Usually replies within 24 hours</span>
         <span class="notice-pill">Payment details after review + seat confirmation</span>
-        <span class="notice-pill">No job guarantee</span>
+        <span class="notice-pill">No stipend or job guarantee</span>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- COMPANY CONTACT DETAILS -->
 <section class="company-contact" id="company-contact">
@@ -1375,45 +1269,44 @@ body::after{
     <div class="company-box">
       <div class="company-main">
         <span class="label">Company contact</span>
-        <h2>TenTwo Technologies contact details</h2>
-        <p>For internship questions, application review, seat confirmation, certificate queries, or company enquiries, use the official contact details below.</p>
+        <h2>Have questions before applying?</h2>
+        <p>For internship questions, application review, seat confirmation, payment next steps, or certificate queries, contact TenTwo Technologies through the official company details below.</p>
         <div class="company-name">
-          <strong>Sri Ram Kumar Tentu</strong>
-          <span>Founder / Director, TenTwo Technologies Private Limited</span>
+          <strong>TenTwo Technologies Private Limited</strong>
+          <span>Official internship support</span>
         </div>
         <div class="company-buttons">
-          <a class="company-btn primary" href="mailto:sriram@tentwotechnologies.com">Email</a>
-          <a class="company-btn" href="tel:+919059291261">Call Personal</a>
+          <a class="company-btn primary" href="mailto:info@tentwotechnologies.com">Email</a>
           <a class="company-btn" href="tel:+918897443993">Call Company</a>
-          <a class="company-btn" href="https://wa.me/919059291261?text=Hi%20TenTwo%20Technologies%2C%20I%20have%20a%20question%20about%20the%20internship%20program." target="_blank" rel="noopener">WhatsApp</a>
+          <a class="company-btn" href="https://wa.me/918897443993?text=Hi%20TenTwo%20Technologies%2C%20I%20have%20a%20question%20about%20the%20internship%20program." target="_blank" rel="noopener">WhatsApp</a>
           <a class="company-btn" href="https://www.tentwotechnologies.com" target="_blank" rel="noopener">Website</a>
           <a class="company-btn" href="https://www.linkedin.com/company/tentwo-technologies" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-      <div class="company-details" aria-label="TenTwo Technologies company details">
+      <div class="company-details" aria-label="TenTwo Technologies contact details">
         <div class="company-detail">
           <span class="k">Company</span>
           <span class="v">TenTwo Technologies Private Limited</span>
         </div>
         <div class="company-detail">
-          <span class="k">Email</span>
-          <a class="v" href="mailto:sriram@tentwotechnologies.com">sriram@tentwotechnologies.com</a>
-        </div>
-        <div class="company-detail">
-          <span class="k">Personal phone</span>
-          <a class="v" href="tel:+919059291261">+91 9059291261</a>
+          <span class="k">Official email</span>
+          <a class="v" href="mailto:info@tentwotechnologies.com">info@tentwotechnologies.com</a>
         </div>
         <div class="company-detail">
           <span class="k">Company phone</span>
-          <a class="v" href="tel:+918897443993">+91 8897443993</a>
+          <a class="v" href="tel:+918897443993">+91 88974 43993</a>
         </div>
         <div class="company-detail">
-          <span class="k">Director Identification Number (DIN)</span>
-          <span class="v">11495822</span>
+          <span class="k">WhatsApp support</span>
+          <a class="v" href="https://wa.me/918897443993?text=Hi%20TenTwo%20Technologies%2C%20I%20have%20a%20question%20about%20the%20internship%20program." target="_blank" rel="noopener">+91 88974 43993</a>
         </div>
         <div class="company-detail">
           <span class="k">Registered address</span>
           <span class="v">15-37B, Telephone Office Road, Kaikaluru, Andhra Pradesh, Krishna, India, 521333</span>
+        </div>
+        <div class="company-detail">
+          <span class="k">Verification note</span>
+          <span class="v">Company registration details can be shared on request for verification.</span>
         </div>
       </div>
     </div>
@@ -1423,18 +1316,18 @@ body::after{
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-    TenTwo Technologies Private Limited · Kaikaluru, Andhra Pradesh, Krishna, India 521333<br>
-    Founder / Director: Sri Ram Kumar Tentu · DIN: 11495822<br>
-    <a href="mailto:sriram@tentwotechnologies.com">sriram@tentwotechnologies.com</a> &nbsp;·&nbsp;
+    TenTwo Technologies Private Limited · Kaikaluru, Andhra Pradesh, India<br>
+    <a href="mailto:info@tentwotechnologies.com">info@tentwotechnologies.com</a> &nbsp;·&nbsp;
     <a href="tel:+918897443993">+91 88974 43993</a> &nbsp;·&nbsp;
     <a href="https://www.linkedin.com/company/tentwo-technologies" target="_blank" rel="noopener">LinkedIn</a><br>
     <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="services.html">Services</a> &nbsp;·&nbsp; <a href="amazon.html">Amazon</a> &nbsp;·&nbsp; <a href="https://www.tentwotechnologies.com">tentwotechnologies.com</a>
   </div>
 </footer>
 
+
 <!-- WHATSAPP FLOATING BUTTON -->
 <a class="whatsapp-float"
-   href="https://wa.me/919059291261?text=Hi%20TenTwo%20Technologies%2C%20I%20have%20a%20question%20about%20the%20internship%20program."
+   href="https://wa.me/918897443993?text=Hi%20TenTwo%20Technologies%2C%20I%20have%20a%20question%20about%20the%20internship%20program."
    target="_blank"
    rel="noopener"
    aria-label="Chat on WhatsApp about the internship program">
@@ -1463,7 +1356,7 @@ body::after{
       <input type="hidden" name="service" id="quoteService" value="Internship Program Enquiry">
 
       <label for="qname">Full name</label>
-      <input id="qname" type="text" name="name" required placeholder="Example: Sri Ram Tentu" autocomplete="name">
+      <input id="qname" type="text" name="name" required placeholder="Example: Student Name" autocomplete="name">
 
       <label for="qemail">Email address</label>
       <input id="qemail" type="email" name="email" required placeholder="you@example.com" autocomplete="email">
@@ -1481,7 +1374,7 @@ body::after{
       </select>
 
       <label for="qphone">Phone / WhatsApp number</label>
-      <input id="qphone" type="tel" name="phone_or_whatsapp" required placeholder="Example: +91 90592 91261" autocomplete="tel" pattern="[0-9+\-\s()]{7,20}">
+      <input id="qphone" type="tel" name="phone_or_whatsapp" required placeholder="Example: +91 98765 43210" autocomplete="tel" pattern="[0-9+\-\s()]{7,20}">
 
       <label for="qtrack">Preferred internship track</label>
       <select id="qtrack" name="preferred_track" required>
@@ -1534,7 +1427,7 @@ body::after{
       title=document.getElementById('qmTitle'),
       thanks=document.getElementById('quoteThanks'),
       another=document.getElementById('quoteAnother'),
-      FALLBACK='sriram@tentwotechnologies.com';
+      FALLBACK='info@tentwotechnologies.com';
 
   function open(service, ttl){
     title.textContent = ttl || 'Ask about the program';
