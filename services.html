@@ -1227,56 +1227,27 @@ body::before{
 
 
 
-/* MOBILE NAV RELIABILITY - prevents hamburger from shrinking on small phones */
-@media(max-width:480px){
-  .nav-inner{gap:8px !important;}
-  .nav-burger{flex:0 0 38px !important; width:38px !important; min-width:38px !important;}
-  .nav-cta{flex:0 0 auto !important;}
-  .nav-logo{min-width:0 !important; flex-shrink:1 !important;}
+/* TRUST FOOTER LINKS - privacy, terms, refund and verification */
+.trust-footer-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px 14px;
+  flex-wrap:wrap;
+  margin:18px auto 0;
+  padding-top:16px;
+  border-top:1px solid rgba(255,255,255,0.09);
+  font-size:12.5px;
+  line-height:1.4;
+  color:var(--text-faint,#5B6478);
+  text-align:center;
 }
-@media(max-width:340px){
-  .nav-cta{display:none !important;}
+.trust-footer-links a{color:var(--text-dim,#8A93A6);text-decoration:none;transition:color .2s ease, transform .2s ease;}
+.trust-footer-links a:hover{color:var(--brand-3,#6BA8FF);transform:translateY(-1px);}
+@media(max-width:640px){
+  .trust-footer-links{gap:8px 10px;font-size:12px;padding-left:8px;padding-right:8px;}
+  .trust-footer-links a{padding:4px 2px;}
 }
-
-
-
-/* MOBILE BRAND SHORT LABEL - prevents logo text from clipping beside CTA buttons */
-@media(max-width:480px){
-  .nav-logo span{
-    max-width:none !important;
-    white-space:nowrap !important;
-    overflow:visible !important;
-    text-overflow:clip !important;
-    font-size:0 !important;
-    line-height:1 !important;
-  }
-  .nav-logo span em{font-size:0 !important;}
-  .nav-logo span::after{
-    content:'TenTwo';
-    font-size:14px !important;
-    font-weight:700;
-    color:var(--text);
-    letter-spacing:-0.01em;
-  }
-}
-
-
-
-/* MOBILE CONTACT LOGO FIX - keep TT icon clean when brand is shortened */
-@media(max-width:480px){
-  .nav-logo .mark{
-    font-size:14px !important;
-    line-height:1 !important;
-    display:grid !important;
-    place-items:center !important;
-    flex:0 0 30px !important;
-    width:30px !important;
-    height:30px !important;
-    overflow:hidden !important;
-  }
-  .nav-logo .mark::after{content:none !important; display:none !important;}
-}
-
 </style>
 </head>
 <body>
@@ -1790,6 +1761,16 @@ Registered address: 15-37B, Telephone Office Road, Kaikaluru, Andhra Pradesh, Kr
 <a href="https://www.linkedin.com/company/tentwo-technologies" rel="noopener noreferrer" target="_blank">LinkedIn</a>
 </div>
 </div>
+
+  <div class="trust-footer-links" aria-label="Trust and policy links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <span>·</span>
+    <a href="terms.html">Terms</a>
+    <span>·</span>
+    <a href="refund-policy.html">Refund Policy</a>
+    <span>·</span>
+    <a href="company-verification.html">Company Verification</a>
+  </div>
 </footer>
 <!-- WHATSAPP FLOATING BUTTON -->
 <a aria-label="Chat with TenTwo Technologies on WhatsApp" class="whatsapp-float" href="https://wa.me/919059291261" rel="noopener noreferrer" target="_blank">
@@ -2104,7 +2085,7 @@ Registered address: 15-37B, Telephone Office Road, Kaikaluru, Andhra Pradesh, Kr
 </div>
 </div>
 <button class="submit" id="quoteSubmit" type="submit">Send request</button>
-<p class="privacy-note">We only use your details to respond to your project request.</p>
+<p class="privacy-note">We only use your details to respond to your project request. Read our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms.html">Terms</a>.</p>
 <p class="msg" id="quoteMsg"></p>
 </form>
 <div aria-live="polite" class="form-success" id="quoteSuccess">
