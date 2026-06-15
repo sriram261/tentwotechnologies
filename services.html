@@ -966,6 +966,239 @@ body::before{
     display:inline !important;
   }
 }
+
+/* COMPANY CONTACT DETAILS */
+.company-contact{padding:8px 0 72px}
+.company-card{
+  background:linear-gradient(135deg,rgba(46,134,255,0.18),rgba(255,255,255,0.055));
+  border:1px solid var(--border-strong);
+  border-radius:var(--radius-lg);
+  padding:clamp(26px,4vw,42px);
+  box-shadow:0 22px 60px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.07);
+  position:relative;
+  overflow:hidden;
+}
+.company-card::before{
+  content:'';
+  position:absolute;
+  right:-120px;
+  top:-120px;
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(107,168,255,0.22), transparent 68%);
+  pointer-events:none;
+}
+.company-card > *{position:relative; z-index:1}
+.company-top{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:28px;
+  align-items:start;
+}
+.company-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--brand-3);
+  background:var(--brand-soft);
+  border:1px solid var(--border-strong);
+  padding:7px 12px;
+  border-radius:999px;
+  margin-bottom:16px;
+}
+.company-title{
+  font-size:clamp(25px,3.5vw,36px);
+  letter-spacing:-0.025em;
+  line-height:1.12;
+  margin-bottom:10px;
+}
+.company-sub{color:var(--text-dim); max-width:570px; font-size:15px; line-height:1.7}
+.company-name-card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:22px;
+  padding:22px;
+}
+.company-name-card h3{font-size:20px; letter-spacing:-0.02em; margin-bottom:5px}
+.company-name-card p{color:var(--text-dim); font-size:14px}
+.company-details-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin-top:26px;
+}
+.company-detail{
+  background:rgba(5,8,15,0.28);
+  border:1px solid rgba(255,255,255,0.10);
+  border-radius:18px;
+  padding:16px 17px;
+}
+.company-detail.full{grid-column:1 / -1}
+.company-detail span{
+  display:block;
+  font-size:12px;
+  color:var(--text-faint);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:5px;
+}
+.company-detail a,
+.company-detail strong,
+.company-detail p{
+  color:var(--text);
+  font-size:14.5px;
+  line-height:1.55;
+  overflow-wrap:anywhere;
+}
+.company-detail a:hover{color:var(--brand-3)}
+.company-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+.company-action{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px 16px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:14px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  border:1px solid rgba(255,255,255,0.12);
+  box-shadow:0 12px 28px rgba(46,134,255,0.30), inset 0 1px 0 rgba(255,255,255,0.20);
+  transition:transform .25s var(--ease), filter .25s var(--ease), box-shadow .25s var(--ease);
+}
+.company-action:hover{transform:translateY(-2px); filter:brightness(1.06); box-shadow:0 16px 38px rgba(46,134,255,0.42), inset 0 1px 0 rgba(255,255,255,0.24)}
+.company-action.secondary{
+  background:rgba(255,255,255,0.07);
+  color:var(--text);
+  box-shadow:none;
+}
+.company-action.secondary:hover{background:rgba(255,255,255,0.10)}
+.footer .footer-company{color:var(--text-dim); margin-bottom:8px}
+.footer .footer-links{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:8px}
+@media(max-width:760px){
+  .company-top{grid-template-columns:1fr}
+  .company-details-grid{grid-template-columns:1fr}
+  .company-detail.full{grid-column:auto}
+  .company-actions{flex-direction:column}
+  .company-action{width:100%}
+}
+
+
+/* SERVICE VIDEO CARD - matched with internship video section */
+.video-section{
+  padding-top:0 !important;
+}
+.video-card{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(240px,330px);
+  gap:28px;
+  align-items:center;
+  max-width:980px;
+  margin:0 auto;
+  padding:clamp(24px,4vw,42px);
+  border-radius:var(--radius-lg);
+  border:1px solid var(--border-strong);
+  background:linear-gradient(135deg,rgba(46,134,255,0.16),rgba(255,255,255,0.04));
+  box-shadow:0 24px 60px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.06);
+  overflow:hidden;
+  position:relative;
+}
+.video-card::after{
+  content:'';
+  position:absolute;
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  right:-120px;
+  bottom:-120px;
+  background:radial-gradient(circle,rgba(46,134,255,0.22),transparent 70%);
+  pointer-events:none;
+}
+.video-copy{
+  position:relative;
+  z-index:1;
+}
+.video-copy .label{
+  margin-bottom:16px;
+}
+.video-copy h2{
+  font-size:clamp(26px,4vw,40px);
+  letter-spacing:-0.025em;
+  line-height:1.1;
+}
+.video-copy p{
+  color:var(--text-dim);
+  max-width:520px;
+  margin-top:14px;
+  font-size:15.5px;
+  line-height:1.75;
+}
+.video-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+.video-actions .inline-apply,
+.video-actions .inline-ghost{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 18px;
+  border-radius:12px;
+  font-size:14px;
+  font-weight:700;
+  transition:.25s var(--ease);
+}
+.video-actions .inline-apply{
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  color:#fff;
+  box-shadow:0 10px 24px rgba(46,134,255,0.30);
+}
+.video-actions .inline-apply:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.06);
+}
+.video-actions .inline-ghost{
+  border:1px solid var(--border-strong);
+  color:var(--text);
+  background:var(--glass);
+}
+.video-actions .inline-ghost:hover{
+  background:var(--glass-2);
+  transform:translateY(-2px);
+}
+.video-card .video-wrap{
+  margin:0 !important;
+  position:relative;
+  z-index:1;
+}
+@media(max-width:820px){
+  .video-card{
+    grid-template-columns:1fr;
+  }
+  .video-card .video-wrap{
+    max-width:300px;
+    margin:0 auto !important;
+  }
+}
+@media(max-width:640px){
+  .video-actions .inline-apply,
+  .video-actions .inline-ghost{
+    width:100%;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1321,14 +1554,21 @@ body::before{
 <a class="mini-quote js-quote" data-service="Other" data-title="Ask for service guidance" href="#quote">Ask for guidance</a>
 </div>
 </div>
-</section><section class="section" id="preview" style="padding-top:10px">
+</section><section class="section video-section" id="preview">
 <div class="container">
-<div class="section-head" style="margin-bottom:0">
+<div class="video-card">
+<div class="video-copy">
+<span class="label">Service preview</span>
 <h2>Watch what we can build</h2>
-<p>See a quick service preview after checking the main options above.</p>
+<p>After checking the service options and process, watch this quick preview to understand how TenTwo Technologies can help with websites, software, dashboards, apps, and automation.</p>
+<div class="video-actions">
+<a class="inline-apply js-quote" data-service="Service Project Enquiry" data-title="Get a service quote" href="#quote">Get a quote</a>
+<a class="inline-ghost" href="https://wa.me/919059291261" rel="noopener noreferrer" target="_blank">Talk on WhatsApp</a>
+</div>
 </div>
 <div class="video-wrap">
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/MZUxOfK_6gk" title="TenTwo Technologies Services preview"></iframe>
+</div>
 </div>
 </div>
 </section>
@@ -1387,15 +1627,90 @@ body::before{
 <div class="cta-actions">
 <a class="btn btn-primary js-quote" href="#quote">Get a quote</a>
 <a class="btn btn-ghost" href="tel:+919059291261">+91 90592 91261</a>
+<a class="btn btn-ghost" href="mailto:sriram@tentwotechnologies.com">Email us</a>
 </div>
 </div>
 </div>
 </section>
+<!-- COMPANY CONTACT DETAILS -->
+<section class="section company-contact" id="company-details">
+<div class="container">
+<div class="company-card">
+<div class="company-top">
+<div>
+<span class="company-kicker">Official contact details</span>
+<h2 class="company-title">Founder &amp; company information</h2>
+<p class="company-sub">Use these details to contact TenTwo Technologies Private Limited for service inquiries, project discussions, business communication, and official company reference.</p>
+</div>
+<div class="company-name-card">
+<h3>Sri Ram Kumar Tentu</h3>
+<p>Founder / Director<br/>TenTwo Technologies Private Limited</p>
+</div>
+</div>
+<div class="company-details-grid">
+<div class="company-detail">
+<span>Mail</span>
+<a href="mailto:sriram@tentwotechnologies.com">sriram@tentwotechnologies.com</a>
+</div>
+<div class="company-detail">
+<span>Personal phone</span>
+<a href="tel:+919059291261">+91 9059291261</a>
+</div>
+<div class="company-detail">
+<span>Company phone</span>
+<a href="tel:+918897443993">+91 8897443993</a>
+</div>
+<div class="company-detail">
+<span>Director Identification Number</span>
+<strong>11495822</strong>
+</div>
+<div class="company-detail">
+<span>Website</span>
+<a href="https://www.tentwotechnologies.com" rel="noopener noreferrer" target="_blank">www.tentwotechnologies.com</a>
+</div>
+<div class="company-detail">
+<span>LinkedIn</span>
+<a href="https://www.linkedin.com/company/tentwo-technologies" rel="noopener noreferrer" target="_blank">TenTwo Technologies on LinkedIn</a>
+</div>
+<div class="company-detail full">
+<span>Registered address</span>
+<p>15-37B, Telephone Office Road, Kaikaluru, Andhra Pradesh, Krishna, India, 521333</p>
+</div>
+</div>
+<div aria-label="Company contact action buttons" class="company-actions">
+<a class="company-action" href="mailto:sriram@tentwotechnologies.com">Email Sri Ram</a>
+<a class="company-action" href="tel:+919059291261">Call personal number</a>
+<a class="company-action secondary" href="tel:+918897443993">Call company number</a>
+<a class="company-action secondary" href="https://wa.me/919059291261" rel="noopener noreferrer" target="_blank">WhatsApp</a>
+<a class="company-action secondary" href="https://www.tentwotechnologies.com" rel="noopener noreferrer" target="_blank">Visit website</a>
+<a class="company-action secondary" href="https://www.linkedin.com/company/tentwo-technologies" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+</div>
+</div>
+</div>
+</section>
+
 <!-- FOOTER -->
 <footer class="footer">
 <div class="container">
-    TenTwo Technologies Private Limited · Andhra Pradesh, Krishna, India 521333<br/>
-<a href="index.html">Home</a>  ·  <a href="internships.html">Internship Program</a>  ·  <a href="https://www.tentwotechnologies.com">tentwotechnologies.com</a>
+<div class="footer-company">
+TenTwo Technologies Private Limited · Founder / Director: Sri Ram Kumar Tentu<br/>
+Registered address: 15-37B, Telephone Office Road, Kaikaluru, Andhra Pradesh, Krishna, India, 521333
+</div>
+<div class="footer-links">
+<a href="index.html">Home</a>
+<span>·</span>
+<a href="services.html">Services</a>
+<span>·</span>
+<a href="internships.html">Internship Program</a>
+<span>·</span>
+<a href="mailto:sriram@tentwotechnologies.com">sriram@tentwotechnologies.com</a>
+<span>·</span>
+<a href="tel:+918897443993">+91 8897443993</a>
+<span>·</span>
+<a href="https://www.tentwotechnologies.com" rel="noopener noreferrer" target="_blank">Website</a>
+<span>·</span>
+<a href="https://www.linkedin.com/company/tentwo-technologies" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+</div>
 </div>
 </footer>
 <!-- WHATSAPP FLOATING BUTTON -->
@@ -1734,7 +2049,7 @@ body::before{
       success=document.getElementById('quoteSuccess'),
       successClose=document.getElementById('successClose'),
       title=document.getElementById('qmTitle'),
-      FALLBACK='tsriram261@gmail.com';
+      FALLBACK='sriram@tentwotechnologies.com';
 
   function open(service, ttl){
     title.textContent = ttl || 'Get a quote';
