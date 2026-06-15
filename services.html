@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <meta content="#05080F" name="theme-color"/>
-<title>Services & Pricing · TenTwo Technologies</title>
+<title>Services &amp; Pricing · TenTwo Technologies</title>
 <meta content="Clear website, software, dashboard, mobile app and automation services from TenTwo Technologies. Simple process, mobile-friendly builds, affordable starter pricing and quote form." name="description"/>
 <link href="https://www.tentwotechnologies.com/services.html" rel="canonical"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -1199,119 +1199,49 @@ body::before{
   }
 }
 
+</style>
 
-
-/* MOBILE FINAL POLISH - keeps navbar and buttons clean for phone users */
-@media(max-width:480px){
-  .nav-logo span{
-    max-width:150px !important;
-    white-space:normal !important;
-    overflow:visible !important;
-    text-overflow:clip !important;
-    line-height:1.15 !important;
-    font-size:14px !important;
-  }
-  .nav-cta{
-    white-space:nowrap !important;
-    min-height:38px !important;
-  }
-  .mobile-menu{
-    max-height:calc(100vh - 96px) !important;
-    overflow-y:auto !important;
-  }
-}
-@media(max-width:380px){
-  .nav-logo span{max-width:132px !important; font-size:13px !important;}
-  .nav-cta{font-size:12px !important; padding-left:10px !important; padding-right:10px !important;}
-}
-
-
-
-/* TRUST FOOTER LINKS - privacy, terms, refund and verification */
-.trust-footer-links{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:10px 14px;
-  flex-wrap:wrap;
-  margin:18px auto 0;
-  padding-top:16px;
-  border-top:1px solid rgba(255,255,255,0.09);
-  font-size:12.5px;
-  line-height:1.4;
-  color:var(--text-faint,#5B6478);
-  text-align:center;
-}
-.trust-footer-links a{color:var(--text-dim,#8A93A6);text-decoration:none;transition:color .2s ease, transform .2s ease;}
-.trust-footer-links a:hover{color:var(--brand-3,#6BA8FF);transform:translateY(-1px);}
+<style id="final-nav-style">
+/* FINAL SHARED MOBILE NAVBAR - same layout across all pages */
+.nav{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;z-index:1000 !important;padding:20px 32px !important;display:flex !important;justify-content:center !important;background:transparent !important;border:0 !important;box-shadow:none !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;}
+.nav-inner{width:100% !important;max-width:1240px !important;min-height:64px !important;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:12px !important;padding:12px 18px 12px 22px !important;background:rgba(10,14,26,.58) !important;border:1px solid rgba(255,255,255,.13) !important;border-radius:100px !important;backdrop-filter:blur(28px) saturate(200%) !important;-webkit-backdrop-filter:blur(28px) saturate(200%) !important;box-shadow:0 12px 36px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.08) !important;overflow:hidden !important;}
+.nav-logo{display:flex !important;align-items:center !important;gap:11px !important;min-width:0 !important;flex:0 1 auto !important;color:#fff !important;font-weight:700 !important;text-decoration:none !important;letter-spacing:-.02em !important;position:relative !important;z-index:2 !important;}
+.nav-logo img{width:34px !important;height:34px !important;min-width:34px !important;flex:0 0 34px !important;border-radius:9px !important;object-fit:cover !important;display:block !important;}
+.nav-logo span{display:block !important;color:#fff !important;font-size:16px !important;line-height:1.05 !important;white-space:nowrap !important;overflow:hidden !important;text-overflow:ellipsis !important;}
+.nav-logo em{font-style:normal !important;color:#2E86FF !important;}
+.nav-links{display:flex !important;align-items:center !important;gap:4px !important;position:relative !important;z-index:2 !important;}
+.nav-links a{padding:8px 14px !important;font-size:14px !important;line-height:1 !important;border-radius:100px !important;color:rgba(231,236,243,.72) !important;border:1px solid transparent !important;transition:.25s ease !important;text-decoration:none !important;}
+.nav-links a:hover{color:#fff !important;background:rgba(255,255,255,.06) !important;}
+.nav-links a.active,.nav-links a[aria-current="page"]{color:#fff !important;background:rgba(46,134,255,.16) !important;border-color:rgba(255,255,255,.16) !important;}
+.nav-links a.amazon-link{color:#C8A84B !important;}
+.nav-cta{display:inline-flex !important;align-items:center !important;justify-content:center !important;gap:8px !important;flex:0 0 auto !important;padding:10px 18px !important;min-height:44px !important;border-radius:100px !important;background:linear-gradient(135deg,#2E86FF,#1565D8) !important;color:#fff !important;font-size:14px !important;font-weight:700 !important;text-decoration:none !important;box-shadow:0 10px 28px rgba(46,134,255,.40),inset 0 1px 0 rgba(255,255,255,.22) !important;position:relative !important;z-index:2 !important;white-space:nowrap !important;}
+.nav-cta svg{display:block !important;flex:0 0 auto !important;}
+.nav-burger{display:none !important;width:48px !important;height:48px !important;min-width:48px !important;flex:0 0 48px !important;border-radius:17px !important;align-items:center !important;justify-content:center !important;background:rgba(255,255,255,.07) !important;border:1px solid rgba(255,255,255,.14) !important;position:relative !important;z-index:2 !important;}
+.nav-burger span,.nav-burger span::before,.nav-burger span::after{display:block !important;width:20px !important;height:2px !important;border-radius:2px !important;background:#fff !important;position:relative !important;transition:.25s ease !important;}
+.nav-burger span::before,.nav-burger span::after{content:'' !important;position:absolute !important;left:0 !important;}
+.nav-burger span::before{top:-7px !important;}.nav-burger span::after{top:7px !important;}
+.nav-burger.open span{background:transparent !important;}.nav-burger.open span::before{top:0 !important;transform:rotate(45deg) !important;}.nav-burger.open span::after{top:0 !important;transform:rotate(-45deg) !important;}
+.mobile-menu{position:fixed !important;top:104px !important;left:30px !important;right:30px !important;z-index:999 !important;display:block !important;padding:14px !important;border-radius:24px !important;background:rgba(8,12,22,.94) !important;border:1px solid rgba(255,255,255,.16) !important;backdrop-filter:blur(28px) saturate(200%) !important;-webkit-backdrop-filter:blur(28px) saturate(200%) !important;box-shadow:0 22px 60px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.08) !important;opacity:0 !important;pointer-events:none !important;transform:translateY(-12px) !important;transition:.25s ease !important;}
+.mobile-menu.open{opacity:1 !important;pointer-events:auto !important;transform:translateY(0) !important;}
+.mobile-menu a{display:block !important;padding:15px 16px !important;margin:2px 0 !important;border-radius:14px !important;color:#E7ECF3 !important;font-size:16px !important;font-weight:600 !important;text-decoration:none !important;}
+.mobile-menu a:hover,.mobile-menu a:active{background:rgba(46,134,255,.14) !important;}
+.mobile-menu a.active,.mobile-menu a[aria-current="page"]{background:rgba(46,134,255,.18) !important;border:1px solid rgba(46,134,255,.30) !important;}
+@media(max-width:1050px){.nav-links{display:none !important}.nav-burger{display:flex !important}}
 @media(max-width:640px){
-  .trust-footer-links{gap:8px 10px;font-size:12px;padding-left:8px;padding-right:8px;}
-  .trust-footer-links a{padding:4px 2px;}
+  html,body{max-width:100% !important;overflow-x:hidden !important;}
+  .nav{padding:20px 30px !important;}
+  .nav-inner{min-height:70px !important;padding:13px 16px !important;border-radius:28px !important;gap:10px !important;}
+  .nav-logo{flex:1 1 auto !important;max-width:none !important;}
+  .nav-logo img{width:38px !important;height:38px !important;min-width:38px !important;border-radius:10px !important;}
+  .nav-logo span{font-size:16px !important;line-height:1.05 !important;white-space:normal !important;max-width:130px !important;overflow:visible !important;text-overflow:clip !important;}
+  .nav-cta{padding:10px 17px !important;min-height:48px !important;font-size:15px !important;max-width:142px !important;}
+  .nav-cta span{display:inline !important;white-space:nowrap !important;overflow:hidden !important;text-overflow:ellipsis !important;}
+  .nav-burger{display:flex !important;width:48px !important;height:48px !important;min-width:48px !important;}
+  .mobile-menu{top:104px !important;left:30px !important;right:30px !important;}
+  .hero{padding-top:138px !important;}
 }
-
-
-/* TT UNIVERSAL TRUST FOOTER + FORM TRUST LINE */
-.tt-site-footer{
-  position:relative;
-  z-index:1;
-  border-top:1px solid rgba(255,255,255,0.09);
-  background:linear-gradient(180deg,rgba(5,8,15,0.18),rgba(5,8,15,0.62));
-  padding:34px 0 calc(34px + env(safe-area-inset-bottom));
-  color:#8A93A6;
-  font-family:'Geist',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-}
-.tt-site-footer a{color:#8A93A6;text-decoration:none;transition:color .2s ease,background .2s ease,border-color .2s ease}
-.tt-site-footer a:hover{color:#6BA8FF}
-.tt-footer-inner{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;display:grid;gap:20px}
-.tt-footer-brand{display:grid;gap:6px;text-align:center}
-.tt-footer-brand strong{color:#E7ECF3;font-size:16px;letter-spacing:-.01em}
-.tt-footer-brand span{font-size:13.5px;line-height:1.5;color:#8A93A6}
-.tt-footer-groups{display:grid;gap:12px;justify-items:center}
-.tt-footer-links{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap}
-.tt-footer-links a{
-  display:inline-flex;align-items:center;justify-content:center;
-  min-height:34px;padding:8px 12px;border-radius:999px;
-  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);
-  font-size:13px;line-height:1.2;
-}
-.tt-footer-trust a{background:rgba(46,134,255,0.07);border-color:rgba(46,134,255,0.13)}
-.tt-footer-contact{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;font-size:13.5px;line-height:1.5;text-align:center}
-.tt-footer-contact a{color:#DCEBFF}
-.tt-footer-bottom{
-  display:flex;align-items:center;justify-content:center;gap:10px 18px;flex-wrap:wrap;
-  padding-top:18px;border-top:1px solid rgba(255,255,255,0.08);
-  font-size:12.5px;color:#5B6478;text-align:center;
-}
-.tt-form-trust-line{
-  margin-top:12px;padding:12px 14px;border-radius:14px;
-  background:rgba(46,134,255,0.08);border:1px solid rgba(46,134,255,0.18);
-  color:#DCEBFF;font-size:12.5px;line-height:1.55;text-align:center;
-}
-.tt-policy-cta{
-  margin-top:30px;padding:22px;border-radius:22px;
-  background:linear-gradient(135deg,rgba(46,134,255,0.14),rgba(255,255,255,0.045));
-  border:1px solid rgba(46,134,255,0.22);text-align:center;
-}
-.tt-policy-cta strong{display:block;color:#E7ECF3;font-size:18px;margin-bottom:6px}
-.tt-policy-cta span{display:block;color:#8A93A6;font-size:14px;line-height:1.6;margin-bottom:16px}
-.tt-policy-cta-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.tt-policy-cta-actions a{
-  display:inline-flex;align-items:center;justify-content:center;min-height:42px;
-  padding:11px 16px;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none;
-  border:1px solid rgba(255,255,255,0.16);color:#E7ECF3;background:rgba(255,255,255,0.055);
-}
-.tt-policy-cta-actions a:first-child{background:linear-gradient(135deg,#2E86FF,#1565D8);color:#fff;border-color:rgba(255,255,255,0.12)}
-@media(max-width:640px){
-  .tt-site-footer{padding-top:28px;padding-bottom:calc(92px + env(safe-area-inset-bottom))}
-  .tt-footer-inner{padding:0 18px;gap:18px}
-  .tt-footer-links{gap:8px}
-  .tt-footer-links a{width:auto;max-width:none;min-height:36px;padding:8px 11px;font-size:12.5px}
-  .tt-footer-contact{display:grid;gap:6px;font-size:13px}
-  .tt-footer-contact span{display:none}
-  .tt-footer-bottom{display:grid;gap:6px;font-size:12px}
-  .tt-policy-cta-actions a{width:100%}
-}
-
+@media(max-width:390px){.nav{padding-left:22px !important;padding-right:22px !important}.nav-logo span{font-size:15px !important;max-width:112px !important}.nav-cta{font-size:14px !important;max-width:128px !important;padding-left:14px !important;padding-right:14px !important}.mobile-menu{left:22px !important;right:22px !important}}
+@media(max-width:360px){.nav-logo span{max-width:92px !important}.nav-cta{max-width:112px !important;font-size:13px !important}.nav-cta svg{display:none !important}}
 </style>
 </head>
 <body>
@@ -1328,9 +1258,8 @@ body::before{
 <a href="internships.html">Internship Program</a>
 <a class="amazon-link" href="amazon.html">Amazon</a>
 <a href="index.html#founder">Founder</a>
-<a href="contact.html">Contact</a>
 </div>
-<a class="nav-cta js-quote" data-service="Service Project Enquiry" data-title="Start a project" href="#quote">
+<a class="nav-cta" href="index.html#contact">
 <span>Start a project</span>
 <svg fill="none" height="11" viewbox="0 0 11 11" width="11"><path d="M1 10L10 1M10 1H2M10 1V9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
 </a>
@@ -1344,8 +1273,8 @@ body::before{
 <a href="internships.html">Internship Program</a>
 <a class="amazon-link" href="amazon.html">Amazon Store</a>
 <a href="index.html#founder">Founder</a>
-<a href="#simple-process">Process</a>
-<a href="contact.html">Contact</a>
+<a href="index.html#process">Process</a>
+<a href="index.html#contact">Contact</a>
 </div>
 <!-- HERO -->
 <header class="hero">
@@ -1739,7 +1668,7 @@ body::before{
 <div class="cta-actions">
 <a class="btn btn-primary js-quote" href="#quote">Get a quote</a>
 <a class="btn btn-ghost" href="tel:+919059291261">+91 90592 91261</a>
-<a class="btn btn-ghost" href="mailto:info@tentwotechnologies.com">Email company</a>
+<a class="btn btn-ghost" href="mailto:sriram@tentwotechnologies.com">Email us</a>
 </div>
 </div>
 </div>
@@ -1751,26 +1680,30 @@ body::before{
 <div class="company-top">
 <div>
 <span class="company-kicker">Official contact details</span>
-<h2 class="company-title">Company contact information</h2>
-<p class="company-sub">Use these official company details to contact TenTwo Technologies Private Limited for service inquiries, project discussions, business communication, and verification requests.</p>
+<h2 class="company-title">Founder &amp; company information</h2>
+<p class="company-sub">Use these details to contact TenTwo Technologies Private Limited for service inquiries, project discussions, business communication, and official company reference.</p>
 </div>
 <div class="company-name-card">
-<h3>TenTwo Technologies Private Limited</h3>
-<p>Official service support</p>
+<h3>Sri Ram Kumar Tentu</h3>
+<p>Founder / Director<br/>TenTwo Technologies Private Limited</p>
 </div>
 </div>
 <div class="company-details-grid">
 <div class="company-detail">
-<span>Official email</span>
-<a href="mailto:info@tentwotechnologies.com">info@tentwotechnologies.com</a>
+<span>Mail</span>
+<a href="mailto:sriram@tentwotechnologies.com">sriram@tentwotechnologies.com</a>
+</div>
+<div class="company-detail">
+<span>Personal phone</span>
+<a href="tel:+919059291261">+91 9059291261</a>
 </div>
 <div class="company-detail">
 <span>Company phone</span>
-<a href="tel:+919059291261">+91 90592 91261</a>
+<a href="tel:+918897443993">+91 8897443993</a>
 </div>
 <div class="company-detail">
-<span>WhatsApp</span>
-<a href="https://wa.me/919059291261" rel="noopener noreferrer" target="_blank">Chat on WhatsApp</a>
+<span>Director Identification Number</span>
+<strong>11495822</strong>
 </div>
 <div class="company-detail">
 <span>Website</span>
@@ -1780,18 +1713,15 @@ body::before{
 <span>LinkedIn</span>
 <a href="https://www.linkedin.com/company/tentwo-technologies" rel="noopener noreferrer" target="_blank">TenTwo Technologies on LinkedIn</a>
 </div>
-<div class="company-detail">
-<span>Verification note</span>
-<p>Company registration details can be shared on request for verification.</p>
-</div>
 <div class="company-detail full">
 <span>Registered address</span>
 <p>15-37B, Telephone Office Road, Kaikaluru, Andhra Pradesh, Krishna, India, 521333</p>
 </div>
 </div>
 <div aria-label="Company contact action buttons" class="company-actions">
-<a class="company-action" href="mailto:info@tentwotechnologies.com">Email company</a>
-<a class="company-action secondary" href="tel:+919059291261">Call company</a>
+<a class="company-action" href="mailto:sriram@tentwotechnologies.com">Email Sri Ram</a>
+<a class="company-action" href="tel:+919059291261">Call personal number</a>
+<a class="company-action secondary" href="tel:+918897443993">Call company number</a>
 <a class="company-action secondary" href="https://wa.me/919059291261" rel="noopener noreferrer" target="_blank">WhatsApp</a>
 <a class="company-action secondary" href="https://www.tentwotechnologies.com" rel="noopener noreferrer" target="_blank">Visit website</a>
 <a class="company-action secondary" href="https://www.linkedin.com/company/tentwo-technologies" rel="noopener noreferrer" target="_blank">LinkedIn</a>
@@ -1801,42 +1731,28 @@ body::before{
 </section>
 
 <!-- FOOTER -->
-<footer class="tt-site-footer" role="contentinfo">
-  <div class="tt-footer-inner">
-    <div class="tt-footer-brand">
-      <strong>TenTwo Technologies Private Limited</strong>
-      <span>Websites, software, internships, Amazon product support and business automation.</span>
-    </div>
-
-    <div class="tt-footer-groups">
-      <nav class="tt-footer-links" aria-label="Main footer links">
-        <a href="index.html#top">Home</a>
-        <a href="services.html">Services</a>
-        <a href="internships.html">Internship Program</a>
-        <a href="amazon.html">Amazon</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <nav class="tt-footer-links tt-footer-trust" aria-label="Trust and policy links">
-        <a href="company-verification.html">Company Verification</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms.html">Terms</a>
-        <a href="refund-policy.html">Refund Policy</a>
-        <a href="sitemap.html">Sitemap</a>
-      </nav>
-
-      <div class="tt-footer-contact" aria-label="Company contact details">
-        <a href="mailto:info@tentwotechnologies.com">info@tentwotechnologies.com</a>
-        <span>·</span>
-        <a href="https://wa.me/919059291261">WhatsApp +91 90592 91261</a>
-      </div>
-    </div>
-
-    <div class="tt-footer-bottom">
-      <span>© 2026 TenTwo Technologies Private Limited. All rights reserved.</span>
-      <span>Usually replies within 24 hours.</span>
-    </div>
-  </div>
+<footer class="footer">
+<div class="container">
+<div class="footer-company">
+TenTwo Technologies Private Limited · Founder / Director: Sri Ram Kumar Tentu<br/>
+Registered address: 15-37B, Telephone Office Road, Kaikaluru, Andhra Pradesh, Krishna, India, 521333
+</div>
+<div class="footer-links">
+<a href="index.html">Home</a>
+<span>·</span>
+<a href="services.html">Services</a>
+<span>·</span>
+<a href="internships.html">Internship Program</a>
+<span>·</span>
+<a href="mailto:sriram@tentwotechnologies.com">sriram@tentwotechnologies.com</a>
+<span>·</span>
+<a href="tel:+918897443993">+91 8897443993</a>
+<span>·</span>
+<a href="https://www.tentwotechnologies.com" rel="noopener noreferrer" target="_blank">Website</a>
+<span>·</span>
+<a href="https://www.linkedin.com/company/tentwo-technologies" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+</div>
+</div>
 </footer>
 <!-- WHATSAPP FLOATING BUTTON -->
 <a aria-label="Chat with TenTwo Technologies on WhatsApp" class="whatsapp-float" href="https://wa.me/919059291261" rel="noopener noreferrer" target="_blank">
@@ -1858,7 +1774,7 @@ body::before{
 <div class="modal-form-grid">
 <div class="field">
 <label for="qname">Your name</label>
-<input id="qname" name="name" placeholder="Example: Your name" required="" type="text"/>
+<input id="qname" name="name" placeholder="Example: Sri Ram Kumar Tentu" required="" type="text"/>
 </div>
 <div class="field">
 <label for="qemail">Email</label>
@@ -2116,7 +2032,7 @@ body::before{
 </div>
 <div class="field">
 <label for="qmobile">Mobile number</label>
-<input id="qmobile" inputmode="tel" name="mobile_number" placeholder="Example: 98765 43210" required="" type="tel"/>
+<input id="qmobile" inputmode="tel" name="mobile_number" placeholder="Example: 90592 91261" required="" type="tel"/>
 </div>
 <div class="field">
 <label for="qcontact">Preferred contact</label>
@@ -2154,7 +2070,6 @@ body::before{
 <p class="privacy-note">We only use your details to respond to your project request.</p>
 <p class="msg" id="quoteMsg"></p>
 </form>
-<div class="tt-form-trust-line">We only use your details to respond to your inquiry. Usually replies within 24 hours.</div>
 <div aria-live="polite" class="form-success" id="quoteSuccess">
 <div class="success-icon">✓</div>
 <h4>Thank you. Your request was sent.</h4>
@@ -2175,7 +2090,7 @@ body::before{
       success=document.getElementById('quoteSuccess'),
       successClose=document.getElementById('successClose'),
       title=document.getElementById('qmTitle'),
-      FALLBACK='info@tentwotechnologies.com';
+      FALLBACK='sriram@tentwotechnologies.com';
 
   function open(service, ttl){
     title.textContent = ttl || 'Get a quote';
@@ -2264,6 +2179,32 @@ body::before{
       });
     });
   }
+})();
+</script>
+
+<script id="final-nav-script">
+/* FINAL MOBILE NAVBAR SCRIPT */
+(function(){
+  function ready(fn){ if(document.readyState !== 'loading') fn(); else document.addEventListener('DOMContentLoaded', fn); }
+  ready(function(){
+    var nav=document.getElementById('nav');
+    var burger=document.getElementById('burger');
+    var menu=document.getElementById('mobileMenu');
+    function syncScroll(){ if(nav){ nav.classList.toggle('scrolled', window.scrollY > 20); } }
+    window.addEventListener('scroll', syncScroll, {passive:true});
+    syncScroll();
+    if(burger && menu){
+      burger.onclick=function(){
+        var isOpen=menu.classList.toggle('open');
+        burger.classList.toggle('open', isOpen);
+        burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      };
+      menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
+        menu.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded','false'); menu.setAttribute('aria-hidden','true');
+      });});
+    }
+  });
 })();
 </script>
 </body>
