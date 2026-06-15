@@ -351,6 +351,82 @@ a{color:inherit; text-decoration:none}
 @media(min-width:641px){.hero{padding-top:140px !important;}}
 @media(max-width:640px){.hero{padding-top:124px !important;}}
 
+
+
+/* FLOATING PAGE BACKGROUND + NAV FIX
+   Keeps the navbar floating like index.html and removes the full-width black strip. */
+body{
+  background:
+    radial-gradient(1400px 900px at 12% 0%, rgba(46,134,255,0.22), transparent 55%),
+    radial-gradient(1100px 800px at 92% 8%, rgba(21,101,216,0.18), transparent 60%),
+    radial-gradient(1000px 800px at 50% 100%, rgba(46,134,255,0.12), transparent 70%),
+    linear-gradient(rgba(46,134,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46,134,255,0.035) 1px, transparent 1px),
+    linear-gradient(180deg, #05080F 0%, #06090F 50%, #04060B 100%) !important;
+  background-size:auto, auto, auto, 80px 80px, 80px 80px, auto !important;
+  background-position:center, center, center, 0 0, 0 0, center !important;
+  background-attachment:fixed !important;
+}
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(620px 420px at 16% 18%, rgba(46,134,255,0.12), transparent 65%),
+    radial-gradient(540px 400px at 84% 14%, rgba(107,168,255,0.08), transparent 68%),
+    radial-gradient(680px 460px at 50% 90%, rgba(46,134,255,0.08), transparent 72%);
+  opacity:1;
+}
+body::after{
+  content:'';
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  opacity:0.035;
+  mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.7'/></svg>");
+}
+.container,
+.hero,
+.section,
+.cta,
+.faq-section,
+.footer{
+  position:relative;
+  z-index:1;
+}
+.nav{
+  background:transparent !important;
+  border-bottom:0 !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+  box-shadow:none !important;
+}
+.nav-inner{
+  background:rgba(10,14,26,0.45) !important;
+  border:1px solid var(--border) !important;
+  border-radius:100px !important;
+  backdrop-filter:blur(28px) saturate(200%) !important;
+  -webkit-backdrop-filter:blur(28px) saturate(200%) !important;
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    inset 0 -1px 0 rgba(255,255,255,0.02) !important;
+}
+.nav.scrolled .nav-inner{
+  background:rgba(8,12,22,0.72) !important;
+  box-shadow:
+    0 14px 50px rgba(0,0,0,0.55),
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    inset 0 -1px 0 rgba(255,255,255,0.02) !important;
+}
+.mobile-menu{
+  z-index:99;
+}
+
 </style>
 </head>
 <body>
