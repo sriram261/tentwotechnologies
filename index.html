@@ -1862,6 +1862,73 @@ h3 { font-size: clamp(20px, 2.2vw, 26px); letter-spacing: -0.02em; }
   .tt-policy-cta-actions a{width:100%}
 }
 
+
+
+/* CONSISTENT WHATSAPP FLOATING BUTTON - shared across all pages */
+.whatsapp-float,
+.floating-whatsapp{
+  position:fixed !important;
+  right:24px !important;
+  bottom:calc(24px + env(safe-area-inset-bottom)) !important;
+  z-index:9999 !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:10px !important;
+  min-width:142px !important;
+  height:52px !important;
+  padding:0 18px !important;
+  border-radius:999px !important;
+  background:linear-gradient(135deg,#25D366 0%,#128C7E 100%) !important;
+  color:#fff !important;
+  border:1px solid rgba(255,255,255,0.18) !important;
+  box-shadow:0 18px 44px rgba(18,140,126,0.36), inset 0 1px 0 rgba(255,255,255,0.22) !important;
+  font-size:14px !important;
+  font-weight:800 !important;
+  letter-spacing:0.01em !important;
+  line-height:1 !important;
+  text-decoration:none !important;
+  white-space:nowrap !important;
+  cursor:pointer !important;
+  transform:translateZ(0) !important;
+  transition:transform .22s ease, box-shadow .22s ease, filter .22s ease !important;
+}
+.whatsapp-float:hover,
+.floating-whatsapp:hover{
+  transform:translateY(-2px) translateZ(0) !important;
+  filter:brightness(1.05) !important;
+  box-shadow:0 22px 54px rgba(18,140,126,0.44), inset 0 1px 0 rgba(255,255,255,0.26) !important;
+}
+.whatsapp-float svg,
+.floating-whatsapp svg{
+  width:22px !important;
+  height:22px !important;
+  flex:0 0 22px !important;
+  display:block !important;
+}
+.whatsapp-float .whatsapp-label,
+.floating-whatsapp .whatsapp-label,
+.floating-whatsapp .wa-text{
+  display:inline-block !important;
+}
+@media(max-width:640px){
+  .whatsapp-float,
+  .floating-whatsapp{
+    right:16px !important;
+    bottom:calc(16px + env(safe-area-inset-bottom)) !important;
+    min-width:54px !important;
+    width:54px !important;
+    height:54px !important;
+    padding:0 !important;
+    gap:0 !important;
+    border-radius:50% !important;
+  }
+  .whatsapp-float .whatsapp-label,
+  .floating-whatsapp .whatsapp-label,
+  .floating-whatsapp .wa-text{
+    display:none !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -3067,11 +3134,11 @@ h3 { font-size: clamp(20px, 2.2vw, 26px); letter-spacing: -0.02em; }
     </div>
   </div>
 </footer>
-<a aria-label="Chat with TenTwo Technologies on WhatsApp" class="whatsapp-float" href="https://wa.me/919059291261?text=Hi%20TenTwo%20Technologies%2C%20I%20want%20to%20discuss%20a%20project." rel="noopener" target="_blank">
-<svg aria-hidden="true" focusable="false" viewbox="0 0 32 32">
-<path d="M16.02 3.2C9.05 3.2 3.38 8.78 3.38 15.64c0 2.21.59 4.37 1.72 6.25L3.2 28.8l7.1-1.85a12.9 12.9 0 0 0 5.72 1.35c6.97 0 12.64-5.58 12.64-12.44S22.99 3.2 16.02 3.2Zm0 22.95c-1.83 0-3.62-.49-5.18-1.41l-.37-.22-4.22 1.1 1.13-4.05-.25-.4a10.2 10.2 0 0 1-1.6-5.53c0-5.68 4.7-10.3 10.49-10.3s10.49 4.62 10.49 10.3-4.7 10.51-10.49 10.51Zm5.75-7.73c-.31-.16-1.86-.9-2.15-1-.29-.11-.5-.16-.71.16-.21.31-.81 1-.99 1.2-.18.21-.37.23-.68.08-.31-.16-1.32-.48-2.51-1.52-.93-.82-1.56-1.82-1.74-2.13-.18-.31-.02-.48.14-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.68-.97-2.3-.26-.61-.52-.52-.71-.53h-.6c-.21 0-.55.08-.84.39-.29.31-1.1 1.06-1.1 2.58s1.13 2.99 1.29 3.2c.16.21 2.23 3.35 5.4 4.69.75.32 1.34.51 1.8.65.76.24 1.45.2 1.99.12.61-.09 1.86-.75 2.12-1.47.26-.72.26-1.34.18-1.47-.08-.13-.29-.21-.6-.37Z" fill="currentColor"></path>
-</svg>
-<span>WhatsApp</span>
+<a aria-label="Chat with TenTwo Technologies on WhatsApp" class="whatsapp-float" href="https://wa.me/919059291261" rel="noopener noreferrer" target="_blank">
+  <svg aria-hidden="true" fill="currentColor" viewBox="0 0 32 32">
+    <path d="M16.04 3C9.42 3 4.04 8.38 4.04 15c0 2.12.56 4.19 1.62 6.01L4 29l8.16-1.6A11.94 11.94 0 0 0 16.04 27c6.62 0 12-5.38 12-12s-5.38-12-12-12Zm0 21.78c-1.86 0-3.67-.53-5.24-1.54l-.38-.24-4.02.79.82-3.93-.25-.4A9.7 9.7 0 0 1 6.26 15c0-5.4 4.39-9.78 9.78-9.78S25.82 9.6 25.82 15s-4.39 9.78-9.78 9.78Zm5.36-7.32c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.19.29-.76.95-.93 1.14-.17.2-.34.22-.63.07-.29-.15-1.23-.45-2.34-1.44-.86-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.6-.9-2.19-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44s1.05 2.83 1.19 3.02c.15.2 2.06 3.14 4.99 4.4.7.3 1.25.48 1.67.61.7.22 1.34.19 1.85.12.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.19-.56-.34Z"/>
+  </svg>
+  <span class="whatsapp-label">WhatsApp</span>
 </a>
 <script>
 // =============================================
