@@ -565,6 +565,84 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 @media(max-width:900px){.brand-simple-card{grid-template-columns:1fr;text-align:center;justify-items:center}.brand-simple-copy p{max-width:620px}.brand-simple-actions{justify-content:center}.brand-simple-logo{width:min(100%,360px);height:auto;aspect-ratio:16/11}}
 @media(max-width:640px){.brand-simple-section{padding:24px 0 24px}.brand-simple-card{padding:22px 18px;gap:20px}.brand-simple-logo{width:100%;max-width:300px;height:auto;aspect-ratio:16/11;border-radius:24px;padding:14px}.brand-simple-actions{width:100%;flex-direction:column}.brand-simple-actions .btn{width:100%;justify-content:center}.brand-simple-note{text-align:center}}
 
+
+
+/* MOBILE FINAL POLISH - keeps navbar and buttons clean for phone users */
+@media(max-width:480px){
+  .nav-logo span{
+    max-width:150px !important;
+    white-space:normal !important;
+    overflow:visible !important;
+    text-overflow:clip !important;
+    line-height:1.15 !important;
+    font-size:14px !important;
+  }
+  .nav-cta{
+    white-space:nowrap !important;
+    min-height:38px !important;
+  }
+  .mobile-menu{
+    max-height:calc(100vh - 96px) !important;
+    overflow-y:auto !important;
+  }
+}
+@media(max-width:380px){
+  .nav-logo span{max-width:132px !important; font-size:13px !important;}
+  .nav-cta{font-size:12px !important; padding-left:10px !important; padding-right:10px !important;}
+}
+
+
+
+/* MOBILE NAV RELIABILITY - prevents hamburger from shrinking on small phones */
+@media(max-width:480px){
+  .nav-inner{gap:8px !important;}
+  .nav-burger{flex:0 0 38px !important; width:38px !important; min-width:38px !important;}
+  .nav-cta{flex:0 0 auto !important;}
+  .nav-logo{min-width:0 !important; flex-shrink:1 !important;}
+}
+@media(max-width:340px){
+  .nav-cta{display:none !important;}
+}
+
+
+
+/* MOBILE BRAND SHORT LABEL - prevents logo text from clipping beside CTA buttons */
+@media(max-width:480px){
+  .nav-logo span{
+    max-width:none !important;
+    white-space:nowrap !important;
+    overflow:visible !important;
+    text-overflow:clip !important;
+    font-size:0 !important;
+    line-height:1 !important;
+  }
+  .nav-logo span em{font-size:0 !important;}
+  .nav-logo span::after{
+    content:'TenTwo';
+    font-size:14px !important;
+    font-weight:700;
+    color:var(--text);
+    letter-spacing:-0.01em;
+  }
+}
+
+
+
+/* MOBILE CONTACT LOGO FIX - keep TT icon clean when brand is shortened */
+@media(max-width:480px){
+  .nav-logo .mark{
+    font-size:14px !important;
+    line-height:1 !important;
+    display:grid !important;
+    place-items:center !important;
+    flex:0 0 30px !important;
+    width:30px !important;
+    height:30px !important;
+    overflow:hidden !important;
+  }
+  .nav-logo .mark::after{content:none !important; display:none !important;}
+}
+
 </style>
 
 <meta property="og:title" content="Tuberose &amp; Co. Amazon India Store | Product Research &amp; Profit Calculator" />
@@ -661,7 +739,6 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   <a href="index.html#top">Home</a>
       <a href="index.html#about">About</a>
       <a href="services.html">Services</a>
-      <a href="services.html#starter">Pricing</a>
       <a href="internships.html">Internship Program</a>
       <a href="amazon.html" class="amazon-link active" aria-current="page">Amazon</a>
       <a href="index.html#founder">Founder</a>
@@ -678,7 +755,6 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   <a href="index.html#top">Home</a>
   <a href="index.html#about">About</a>
   <a href="services.html">Services</a>
-  <a href="services.html#starter">Pricing</a>
   <a href="internships.html">Internship Program</a>
   <a href="amazon.html" class="amazon-link active" aria-current="page">Amazon Store</a>
   <a href="index.html#founder">Founder</a>
