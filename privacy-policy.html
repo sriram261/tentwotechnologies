@@ -31,6 +31,70 @@ h1{font-size:clamp(38px,6vw,70px);font-weight:500;line-height:1;letter-spacing:-
 @media(max-width:900px){.nav-links{display:none}.nav-burger{display:flex}.container{padding:0 18px}.hero{text-align:left}.hero-actions{justify-content:flex-start}.policy-card{border-radius:24px}.footer-inner{justify-content:center;text-align:center}.whatsapp-float{width:54px;height:54px;padding:0;justify-content:center;border-radius:50%;right:16px;bottom:16px}.whatsapp-float span{display:none}}
 @media(max-width:480px){.nav{padding:14px 14px}.nav-inner{border-radius:24px;padding:11px 13px 11px 15px}.nav-logo span{font-size:0}.nav-logo span::after{content:'TenTwo';font-size:14px;font-weight:700;color:var(--text)}.nav-cta{font-size:12px;padding:9px 11px}.nav-cta svg{display:none}h1{font-size:clamp(34px,11vw,48px)}.hero{padding-top:128px}.btn{width:100%}.trust-footer-links{font-size:12px;gap:8px 10px}}
 @media(max-width:340px){.nav-cta{display:none}}
+
+
+/* TT UNIVERSAL TRUST FOOTER + FORM TRUST LINE */
+.tt-site-footer{
+  position:relative;
+  z-index:1;
+  border-top:1px solid rgba(255,255,255,0.09);
+  background:linear-gradient(180deg,rgba(5,8,15,0.18),rgba(5,8,15,0.62));
+  padding:34px 0 calc(34px + env(safe-area-inset-bottom));
+  color:#8A93A6;
+  font-family:'Geist',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+.tt-site-footer a{color:#8A93A6;text-decoration:none;transition:color .2s ease,background .2s ease,border-color .2s ease}
+.tt-site-footer a:hover{color:#6BA8FF}
+.tt-footer-inner{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;display:grid;gap:20px}
+.tt-footer-brand{display:grid;gap:6px;text-align:center}
+.tt-footer-brand strong{color:#E7ECF3;font-size:16px;letter-spacing:-.01em}
+.tt-footer-brand span{font-size:13.5px;line-height:1.5;color:#8A93A6}
+.tt-footer-groups{display:grid;gap:12px;justify-items:center}
+.tt-footer-links{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap}
+.tt-footer-links a{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:34px;padding:8px 12px;border-radius:999px;
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);
+  font-size:13px;line-height:1.2;
+}
+.tt-footer-trust a{background:rgba(46,134,255,0.07);border-color:rgba(46,134,255,0.13)}
+.tt-footer-contact{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;font-size:13.5px;line-height:1.5;text-align:center}
+.tt-footer-contact a{color:#DCEBFF}
+.tt-footer-bottom{
+  display:flex;align-items:center;justify-content:center;gap:10px 18px;flex-wrap:wrap;
+  padding-top:18px;border-top:1px solid rgba(255,255,255,0.08);
+  font-size:12.5px;color:#5B6478;text-align:center;
+}
+.tt-form-trust-line{
+  margin-top:12px;padding:12px 14px;border-radius:14px;
+  background:rgba(46,134,255,0.08);border:1px solid rgba(46,134,255,0.18);
+  color:#DCEBFF;font-size:12.5px;line-height:1.55;text-align:center;
+}
+.tt-policy-cta{
+  margin-top:30px;padding:22px;border-radius:22px;
+  background:linear-gradient(135deg,rgba(46,134,255,0.14),rgba(255,255,255,0.045));
+  border:1px solid rgba(46,134,255,0.22);text-align:center;
+}
+.tt-policy-cta strong{display:block;color:#E7ECF3;font-size:18px;margin-bottom:6px}
+.tt-policy-cta span{display:block;color:#8A93A6;font-size:14px;line-height:1.6;margin-bottom:16px}
+.tt-policy-cta-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.tt-policy-cta-actions a{
+  display:inline-flex;align-items:center;justify-content:center;min-height:42px;
+  padding:11px 16px;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none;
+  border:1px solid rgba(255,255,255,0.16);color:#E7ECF3;background:rgba(255,255,255,0.055);
+}
+.tt-policy-cta-actions a:first-child{background:linear-gradient(135deg,#2E86FF,#1565D8);color:#fff;border-color:rgba(255,255,255,0.12)}
+@media(max-width:640px){
+  .tt-site-footer{padding-top:28px;padding-bottom:calc(92px + env(safe-area-inset-bottom))}
+  .tt-footer-inner{padding:0 18px;gap:18px}
+  .tt-footer-links{gap:8px}
+  .tt-footer-links a{width:auto;max-width:none;min-height:36px;padding:8px 11px;font-size:12.5px}
+  .tt-footer-contact{display:grid;gap:6px;font-size:13px}
+  .tt-footer-contact span{display:none}
+  .tt-footer-bottom{display:grid;gap:6px;font-size:12px}
+  .tt-policy-cta-actions a{width:100%}
+}
+
 </style>
 </head>
 <body id="top">
@@ -55,7 +119,7 @@ h1{font-size:clamp(38px,6vw,70px);font-weight:500;line-height:1;letter-spacing:-
 </div>
 <header class="hero"><div class="container"><span class="label">Privacy Policy</span><h1>Privacy <em>Policy.</em></h1><p>How we collect, use, and protect details submitted through our website and contact forms.</p><div class="hero-actions"><a class="btn btn-primary" href="contact.html">Contact us</a><a class="btn btn-whatsapp" href="https://wa.me/919059291261">WhatsApp</a><a class="btn btn-ghost" href="index.html#top">Back to home</a></div></div></header>
 <main class="content"><div class="container"><article class="policy-card">
-<div class="note-box"><strong>Last updated:</strong> June 15, 2026. This page explains how TenTwo Technologies uses details submitted through this website, forms, email, and WhatsApp.</div>
+<div class="note-box"><strong>Last updated:</strong> June 2026. This page explains how TenTwo Technologies uses details submitted through this website, forms, email, and WhatsApp.</div>
 <h2>What information we collect</h2>
 <p>We may collect the details you choose to submit, such as your name, email address, phone or WhatsApp number, inquiry type, project requirement, internship application details, product submission details, and message content.</p>
 <h2>How we use your information</h2>
@@ -73,16 +137,52 @@ h1{font-size:clamp(38px,6vw,70px);font-weight:500;line-height:1;letter-spacing:-
 <p>You may contact us at <a href="mailto:info@tentwotechnologies.com">info@tentwotechnologies.com</a> to request correction or deletion of your submitted details, where reasonably possible.</p>
 <h2>Contact</h2>
 <p>For privacy questions, email <a href="mailto:info@tentwotechnologies.com">info@tentwotechnologies.com</a> or WhatsApp <a href="https://wa.me/919059291261">+91 90592 91261</a>.</p>
+
+<div class="tt-policy-cta">
+  <strong>Have questions about this page?</strong>
+  <span>Contact TenTwo Technologies through the official email or WhatsApp number before sharing details or making any payment.</span>
+  <div class="tt-policy-cta-actions">
+    <a href="contact.html">Contact us for questions</a>
+    <a href="https://wa.me/919059291261">WhatsApp +91 90592 91261</a>
+  </div>
+</div>
+
 </article></div></main>
-<footer class="footer"><div class="container footer-inner"><div>© 2026 <strong>TenTwo Technologies Private Limited</strong>. All rights reserved.</div><div class="footer-links"><a href="index.html#top">Home</a><a href="services.html">Services</a><a href="internships.html">Internship</a><a href="amazon.html">Amazon</a><a href="contact.html">Contact</a></div></div>
-  <div class="trust-footer-links" aria-label="Trust and policy links">
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <span>·</span>
-    <a href="terms.html">Terms</a>
-    <span>·</span>
-    <a href="refund-policy.html">Refund Policy</a>
-    <span>·</span>
-    <a href="company-verification.html">Company Verification</a>
+<footer class="tt-site-footer" role="contentinfo">
+  <div class="tt-footer-inner">
+    <div class="tt-footer-brand">
+      <strong>TenTwo Technologies Private Limited</strong>
+      <span>Websites, software, internships, Amazon product support and business automation.</span>
+    </div>
+
+    <div class="tt-footer-groups">
+      <nav class="tt-footer-links" aria-label="Main footer links">
+        <a href="index.html#top">Home</a>
+        <a href="services.html">Services</a>
+        <a href="internships.html">Internship Program</a>
+        <a href="amazon.html">Amazon</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <nav class="tt-footer-links tt-footer-trust" aria-label="Trust and policy links">
+        <a href="company-verification.html">Company Verification</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="refund-policy.html">Refund Policy</a>
+        <a href="sitemap.html">Sitemap</a>
+      </nav>
+
+      <div class="tt-footer-contact" aria-label="Company contact details">
+        <a href="mailto:info@tentwotechnologies.com">info@tentwotechnologies.com</a>
+        <span>·</span>
+        <a href="https://wa.me/919059291261">WhatsApp +91 90592 91261</a>
+      </div>
+    </div>
+
+    <div class="tt-footer-bottom">
+      <span>© 2026 TenTwo Technologies Private Limited. All rights reserved.</span>
+      <span>Usually replies within 24 hours.</span>
+    </div>
   </div>
 </footer>
 <a class="whatsapp-float" href="https://wa.me/919059291261" aria-label="Chat on WhatsApp"><span>WhatsApp</span>💬</a>

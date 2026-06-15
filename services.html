@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <meta content="#05080F" name="theme-color"/>
-<title>Services &amp; Pricing · TenTwo Technologies</title>
+<title>Services & Pricing · TenTwo Technologies</title>
 <meta content="Clear website, software, dashboard, mobile app and automation services from TenTwo Technologies. Simple process, mobile-friendly builds, affordable starter pricing and quote form." name="description"/>
 <link href="https://www.tentwotechnologies.com/services.html" rel="canonical"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -1248,6 +1248,70 @@ body::before{
   .trust-footer-links{gap:8px 10px;font-size:12px;padding-left:8px;padding-right:8px;}
   .trust-footer-links a{padding:4px 2px;}
 }
+
+
+/* TT UNIVERSAL TRUST FOOTER + FORM TRUST LINE */
+.tt-site-footer{
+  position:relative;
+  z-index:1;
+  border-top:1px solid rgba(255,255,255,0.09);
+  background:linear-gradient(180deg,rgba(5,8,15,0.18),rgba(5,8,15,0.62));
+  padding:34px 0 calc(34px + env(safe-area-inset-bottom));
+  color:#8A93A6;
+  font-family:'Geist',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+.tt-site-footer a{color:#8A93A6;text-decoration:none;transition:color .2s ease,background .2s ease,border-color .2s ease}
+.tt-site-footer a:hover{color:#6BA8FF}
+.tt-footer-inner{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;display:grid;gap:20px}
+.tt-footer-brand{display:grid;gap:6px;text-align:center}
+.tt-footer-brand strong{color:#E7ECF3;font-size:16px;letter-spacing:-.01em}
+.tt-footer-brand span{font-size:13.5px;line-height:1.5;color:#8A93A6}
+.tt-footer-groups{display:grid;gap:12px;justify-items:center}
+.tt-footer-links{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap}
+.tt-footer-links a{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:34px;padding:8px 12px;border-radius:999px;
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);
+  font-size:13px;line-height:1.2;
+}
+.tt-footer-trust a{background:rgba(46,134,255,0.07);border-color:rgba(46,134,255,0.13)}
+.tt-footer-contact{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;font-size:13.5px;line-height:1.5;text-align:center}
+.tt-footer-contact a{color:#DCEBFF}
+.tt-footer-bottom{
+  display:flex;align-items:center;justify-content:center;gap:10px 18px;flex-wrap:wrap;
+  padding-top:18px;border-top:1px solid rgba(255,255,255,0.08);
+  font-size:12.5px;color:#5B6478;text-align:center;
+}
+.tt-form-trust-line{
+  margin-top:12px;padding:12px 14px;border-radius:14px;
+  background:rgba(46,134,255,0.08);border:1px solid rgba(46,134,255,0.18);
+  color:#DCEBFF;font-size:12.5px;line-height:1.55;text-align:center;
+}
+.tt-policy-cta{
+  margin-top:30px;padding:22px;border-radius:22px;
+  background:linear-gradient(135deg,rgba(46,134,255,0.14),rgba(255,255,255,0.045));
+  border:1px solid rgba(46,134,255,0.22);text-align:center;
+}
+.tt-policy-cta strong{display:block;color:#E7ECF3;font-size:18px;margin-bottom:6px}
+.tt-policy-cta span{display:block;color:#8A93A6;font-size:14px;line-height:1.6;margin-bottom:16px}
+.tt-policy-cta-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.tt-policy-cta-actions a{
+  display:inline-flex;align-items:center;justify-content:center;min-height:42px;
+  padding:11px 16px;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none;
+  border:1px solid rgba(255,255,255,0.16);color:#E7ECF3;background:rgba(255,255,255,0.055);
+}
+.tt-policy-cta-actions a:first-child{background:linear-gradient(135deg,#2E86FF,#1565D8);color:#fff;border-color:rgba(255,255,255,0.12)}
+@media(max-width:640px){
+  .tt-site-footer{padding-top:28px;padding-bottom:calc(92px + env(safe-area-inset-bottom))}
+  .tt-footer-inner{padding:0 18px;gap:18px}
+  .tt-footer-links{gap:8px}
+  .tt-footer-links a{width:auto;max-width:none;min-height:36px;padding:8px 11px;font-size:12.5px}
+  .tt-footer-contact{display:grid;gap:6px;font-size:13px}
+  .tt-footer-contact span{display:none}
+  .tt-footer-bottom{display:grid;gap:6px;font-size:12px}
+  .tt-policy-cta-actions a{width:100%}
+}
+
 </style>
 </head>
 <body>
@@ -1737,39 +1801,41 @@ body::before{
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-<div class="container">
-<div class="footer-company">
-TenTwo Technologies Private Limited<br/>
-Registered address: 15-37B, Telephone Office Road, Kaikaluru, Andhra Pradesh, Krishna, India, 521333
-</div>
-<div class="footer-links">
-<a href="index.html">Home</a>
-<span>·</span>
-<a href="services.html">Services</a>
-<span>·</span>
-<a href="internships.html">Internship Program</a>
-<span>·</span>
-<a href="mailto:info@tentwotechnologies.com">info@tentwotechnologies.com</a>
-<span>·</span>
-<a href="tel:+919059291261">+91 90592 91261</a>
-<span>·</span>
-<a href="https://wa.me/919059291261" rel="noopener noreferrer" target="_blank">WhatsApp</a>
-<span>·</span>
-<a href="https://www.tentwotechnologies.com" rel="noopener noreferrer" target="_blank">Website</a>
-<span>·</span>
-<a href="https://www.linkedin.com/company/tentwo-technologies" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-</div>
-</div>
+<footer class="tt-site-footer" role="contentinfo">
+  <div class="tt-footer-inner">
+    <div class="tt-footer-brand">
+      <strong>TenTwo Technologies Private Limited</strong>
+      <span>Websites, software, internships, Amazon product support and business automation.</span>
+    </div>
 
-  <div class="trust-footer-links" aria-label="Trust and policy links">
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <span>·</span>
-    <a href="terms.html">Terms</a>
-    <span>·</span>
-    <a href="refund-policy.html">Refund Policy</a>
-    <span>·</span>
-    <a href="company-verification.html">Company Verification</a>
+    <div class="tt-footer-groups">
+      <nav class="tt-footer-links" aria-label="Main footer links">
+        <a href="index.html#top">Home</a>
+        <a href="services.html">Services</a>
+        <a href="internships.html">Internship Program</a>
+        <a href="amazon.html">Amazon</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <nav class="tt-footer-links tt-footer-trust" aria-label="Trust and policy links">
+        <a href="company-verification.html">Company Verification</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="refund-policy.html">Refund Policy</a>
+        <a href="sitemap.html">Sitemap</a>
+      </nav>
+
+      <div class="tt-footer-contact" aria-label="Company contact details">
+        <a href="mailto:info@tentwotechnologies.com">info@tentwotechnologies.com</a>
+        <span>·</span>
+        <a href="https://wa.me/919059291261">WhatsApp +91 90592 91261</a>
+      </div>
+    </div>
+
+    <div class="tt-footer-bottom">
+      <span>© 2026 TenTwo Technologies Private Limited. All rights reserved.</span>
+      <span>Usually replies within 24 hours.</span>
+    </div>
   </div>
 </footer>
 <!-- WHATSAPP FLOATING BUTTON -->
@@ -2085,9 +2151,10 @@ Registered address: 15-37B, Telephone Office Road, Kaikaluru, Andhra Pradesh, Kr
 </div>
 </div>
 <button class="submit" id="quoteSubmit" type="submit">Send request</button>
-<p class="privacy-note">We only use your details to respond to your project request. Read our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms.html">Terms</a>.</p>
+<p class="privacy-note">We only use your details to respond to your project request.</p>
 <p class="msg" id="quoteMsg"></p>
 </form>
+<div class="tt-form-trust-line">We only use your details to respond to your inquiry. Usually replies within 24 hours.</div>
 <div aria-live="polite" class="form-success" id="quoteSuccess">
 <div class="success-icon">✓</div>
 <h4>Thank you. Your request was sent.</h4>
