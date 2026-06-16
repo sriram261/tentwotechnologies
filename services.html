@@ -1474,6 +1474,34 @@ html,body{max-width:100%;overflow-x:hidden}
   .nav-cta{font-size:12px!important;padding:9px 10px!important}
 }
 
+
+
+/* FINAL NAVBAR TEXT + MOBILE MENU FIX */
+.nav-cta span{
+  display:inline !important;
+  white-space:nowrap !important;
+}
+@media(max-width:768px){
+  .nav-cta span{display:inline !important;}
+  .nav-cta{
+    min-width:auto !important;
+    width:auto !important;
+    padding:9px 14px !important;
+    white-space:nowrap !important;
+  }
+}
+@media(max-width:380px){
+  .nav-cta{font-size:11.5px !important;padding:9px 10px !important;}
+  .nav-cta svg{display:none !important;}
+}
+.mobile-menu a.mobile-cta{
+  text-align:center !important;
+  font-weight:800 !important;
+  color:#fff !important;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2)) !important;
+  border:1px solid rgba(255,255,255,0.14) !important;
+  box-shadow:0 10px 24px rgba(46,134,255,0.26) !important;
+}
 </style>
 </head>
 <body>
@@ -1494,6 +1522,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div>
 <a class="nav-cta js-quote" data-service="Service Project Enquiry" data-title="Start a project" href="#quote">
 <span>Start a project</span>
+
 <svg fill="none" height="11" viewbox="0 0 11 11" width="11"><path d="M1 10L10 1M10 1H2M10 1V9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
 </a>
 <button aria-label="Menu" class="nav-burger" id="burger"><span></span></button>
@@ -1506,7 +1535,6 @@ html,body{max-width:100%;overflow-x:hidden}
 <a href="internships.html">Internship Program</a>
 <a class="amazon-link" href="amazon.html">Amazon Store</a>
 <a href="index.html#founder">Founder</a>
-<a href="#simple-process">Process</a>
 <a href="contact.html">Contact</a>
 </div>
 <!-- HERO -->
