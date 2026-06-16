@@ -2024,6 +2024,57 @@ html,body{max-width:100%;overflow-x:hidden}
   .nav-cta{font-size:12px!important;padding:9px 10px!important}
 }
 
+
+
+/* INDEX NAV CTA TEXT FIX - keeps Start a project visible on mobile */
+.nav-cta span{
+  display:inline-block !important;
+  white-space:nowrap !important;
+}
+@media(max-width:768px){
+  .nav-cta span{
+    display:inline-block !important;
+  }
+}
+@media(max-width:430px){
+  .nav-inner{
+    gap:8px !important;
+  }
+  .nav-logo{
+    flex:1 1 auto !important;
+    min-width:0 !important;
+    max-width:calc(100% - 172px) !important;
+  }
+  .nav-logo>span:not(.logo-mark):not(.mark){
+    white-space:normal !important;
+    line-height:1.12 !important;
+    max-height:2.4em !important;
+    overflow:hidden !important;
+  }
+  .nav-cta{
+    width:118px !important;
+    min-width:118px !important;
+    padding:9px 10px !important;
+    font-size:13px !important;
+    line-height:1 !important;
+  }
+  .nav-cta svg{
+    display:none !important;
+  }
+}
+@media(max-width:380px){
+  .nav-logo{
+    max-width:calc(100% - 156px) !important;
+  }
+  .nav-cta{
+    width:104px !important;
+    min-width:104px !important;
+    font-size:12px !important;
+    padding-left:8px !important;
+    padding-right:8px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -2065,7 +2116,6 @@ html,body{max-width:100%;overflow-x:hidden}
 <a href="internships.html">Internship Program</a>
 <a class="amazon-link" href="amazon.html">Amazon Store</a>
 <a href="#founder">Founder</a>
-<a href="#process">Process</a>
 <a href="contact.html">Contact</a>
 </div>
 <!-- HERO -->
