@@ -353,6 +353,88 @@ html,body{max-width:100%;overflow-x:hidden}
 
   gtag('config', 'G-TLTHLNX0QJ');
 </script>
+<style>
+/* MOBILE ONLY BOTTOM NAVIGATION */
+.mobile-bottom-nav{
+  display:none !important;
+  visibility:hidden !important;
+  pointer-events:none !important;
+}
+@media (max-width: 768px){
+  body{padding-bottom:92px !important;}
+  .mobile-bottom-nav{
+    position:fixed !important;
+    left:10px !important;
+    right:10px !important;
+    bottom:10px !important;
+    display:flex !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:8px !important;
+    padding:10px 14px !important;
+    border-radius:18px !important;
+    background:rgba(5,13,30,0.92) !important;
+    border:1px solid rgba(82,136,255,0.20) !important;
+    box-shadow:0 14px 34px rgba(0,0,0,0.30) !important;
+    backdrop-filter:blur(14px) !important;
+    -webkit-backdrop-filter:blur(14px) !important;
+    z-index:9998 !important;
+  }
+  .mobile-bottom-nav a{
+    flex:1 1 0 !important;
+    min-width:0 !important;
+    text-align:center !important;
+    color:rgba(255,255,255,0.86) !important;
+    text-decoration:none !important;
+    font-size:13px !important;
+    line-height:1.2 !important;
+    font-weight:800 !important;
+    padding:7px 2px !important;
+    border-radius:12px !important;
+    transition:background .2s ease,color .2s ease,border-color .2s ease !important;
+    white-space:nowrap !important;
+    border:1px solid transparent !important;
+  }
+  .mobile-bottom-nav a.active,
+  .mobile-bottom-nav a[aria-current="page"]{
+    background:rgba(60,120,255,0.20) !important;
+    color:#ffffff !important;
+    border-color:rgba(82,136,255,0.22) !important;
+  }
+  .mobile-bottom-nav a.amazon-bottom-link{
+    color:#FF9900 !important;
+  }
+  .mobile-bottom-nav a.amazon-bottom-link.active,
+  .mobile-bottom-nav a.amazon-bottom-link[aria-current="page"]{
+    background:rgba(255,153,0,0.18) !important;
+    color:#FFB000 !important;
+    border-color:rgba(255,153,0,0.34) !important;
+  }
+  .whatsapp-float,
+  .floating-whatsapp{
+    bottom:calc(88px + env(safe-area-inset-bottom)) !important;
+  }
+}
+@media (max-width: 380px){
+  .mobile-bottom-nav{
+    gap:6px !important;
+    padding-left:10px !important;
+    padding-right:10px !important;
+  }
+  .mobile-bottom-nav a{
+    font-size:12px !important;
+  }
+}
+@media (min-width: 769px){
+  .mobile-bottom-nav{
+    display:none !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+  }
+}
+</style>
 </head>
 <body id="top">
 <div class="atmosphere"></div><div class="grain"></div><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div>
@@ -384,6 +466,13 @@ html,body{max-width:100%;overflow-x:hidden}
   <a href="index.html#founder">Founder</a>
   <a href="contact.html" class="active" aria-current="page">Contact</a>
 </div>
+<nav class="mobile-bottom-nav" aria-label="Mobile bottom navigation">
+  <a href="index.html#top">Home</a>
+  <a href="services.html">Services</a>
+  <a href="internships.html">Internship</a>
+  <a class="amazon-bottom-link" href="amazon.html">Amazon</a>
+</nav>
+
 <header class="hero">
   <div class="container hero-grid">
     <div>

@@ -2157,7 +2157,6 @@ html,body{max-width:100%;overflow-x:hidden}
 
   gtag('config', 'G-TLTHLNX0QJ');
 </script>
-
 <style>
 /* MOBILE ONLY BOTTOM NAVIGATION */
 .mobile-bottom-nav{
@@ -2166,49 +2165,70 @@ html,body{max-width:100%;overflow-x:hidden}
   pointer-events:none !important;
 }
 @media (max-width: 768px){
-  body{padding-bottom:86px;}
+  body{padding-bottom:92px !important;}
   .mobile-bottom-nav{
-    position:fixed;
-    left:10px;
-    right:10px;
-    bottom:10px;
+    position:fixed !important;
+    left:10px !important;
+    right:10px !important;
+    bottom:10px !important;
     display:flex !important;
     visibility:visible !important;
     pointer-events:auto !important;
-    align-items:center;
-    justify-content:space-between;
-    gap:8px;
-    padding:10px 14px;
-    border-radius:18px;
-    background:rgba(5,13,30,0.92);
-    border:1px solid rgba(82,136,255,0.20);
-    box-shadow:0 14px 34px rgba(0,0,0,0.30);
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-    z-index:9998;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:8px !important;
+    padding:10px 14px !important;
+    border-radius:18px !important;
+    background:rgba(5,13,30,0.92) !important;
+    border:1px solid rgba(82,136,255,0.20) !important;
+    box-shadow:0 14px 34px rgba(0,0,0,0.30) !important;
+    backdrop-filter:blur(14px) !important;
+    -webkit-backdrop-filter:blur(14px) !important;
+    z-index:9998 !important;
   }
   .mobile-bottom-nav a{
-    flex:1 1 0;
-    min-width:0;
-    text-align:center;
-    color:rgba(255,255,255,0.82);
-    text-decoration:none;
-    font-size:11px;
-    line-height:1.2;
-    font-weight:600;
-    padding:6px 2px;
-    border-radius:12px;
-    transition:background .2s ease,color .2s ease;
-    white-space:nowrap;
+    flex:1 1 0 !important;
+    min-width:0 !important;
+    text-align:center !important;
+    color:rgba(255,255,255,0.86) !important;
+    text-decoration:none !important;
+    font-size:13px !important;
+    line-height:1.2 !important;
+    font-weight:800 !important;
+    padding:7px 2px !important;
+    border-radius:12px !important;
+    transition:background .2s ease,color .2s ease,border-color .2s ease !important;
+    white-space:nowrap !important;
+    border:1px solid transparent !important;
   }
   .mobile-bottom-nav a.active,
   .mobile-bottom-nav a[aria-current="page"]{
-    background:rgba(60,120,255,0.20);
-    color:#ffffff;
+    background:rgba(60,120,255,0.20) !important;
+    color:#ffffff !important;
+    border-color:rgba(82,136,255,0.22) !important;
+  }
+  .mobile-bottom-nav a.amazon-bottom-link{
+    color:#FF9900 !important;
+  }
+  .mobile-bottom-nav a.amazon-bottom-link.active,
+  .mobile-bottom-nav a.amazon-bottom-link[aria-current="page"]{
+    background:rgba(255,153,0,0.18) !important;
+    color:#FFB000 !important;
+    border-color:rgba(255,153,0,0.34) !important;
   }
   .whatsapp-float,
   .floating-whatsapp{
-    bottom:calc(86px + env(safe-area-inset-bottom)) !important;
+    bottom:calc(88px + env(safe-area-inset-bottom)) !important;
+  }
+}
+@media (max-width: 380px){
+  .mobile-bottom-nav{
+    gap:6px !important;
+    padding-left:10px !important;
+    padding-right:10px !important;
+  }
+  .mobile-bottom-nav a{
+    font-size:12px !important;
   }
 }
 @media (min-width: 769px){
@@ -2219,7 +2239,6 @@ html,body{max-width:100%;overflow-x:hidden}
   }
 }
 </style>
-
 </head>
 <body>
 <div class="scroll-progress"><div class="scroll-progress-fill" id="scrollProgress"></div></div>
@@ -2263,12 +2282,11 @@ html,body{max-width:100%;overflow-x:hidden}
 <a href="#founder">Founder</a>
 <a href="contact.html">Contact</a>
 </div>
-
 <nav class="mobile-bottom-nav" aria-label="Mobile bottom navigation">
   <a class="active" aria-current="page" href="#top">Home</a>
   <a href="services.html">Services</a>
   <a href="internships.html">Internship</a>
-  <a href="amazon.html">Amazon</a>
+  <a class="amazon-bottom-link" href="amazon.html">Amazon</a>
 </nav>
 
 <!-- HERO -->
