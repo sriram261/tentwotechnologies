@@ -2157,6 +2157,54 @@ html,body{max-width:100%;overflow-x:hidden}
 
   gtag('config', 'G-TLTHLNX0QJ');
 </script>
+
+<style>
+.mobile-bottom-nav{display:none;}
+@media (max-width: 768px){
+  body{padding-bottom:86px;}
+  .mobile-bottom-nav{
+    position:fixed;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    padding:10px 76px 10px 14px;
+    border-radius:18px;
+    background:rgba(5,13,30,0.92);
+    border:1px solid rgba(82,136,255,0.20);
+    box-shadow:0 14px 34px rgba(0,0,0,0.30);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    z-index:9998;
+  }
+  .mobile-bottom-nav a{
+    flex:1 1 0;
+    min-width:0;
+    text-align:center;
+    color:rgba(255,255,255,0.82);
+    text-decoration:none;
+    font-size:11px;
+    line-height:1.2;
+    font-weight:600;
+    padding:6px 2px;
+    border-radius:12px;
+    transition:background .2s ease,color .2s ease;
+    white-space:nowrap;
+  }
+  .mobile-bottom-nav a.active,
+  .mobile-bottom-nav a[aria-current="page"]{
+    background:rgba(60,120,255,0.20);
+    color:#ffffff;
+  }
+}
+@media (min-width: 769px){
+  .mobile-bottom-nav{display:none !important;}
+}
+</style>
+
 </head>
 <body>
 <div class="scroll-progress"><div class="scroll-progress-fill" id="scrollProgress"></div></div>
@@ -2200,6 +2248,15 @@ html,body{max-width:100%;overflow-x:hidden}
 <a href="#founder">Founder</a>
 <a href="contact.html">Contact</a>
 </div>
+
+<nav class="mobile-bottom-nav" aria-label="Mobile bottom navigation">
+  <a class="active" aria-current="page" href="#top">Home</a>
+  <a href="services.html">Services</a>
+  <a href="internships.html">Internship</a>
+  <a href="amazon.html">Amazon</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
 <!-- HERO -->
 <section class="hero" id="top">
 <div class="hero-shard s1"></div>
@@ -3814,6 +3871,38 @@ if (contactForm) {
   }else{
     initSectionHighlight();
   }
+})();
+</script>
+
+
+<script>
+(function(){
+  var bottomLinks = Array.prototype.slice.call(document.querySelectorAll('.mobile-bottom-nav a'));
+  if(!bottomLinks.length) return;
+  var currentPage = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+
+  function setActive(link){
+    bottomLinks.forEach(function(item){
+      item.classList.remove('active');
+      item.removeAttribute('aria-current');
+    });
+    if(link){
+      link.classList.add('active');
+      link.setAttribute('aria-current','page');
+    }
+  }
+
+  var matched = null;
+  bottomLinks.forEach(function(link){
+    var href = (link.getAttribute('href') || '').toLowerCase();
+    if(href === '#top' && (currentPage === '' || currentPage === 'index.html')){
+      matched = matched || link;
+    }
+    if(href && href !== '#top' && href === currentPage){
+      matched = link;
+    }
+  });
+  setActive(matched || bottomLinks[0]);
 })();
 </script>
 
