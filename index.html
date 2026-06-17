@@ -3769,5 +3769,53 @@ if (contactForm) {
 })();
 </script>
 
+<script>
+/* ACTIVE NAV HIGHLIGHT FOR HOME PAGE SECTIONS */
+(function(){
+  function initSectionHighlight(){
+    var sectionIds = ['top','about','founder','contact'];
+    var navItems = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"], .mobile-menu a[href^="#"]'));
+    if(!navItems.length) return;
+
+    function setActive(id){
+      navItems.forEach(function(link){
+        var href = (link.getAttribute('href') || '').replace('#','');
+        var isActive = href === id;
+        link.classList.toggle('active', isActive);
+        if(isActive){
+          link.setAttribute('aria-current','page');
+        }else{
+          link.removeAttribute('aria-current');
+        }
+      });
+    }
+
+    function updateActiveSection(){
+      var scrollPosition = window.scrollY + 140;
+      var current = 'top';
+
+      sectionIds.forEach(function(id){
+        var section = document.getElementById(id);
+        if(section && section.offsetTop <= scrollPosition){
+          current = id;
+        }
+      });
+
+      setActive(current);
+    }
+
+    window.addEventListener('scroll', updateActiveSection, {passive:true});
+    window.addEventListener('resize', updateActiveSection, {passive:true});
+    updateActiveSection();
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initSectionHighlight);
+  }else{
+    initSectionHighlight();
+  }
+})();
+</script>
+
 </body>
 </html>
