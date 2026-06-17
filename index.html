@@ -2159,12 +2159,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </script>
 
 <style>
-/* MOBILE ONLY BOTTOM NAVIGATION */
-.mobile-bottom-nav{
-  display:none !important;
-  visibility:hidden !important;
-  pointer-events:none !important;
-}
+.mobile-bottom-nav{display:none;}
 @media (max-width: 768px){
   body{padding-bottom:86px;}
   .mobile-bottom-nav{
@@ -2172,13 +2167,11 @@ html,body{max-width:100%;overflow-x:hidden}
     left:10px;
     right:10px;
     bottom:10px;
-    display:flex !important;
-    visibility:visible !important;
-    pointer-events:auto !important;
+    display:flex;
     align-items:center;
     justify-content:space-between;
     gap:8px;
-    padding:10px 14px;
+    padding:10px 76px 10px 14px;
     border-radius:18px;
     background:rgba(5,13,30,0.92);
     border:1px solid rgba(82,136,255,0.20);
@@ -2206,17 +2199,9 @@ html,body{max-width:100%;overflow-x:hidden}
     background:rgba(60,120,255,0.20);
     color:#ffffff;
   }
-  .whatsapp-float,
-  .floating-whatsapp{
-    bottom:calc(86px + env(safe-area-inset-bottom)) !important;
-  }
 }
 @media (min-width: 769px){
-  .mobile-bottom-nav{
-    display:none !important;
-    visibility:hidden !important;
-    pointer-events:none !important;
-  }
+  .mobile-bottom-nav{display:none !important;}
 }
 </style>
 
@@ -2269,6 +2254,7 @@ html,body{max-width:100%;overflow-x:hidden}
   <a href="services.html">Services</a>
   <a href="internships.html">Internship</a>
   <a href="amazon.html">Amazon</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
 <!-- HERO -->
