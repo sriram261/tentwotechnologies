@@ -549,6 +549,59 @@ html,body{max-width:100%;overflow-x:hidden}
 
 </style>
 
+<style>
+/* MOBILE CERTIFICATE RESULT WIDTH FIX - prevents preview/details from getting cut on phones */
+@media (max-width: 768px){
+  #resultArea,
+  #resultContent,
+  #resultArea .container,
+  .result-card,
+  .result-grid,
+  .details-panel,
+  .preview-panel,
+  .certificate-preview-wrap{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+  }
+  .result-card{
+    overflow:hidden !important;
+  }
+  .result-grid{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) !important;
+  }
+  .detail-list,
+  .detail-item{
+    min-width:0 !important;
+    max-width:100% !important;
+  }
+  .detail-item span,
+  .detail-item a{
+    display:block !important;
+    max-width:100% !important;
+    overflow-wrap:anywhere !important;
+    word-break:break-word !important;
+  }
+  .certificate-preview-wrap{
+    overflow:hidden !important;
+  }
+  .certificate-preview{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+  }
+  .download-row,
+  .download-row .btn{
+    min-width:0 !important;
+    max-width:100% !important;
+  }
+}
+</style>
+
 </head>
 <body id="top">
 <div class="atmosphere"></div><div class="grain"></div><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div>
