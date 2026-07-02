@@ -10,5 +10,17 @@
     "domainUrl": "https://tentwotechnologies.com/internship",
     "certificateImage": "certificates/TENTWO-2026-FSD-001.png",
     "certificatePdf": "certificates/TENTWO-2026-FSD-001.pdf"
+  },
+  {
+    "id": "TENTWO-2026-DSA-001",
+    "name": "Singamsetty Rishi",
+    "programName": "Data Science & Analytics",
+    "programCode": "DSA",
+    "duration": "May 2026 to July 2026",
+    "issueDate": "02 July 2026",
+    "status": "Active",
+    "domainUrl": "https://tentwotechnologies.com/internship",
+    "certificateImage": "certificates/TENTWO-2026-DSA-001.png",
+    "certificatePdf": "certificates/TENTWO-2026-DSA-001.pdf"
   }
 ]
