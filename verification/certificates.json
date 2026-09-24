@@ -34,5 +34,17 @@
     "domainUrl": "https://tentwotechnologies.com/internship",
     "certificateImage": "certificates/TENTWO-2026-DSA-002.png",
     "certificatePdf": "certificates/TENTWO-2026-DSA-002.pdf"
+  },
+  {
+    "id": "TENTWO-2026-PYA-001",
+    "name": "Pemmasani Sreekumar Chowdary",
+    "programName": "Python & Automation",
+    "programCode": "PYA",
+    "duration": "May 2026 to July 2026",
+    "issueDate": "07 July 2026",
+    "status": "Active",
+    "domainUrl": "https://tentwotechnologies.com/internship",
+    "certificateImage": "certificates/TENTWO-2026-PYA-001.png",
+    "certificatePdf": "certificates/TENTWO-2026-PYA-001.pdf"
   }
 ]
