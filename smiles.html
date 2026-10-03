@@ -439,8 +439,10 @@ html,body{max-width:100%;overflow-x:hidden}
 
 <style>
 /* TENTWO SMILES PAGE - uses the existing TenTwo visual system */
-.smiles-hero-logo{width:min(620px,92%);margin:0 auto 24px;padding:18px 24px;border:1px solid rgba(255,255,255,.14);border-radius:28px;background:#fff;box-shadow:0 24px 70px rgba(0,0,0,.28);display:flex;align-items:center;justify-content:center}
-.smiles-hero-logo img{display:block;width:100%;height:auto;max-height:230px;object-fit:contain}
+.smiles-hero-logo{width:min(650px,94%);margin:0 auto 28px;padding:15px 18px 13px;overflow:hidden;border:1px solid rgba(255,255,255,.11);border-radius:28px;background:radial-gradient(circle at 19% 34%,rgba(46,134,255,.14),transparent 40%),radial-gradient(circle at 82% 66%,rgba(255,176,0,.10),transparent 43%),linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.024));box-shadow:0 24px 70px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.smiles-hero-logo-crop{position:relative;width:100%;aspect-ratio:2.52/1;overflow:hidden}
+.smiles-hero-logo img{position:absolute;top:0;left:0;display:block;width:100%;height:auto;transform:scale(1.035);transform-origin:top center;filter:drop-shadow(0 16px 28px rgba(0,0,0,.22))}
+.smiles-hero-logo-tagline{margin:9px 4px 1px;text-align:center;color:var(--text-dim);font-size:clamp(10px,1.15vw,13px);font-weight:600;letter-spacing:.015em;line-height:1.35}
 .smiles-card{overflow:hidden}
 .smiles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 8px}
 .smiles-mini-card{padding:20px;border-radius:20px;background:rgba(255,255,255,.045);border:1px solid var(--border)}
@@ -449,7 +451,7 @@ html,body{max-width:100%;overflow-x:hidden}
 .smiles-focus{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:16px 0 4px;list-style:none!important;margin-left:0!important}
 .smiles-focus li{padding:12px 14px;border-radius:14px;background:rgba(46,134,255,.08);border:1px solid rgba(46,134,255,.17);color:#DCEBFF!important}
 .smiles-focus li::before{content:'✓';color:#FFB000;font-weight:800;margin-right:9px}
-@media(max-width:760px){.smiles-hero-logo{padding:12px 14px;border-radius:20px}.smiles-grid,.smiles-focus{grid-template-columns:1fr}.smiles-hero-logo img{max-height:170px}}
+@media(max-width:760px){.smiles-hero-logo{width:96%;padding:11px 12px 10px;border-radius:22px;margin-bottom:24px}.smiles-grid,.smiles-focus{grid-template-columns:1fr}}
 </style>
 
 
@@ -500,7 +502,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <a href="contact.html">Contact</a>
 </div>
 <header class="hero smiles-hero"><div class="container">
-<div class="smiles-hero-logo"><img src="assets/images/tentwo-smiles-logo.png" alt="TenTwo Smiles — An initiative of TenTwo Technologies Private Limited" /></div>
+<div class="smiles-hero-logo"><div class="smiles-hero-logo-crop"><img src="assets/images/tentwo-smiles-logo.png" alt="TenTwo Smiles" /></div><div class="smiles-hero-logo-tagline">An initiative of TenTwo Technologies Private Limited</div></div>
 <span class="label">TenTwo Smiles</span>
 <h1>Small actions. <em>Meaningful smiles.</em></h1>
 <p>TenTwo Smiles is a community-focused initiative of TenTwo Technologies Private Limited, created to bring practical support, kindness, and positive impact together under one clear identity.</p>
