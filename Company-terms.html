@@ -32,6 +32,16 @@ h1{font-size:clamp(38px,6vw,70px);font-weight:500;line-height:1;letter-spacing:-
 @media(max-width:480px){.nav{padding:14px 14px}.nav-inner{border-radius:24px;padding:11px 13px 11px 15px}.nav-logo span{font-size:0}.nav-logo span::after{content:'TenTwo';font-size:14px;font-weight:700;color:var(--text)}.nav-cta{font-size:12px;padding:9px 11px}.nav-cta svg{display:none}h1{font-size:clamp(34px,11vw,48px)}.hero{padding-top:128px}.btn{width:100%}.trust-footer-links{font-size:12px;gap:8px 10px}}
 @media(max-width:340px){.nav-cta{display:none}}
 </style>
+
+<style>
+/* TENTWO SMILES MOBILE FLOAT - added without changing existing controls */
+.smiles-float{display:none}
+@media(max-width:768px){
+  .smiles-float{position:fixed!important;right:16px!important;bottom:calc(82px + env(safe-area-inset-bottom))!important;z-index:10000!important;width:54px!important;height:54px!important;border-radius:50%!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:5px!important;background:#fff!important;border:1px solid rgba(255,255,255,.28)!important;box-shadow:0 16px 38px rgba(0,0,0,.35)!important;transition:transform .25s ease,box-shadow .25s ease!important}
+  .smiles-float:active{transform:scale(.96)}
+  .smiles-float svg{display:block;width:44px!important;height:44px!important}
+}
+</style>
 </head>
 <body id="top">
 <div class="atmosphere"></div><div class="grain"></div><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div>
@@ -41,6 +51,7 @@ h1{font-size:clamp(38px,6vw,70px);font-weight:500;line-height:1;letter-spacing:-
     <a href="services.html">Services</a>
     <a href="https://tentwotechnologies.com/internship">Internship Program</a>
     <a href="amazon.html" class="amazon-link">Amazon</a>
+<a class="smiles-link" href="smiles.html">Smiles</a>
     <a href="index.html#founder">Founder</a>
     <a href="contact.html">Contact</a>
 </div><a href="contact.html" class="nav-cta"><span>Contact</span><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M1 10L10 1M10 1H2M10 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><button class="nav-burger" id="burger" aria-label="Menu"><span></span></button></div></nav>
@@ -50,6 +61,7 @@ h1{font-size:clamp(38px,6vw,70px);font-weight:500;line-height:1;letter-spacing:-
     <a href="services.html">Services</a>
     <a href="https://tentwotechnologies.com/internship">Internship Program</a>
     <a href="amazon.html" class="amazon-link">Amazon Store</a>
+<a class="smiles-link" href="smiles.html">Smiles</a>
     <a href="index.html#founder">Founder</a>
     <a href="contact.html">Contact</a>
 </div>
@@ -78,7 +90,7 @@ h1{font-size:clamp(38px,6vw,70px);font-weight:500;line-height:1;letter-spacing:-
 <h2>Contact</h2>
 <p>For questions about these terms, email <a href="mailto:info@tentwotechnologies.com">info@tentwotechnologies.com</a> or WhatsApp <a href="https://wa.me/919059291261">+91 90592 91261</a>.</p>
 </article></div></main>
-<footer class="footer"><div class="container footer-inner"><div>© 2026 <strong>TenTwo Technologies Private Limited</strong>. All rights reserved.</div><div class="footer-links"><a href="index.html#top">Home</a><a href="services.html">Services</a><a href="https://tentwotechnologies.com/internship">Internship</a><a href="amazon.html">Amazon</a><a href="contact.html">Contact</a></div></div>
+<footer class="footer"><div class="container footer-inner"><div>© 2026 <strong>TenTwo Technologies Private Limited</strong>. All rights reserved.</div><div class="footer-links"><a href="index.html#top">Home</a><a href="services.html">Services</a><a href="https://tentwotechnologies.com/internship">Internship</a><a href="amazon.html">Amazon</a><a href="smiles.html">Smiles</a><a href="contact.html">Contact</a></div></div>
   <div class="trust-footer-links" aria-label="Trust and policy links">
     <a href="privacy-policy.html">Privacy Policy</a>
     <span>·</span>
@@ -89,6 +101,9 @@ h1{font-size:clamp(38px,6vw,70px);font-weight:500;line-height:1;letter-spacing:-
     <a href="company-verification.html">Company Verification</a>
   </div>
 </footer>
+<a aria-label="Open TenTwo Smiles" class="smiles-float" href="smiles.html" title="TenTwo Smiles">
+  <svg aria-hidden="true" viewBox="0 0 64 64" role="img"><circle cx="32" cy="32" r="28" fill="#FFB000"/><circle cx="23" cy="25" r="3.2" fill="#0B5FC6"/><circle cx="41" cy="25" r="3.2" fill="#0B5FC6"/><path d="M20 36c3.2 7 20.8 7 24 0" fill="none" stroke="#0B5FC6" stroke-width="4.5" stroke-linecap="round"/></svg>
+</a>
 <a class="whatsapp-float" href="https://wa.me/919059291261" aria-label="Chat on WhatsApp"><span>WhatsApp</span>💬</a>
 <script>const nav=document.getElementById('nav');const burger=document.getElementById('burger');const mobileMenu=document.getElementById('mobileMenu');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>20));burger?.addEventListener('click',()=>{burger.classList.toggle('open');mobileMenu.classList.toggle('open')});mobileMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{burger?.classList.remove('open');mobileMenu?.classList.remove('open')}));</script>
 </body>

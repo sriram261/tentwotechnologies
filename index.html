@@ -2239,6 +2239,16 @@ html,body{max-width:100%;overflow-x:hidden}
   }
 }
 </style>
+
+<style>
+/* TENTWO SMILES MOBILE FLOAT - added without changing existing controls */
+.smiles-float{display:none}
+@media(max-width:768px){
+  .smiles-float{position:fixed!important;right:16px!important;bottom:calc(154px + env(safe-area-inset-bottom))!important;z-index:10000!important;width:54px!important;height:54px!important;border-radius:50%!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:5px!important;background:#fff!important;border:1px solid rgba(255,255,255,.28)!important;box-shadow:0 16px 38px rgba(0,0,0,.35)!important;transition:transform .25s ease,box-shadow .25s ease!important}
+  .smiles-float:active{transform:scale(.96)}
+  .smiles-float svg{display:block;width:44px!important;height:44px!important}
+}
+</style>
 </head>
 <body>
 <div class="scroll-progress"><div class="scroll-progress-fill" id="scrollProgress"></div></div>
@@ -2262,6 +2272,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <a href="services.html">Services</a>
 <a href="https://tentwotechnologies.com/internship">Internship Program</a>
 <a class="amazon-link" href="amazon.html">Amazon</a>
+<a class="smiles-link" href="smiles.html">Smiles</a>
 <a href="#founder">Founder</a>
 <a href="contact.html">Contact</a>
 </div>
@@ -2279,6 +2290,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <a href="services.html">Services</a>
 <a href="https://tentwotechnologies.com/internship">Internship Program</a>
 <a class="amazon-link" href="amazon.html">Amazon Store</a>
+<a class="smiles-link" href="smiles.html">Smiles</a>
 <a href="#founder">Founder</a>
 <a href="contact.html">Contact</a>
 </div>
@@ -2491,6 +2503,38 @@ html,body{max-width:100%;overflow-x:hidden}
 </div>
 </div>
 </section>
+<section class="ht" id="home-smiles">
+<div class="container">
+<div class="ht-grid">
+<div>
+<div class="section-label" style="background:rgba(255,176,0,0.10);border-color:rgba(255,176,0,0.24);color:#FFB000;">TenTwo Smiles · Community Initiative</div>
+<h2>TenTwo Smiles</h2>
+<p>An initiative of TenTwo Technologies Private Limited focused on bringing practical support, kindness, and positive community impact together under one dedicated identity.</p>
+<ul class="ht-points">
+<li>Community support</li>
+<li>Education-focused support</li>
+<li>Essential needs</li>
+<li>Local outreach</li>
+<li>Responsible action</li>
+<li>Positive impact</li>
+</ul>
+<div class="ht-actions">
+<a class="btn btn-primary" href="smiles.html" style="background:linear-gradient(135deg,#F2A900,#FFBF2F);box-shadow:0 12px 30px rgba(255,176,0,0.30);color:#111;">
+Explore TenTwo Smiles
+<span class="btn-arrow"><svg fill="none" height="12" viewBox="0 0 12 12" width="12"><path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span>
+</a>
+<a class="btn btn-ghost" href="contact.html">Contact us →</a>
+</div>
+</div>
+<div style="display:flex;align-items:center;justify-content:center;">
+<div style="width:min(420px,94%);padding:24px;background:#fff;border:1px solid rgba(255,176,0,0.25);border-radius:24px;display:flex;align-items:center;justify-content:center;box-shadow:0 18px 50px rgba(0,0,0,.20);">
+<img alt="TenTwo Smiles" src="assets/images/tentwo-smiles-logo.png" style="width:100%;height:auto;object-fit:contain;border-radius:12px;max-height:220px;"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+
 <!-- SERVICES -->
 <section id="services">
 <div class="container">
@@ -3427,6 +3471,7 @@ html,body{max-width:100%;overflow-x:hidden}
         <a href="services.html">Services</a>
         <a href="https://tentwotechnologies.com/internship">Internship Program</a>
         <a href="amazon.html">Amazon</a>
+        <a href="smiles.html">Smiles</a>
         <a href="contact.html">Contact</a>
       </nav>
 
@@ -3452,6 +3497,9 @@ html,body{max-width:100%;overflow-x:hidden}
     </div>
   </div>
 </footer>
+<a aria-label="Open TenTwo Smiles" class="smiles-float" href="smiles.html" title="TenTwo Smiles">
+  <svg aria-hidden="true" viewBox="0 0 64 64" role="img"><circle cx="32" cy="32" r="28" fill="#FFB000"/><circle cx="23" cy="25" r="3.2" fill="#0B5FC6"/><circle cx="41" cy="25" r="3.2" fill="#0B5FC6"/><path d="M20 36c3.2 7 20.8 7 24 0" fill="none" stroke="#0B5FC6" stroke-width="4.5" stroke-linecap="round"/></svg>
+</a>
 <a aria-label="Chat with TenTwo Technologies on WhatsApp" class="whatsapp-float" href="https://wa.me/919059291261" rel="noopener noreferrer" target="_blank">
   <svg aria-hidden="true" fill="currentColor" viewBox="0 0 32 32">
     <path d="M16.04 3C9.42 3 4.04 8.38 4.04 15c0 2.12.56 4.19 1.62 6.01L4 29l8.16-1.6A11.94 11.94 0 0 0 16.04 27c6.62 0 12-5.38 12-12s-5.38-12-12-12Zm0 21.78c-1.86 0-3.67-.53-5.24-1.54l-.38-.24-4.02.79.82-3.93-.25-.4A9.7 9.7 0 0 1 6.26 15c0-5.4 4.39-9.78 9.78-9.78S25.82 9.6 25.82 15s-4.39 9.78-9.78 9.78Zm5.36-7.32c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.19.29-.76.95-.93 1.14-.17.2-.34.22-.63.07-.29-.15-1.23-.45-2.34-1.44-.86-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.6-.9-2.19-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44s1.05 2.83 1.19 3.02c.15.2 2.06 3.14 4.99 4.4.7.3 1.25.48 1.67.61.7.22 1.34.19 1.85.12.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.19-.56-.34Z"/>
