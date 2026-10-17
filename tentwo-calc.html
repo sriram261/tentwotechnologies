@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website Cost Calculator | TenTwo Technologies</title>
+<meta name="description" content="Instant estimate for a business website in India. 5 page website launch offer Rs.4,999 (regular Rs.14,999) for the first 3 clients. TenTwo Technologies, Kaikaluru, Andhra Pradesh.">
+<link rel="canonical" href="https://www.tentwotechnologies.com/website-cost-calculator.html">
+<link rel="icon" href="/favicon.ico">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TLTHLNX0QJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TLTHLNX0QJ');gtag('config','G-4DK6PSPXV7');</script>
+<style>
+:root{--ink:#EAF1FB;--mut:#9DB2CC;--bg:#0A1628;--card:#101F38;--blue:#2E9BFF;--gold:#D4AF37}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,'Segoe UI',Arial,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px 50px}
+a{color:var(--blue)} h1{font-size:clamp(28px,5vw,40px);line-height:1.2;margin:28px 0 8px}
+.lede{color:var(--mut);font-size:17.5px}
+.box{background:var(--card);border-radius:14px;padding:22px;margin:20px 0}
+label{display:block;font-weight:700;margin:14px 0 6px}
+select,input[type=range]{width:100%}
+.feat{display:flex;gap:10px;align-items:flex-start;margin:9px 0;color:var(--mut)}
+.feat input{margin-top:5px;width:18px;height:18px}
+.out{background:#0D2B17;border:1px solid #1FA855;border-radius:14px;padding:20px 22px;margin:22px 0}
+.out .big{font-size:32px;font-weight:800;color:#7BE495}
+.out s{color:var(--mut)}
+.btn{display:inline-block;padding:13px 22px;border-radius:10px;text-decoration:none;font-weight:700;background:#1FA855;color:#fff;margin-right:10px}
+.btn.alt{background:var(--blue)}
+footer{color:var(--mut);font-size:14px;border-top:1px solid rgba(157,178,204,.25);margin-top:36px;padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>What will your website cost?</h1>
+<p class="lede">Thirty seconds, no phone call needed. Pick your pages and features, and see the real number, including our launch offer.</p>
+<div class="box">
+<label for="pages">How many pages do you need? <span id="pagesVal">5</span></label>
+<input type="range" id="pages" min="5" max="20" step="5" value="5">
+<label class="feat"><input type="checkbox" data-i="0"><span>Online store with payments (+₹9,999)</span></label>
+<label class="feat"><input type="checkbox" data-i="1"><span>Bookings or appointments (+₹3,999)</span></label>
+<label class="feat"><input type="checkbox" data-i="2"><span>Blog or news section (+₹1,999)</span></label>
+<label class="feat"><input type="checkbox" data-i="3"><span>Logo design (+₹1,499)</span></label>
+<label class="feat"><input type="checkbox" data-i="4"><span>We write your content (+₹2,999)</span></label>
+</div>
+<div class="out">
+Standard price: <s id="stdOut">₹14,999</s><br>
+Launch price today: <span class="big" id="launchOut">₹4,999</span><br>
+<span style="color:var(--mut)">Launch offer for the first 3 clients. When they are gone, the standard price applies.</span>
+</div>
+<a class="btn" href="https://wa.me/919059291261?text=Hi%20TenTwo%2C%20I%20used%20your%20cost%20calculator%20and%20want%20a%20website.">Chat on WhatsApp</a>
+<a class="btn alt" href="https://www.tentwotechnologies.com/form">Start with the form</a>
+<p style="color:var(--mut);font-size:14.5px">This is an instant estimate from our standard packages. Your final quote is confirmed after a short form or chat, and it never grows hidden charges later.</p>
+<footer>TenTwo Technologies Private Limited · Kaikaluru, Andhra Pradesh · <a href="https://www.tentwotechnologies.com/">Home</a></footer>
+</div>
+<script>
+const BASE_STD = 14999, BASE_LAUNCH = 4999;
+const extras = [9999,3999,1999,1499,2999];
+function fmt(n){ return "₹" + n.toLocaleString("en-IN"); }
+function calc(){
+  const pages = parseInt(document.getElementById('pages').value, 10);
+  document.getElementById('pagesVal').textContent = pages;
+  const pageExtra = Math.max(0, (pages - 5) / 5) * 3000;
+  let add = 0;
+  document.querySelectorAll('.feat input').forEach((el, i) => { if (el.checked) add += extras[i]; });
+  const std = BASE_STD + pageExtra + add;
+  const launch = BASE_LAUNCH + pageExtra + add;
+  document.getElementById('stdOut').textContent = fmt(std);
+  document.getElementById('launchOut').textContent = fmt(launch);
+}
+document.querySelectorAll('input').forEach(el => el.addEventListener('input', calc));
+calc();
+</script>
+</body>
+</html>
